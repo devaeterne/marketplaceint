@@ -1,0 +1,13 @@
+selenium==4.20.0
+webdriver-manager==4.0.1
+pandas
+openpyxl
+bs4
+psycopg2-binary
+python-dotenv
+requests
+beautifulsoup4
+lxml
+fastapi
+uvicorn
+undetected-chromedriver

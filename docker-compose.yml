@@ -1,0 +1,62 @@
+version: '3.9'
+
+services:
+  api:
+    container_name: api-api-1
+    build:
+      context: ./api
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./api:/app
+    depends_on:
+      - db
+      - bot
+    environment:
+      - PORT=5050
+      - BOT_SERVICE_URL=http://bot:8000
+      - PG_HOST=db
+      - PG_PORT=5432
+      - PG_DB=ikasdb
+      - PG_USER=ikasuser
+      - PG_PASS=ikaspass
+    networks:
+      - marketplace_net
+
+  bot:
+    container_name: api-bot-1
+    build:
+      context: ./bot
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./bot:/app
+    environment:
+      - PG_HOST=db
+      - PG_PORT=5432
+      - PG_DB=ikasdb
+      - PG_USER=ikasuser
+      - PG_PASS=ikaspass
+    networks:
+      - marketplace_net
+
+  db:
+    image: postgres:15.3
+    container_name: api-db-1
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=ikasdb
+      - POSTGRES_USER=ikasuser
+      - POSTGRES_PASSWORD=ikaspass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - marketplace_net
+
+volumes:
+  postgres_data:
+
+networks:
+  marketplace_net:
+    driver: bridge

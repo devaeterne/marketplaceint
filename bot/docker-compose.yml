@@ -1,0 +1,22 @@
+#bot/docker-compose.yml
+version: '3.9'
+
+services:
+  bot:
+    container_name: bot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PG_HOST=standalone-db
+      - PG_PORT=5432
+      - PG_DB=marketplace
+      - PG_USER=postgres
+      - PG_PASS=postgres
+networks:
+  marketplace_net:
+    external: true
