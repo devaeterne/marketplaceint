@@ -11,7 +11,7 @@ import traceback
 import logging
 from db_connection import get_db_connection
 
-# === Log ayarları ===
+# === Log Ayarı ===
 os.makedirs("/app/logs", exist_ok=True)
 logging.basicConfig(
     filename="/app/logs/hepsiburada_log.txt",
@@ -19,29 +19,35 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# === Selenium ayarları ===
-def get_driver():
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument("--window-size=1920,1080")
-    chrome_options.add_argument(
-        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/115.0.0.0 Safari/537.36"
-    )
-    return webdriver.Chrome(service=Service("/usr/bin/chromedriver"), options=chrome_options)
-
-# === Yardımcı fonksiyonlar ===
+# === Yardımcı Fonksiyonlar ===
 def clean_price(raw):
     if not raw:
         return 0.0
+    return float(
+        raw.replace("TL", "")
+           .replace(".", "")
+           .replace(",", ".")
+           .strip()
+    )
+
+def extract_product_id_from_url(url):
     try:
-        return float(raw.replace("TL", "").replace(".", "").replace(",", ".").strip())
+        return url.split("-")[-1]
     except:
-        return 0.0
+        return None
+
+def get_driver():
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--window-size=1920,1080")
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/115.0.0.0 Safari/537.36")
+    return webdriver.Chrome(service=Service("/usr/bin/chromedriver"), options=options)
 
 def upsert_product(cur, platform, platform_product_id, product_link, title, brand):
+    """Ürünü products tablosuna ekle veya güncelle"""
     cur.execute("""
         INSERT INTO products (platform, platform_product_id, product_link, title, brand)
         VALUES (%s, %s, %s, %s, %s)
@@ -53,10 +59,18 @@ def upsert_product(cur, platform, platform_product_id, product_link, title, bran
         RETURNING id;
     """, (platform, platform_product_id, product_link, title, brand))
 
-    row = cur.fetchone()
-    if not row:
-        raise Exception("🛑 Ürün eklenemedi")
-    return row[0]
+    result = cur.fetchone()
+    if not result:
+        print(f"⚠️ WARNING: fetchone() None döndü - {platform_product_id}")
+        return None
+
+    if isinstance(result, dict) and 'id' in result:
+        return result['id']
+    elif isinstance(result, (tuple, list)):
+        return result[0]
+    else:
+        print(f"⚠️ WARNING: fetchone() beklenmeyen formatta - {result}")
+        return None
 
 def insert_price_log(cur, product_id, price, campaign_price, stock_status):
     cur.execute("""
@@ -64,15 +78,14 @@ def insert_price_log(cur, product_id, price, campaign_price, stock_status):
         VALUES (%s, %s, %s, %s);
     """, (product_id, price, campaign_price, stock_status))
 
-# === Bot ana fonksiyonu ===
+# === Ana Bot Fonksiyonu ===
 def run_hepsiburada_bot():
     print("🟡 Hepsiburada bot başlatıldı...")
     logging.info("🟡 Hepsiburada bot başlatıldı...")
 
-    # Arama terimleri
     terms_file = "/app/search_terms/terms.txt"
     if not os.path.exists(terms_file):
-        logging.error("❌ terms.txt dosyası yok!")
+        logging.error("❌ terms.txt dosyası bulunamadı.")
         return
 
     with open(terms_file, "r", encoding="utf-8") as f:
@@ -84,13 +97,13 @@ def run_hepsiburada_bot():
 
     driver = get_driver()
     conn = get_db_connection()
-    logging.info("✅ Database bağlantısı başarılı")
+    logging.info("✅ Veritabanı bağlantısı başarılı.")
 
     with conn:
         with conn.cursor() as cur:
             for term in search_terms:
                 encoded = quote_plus(term)
-                print(f"🔍 '{term}' için ürünler çekiliyor...")
+                print(f"🔍 Arama: {term}")
                 logging.info(f"🔍 Arama: {term}")
 
                 for page in range(1, 6):
@@ -104,43 +117,42 @@ def run_hepsiburada_bot():
                         soup = BeautifulSoup(driver.page_source, "html.parser")
                         product_cards = soup.find_all("li", class_=re.compile("productListContent-"))
 
-                        if not product_cards:
-                            logging.warning(f"⚠️ Sayfa {page} boş")
-                            continue
-
                         for card in product_cards:
                             try:
                                 title_tag = card.find("h2", class_=re.compile("title-module_titleRoot"))
-                                title = title_tag.get_text(strip=True) if title_tag else "Yok"
+                                if not title_tag:
+                                    continue
 
-                                brand_span = title_tag.find("span", class_=re.compile("title-module_brandText")) if title_tag else None
-                                brand = brand_span.get_text(strip=True) if brand_span else "Yok"
-
-                                price_div = card.find("div", class_=re.compile("price-module_finalPrice"))
-                                price = clean_price(price_div.get_text(strip=True)) if price_div else 0.0
-                                campaign_price = 0.0  # Hepsiburada sayfasında sepette kampanya bilgisi yoksa sıfır
+                                title = title_tag.get_text(strip=True)
+                                brand_span = title_tag.find("span", class_=re.compile("title-module_brandText"))
+                                brand = brand_span.get_text(strip=True) if brand_span else "Belirtilmemiş"
 
                                 a_tag = card.find("a", href=True)
-                                product_link = "https://www.hepsiburada.com" + a_tag["href"] if a_tag else None
-                                product_id = a_tag["href"].split("-")[-1] if a_tag else "0"
+                                product_url = "https://www.hepsiburada.com" + a_tag["href"] if a_tag else None
+                                platform_product_id = extract_product_id_from_url(a_tag["href"]) if a_tag else None
 
-                                img_tag = card.find("img")
-                                image_url = img_tag.get("data-src") or img_tag.get("src") if img_tag else None
+                                # Fiyatlar
+                                final_price_div = card.find("div", class_=re.compile(r"(^|\s)price-module_finalPrice__"))
+                                final_price = clean_price(final_price_div.get_text(strip=True)) if final_price_div else 0.0
 
+                                original_price_div = card.find("div", class_=re.compile(r"(^|\s)price-module_originalPrice__"))
+                                original_price = clean_price(original_price_div.get_text(strip=True)) if original_price_div else final_price
+
+                                # Kargo bilgisi
                                 kargo_div = card.find("div", class_=re.compile("estimatedArrivalDate"))
-                                stock_status = kargo_div.get_text(strip=True) if kargo_div else "Bilinmiyor"
+                                stock_status = kargo_div.get_text(strip=True).replace("Teslimat bilgisi:", "").strip() if kargo_div else "Belirsiz"
 
-                                if not product_link or not product_id:
+                                if not product_url or not platform_product_id:
                                     logging.warning("⚠️ Geçersiz ürün atlandı.")
                                     continue
 
-                                db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
-                                insert_price_log(cur, db_id, price, campaign_price, stock_status)
-                                conn.commit()
+                                db_id = upsert_product(cur, "hepsiburada", platform_product_id, product_url, title, brand)
+                                if db_id:
+                                    insert_price_log(cur, db_id, original_price, final_price, stock_status)
+                                    conn.commit()
+                                    logging.info(f"✅ {title[:60]}... → {final_price} TL")
 
-                                logging.info(f"✅ Kaydedildi: {title[:40]}... - {price} TL")
-
-                            except Exception:
+                            except Exception as e:
                                 logging.error(f"❌ Ürün işleme hatası:\n{traceback.format_exc()}")
                                 continue
 
@@ -149,8 +161,8 @@ def run_hepsiburada_bot():
                         continue
 
     driver.quit()
-    print("✅ Hepsiburada bot tamamlandı.")
     logging.info("✅ Hepsiburada bot tamamlandı.")
+    print("✅ Hepsiburada bot tamamlandı.")
 
 if __name__ == "__main__":
     run_hepsiburada_bot()
