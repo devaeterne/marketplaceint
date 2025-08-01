@@ -1,0 +1,1833 @@
+2025-08-01 13:35:36,832 - INFO - 🟡 Hepsiburada bot başlatıldı...
+2025-08-01 13:35:37,371 - INFO - ✅ Database bağlantısı başarılı
+2025-08-01 13:35:37,371 - INFO - 🔍 Arama: nescafe 1 KG
+2025-08-01 13:35:37,372 - INFO - 🔗 Sayfa 1
+2025-08-01 13:35:45,806 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,807 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,808 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,809 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,810 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,811 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,812 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,813 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,814 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,815 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,816 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,817 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,817 - WARNING - ⚠️ Geçersiz ürün atlandı.
+2025-08-01 13:35:45,818 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,819 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,820 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,820 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,821 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,822 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,823 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,824 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,825 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,826 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,826 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,827 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,828 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,829 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,830 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,831 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,832 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,833 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,833 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,834 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,835 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,836 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,837 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,838 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,839 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:45,839 - INFO - 🔗 Sayfa 2
+2025-08-01 13:35:53,018 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,020 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,021 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,022 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,023 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,024 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,025 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,027 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,028 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,029 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,030 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,031 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,032 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,033 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,034 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,035 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,036 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,037 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,038 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,039 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,040 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,040 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,041 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,042 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,043 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,044 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,046 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,046 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,047 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,048 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,049 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,050 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,051 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,052 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:35:53,052 - INFO - 🔗 Sayfa 3
+2025-08-01 13:36:00,515 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,518 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,519 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,520 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,521 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,522 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,523 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,524 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,525 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,526 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,527 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,528 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,528 - WARNING - ⚠️ Geçersiz ürün atlandı.
+2025-08-01 13:36:00,529 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,530 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,531 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,532 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,533 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,534 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,535 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,536 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,537 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,537 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,538 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,539 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,540 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,541 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,542 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,543 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,544 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,545 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,546 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,547 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,547 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,548 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,549 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,550 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,551 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:00,551 - INFO - 🔗 Sayfa 4
+2025-08-01 13:36:08,001 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,003 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,004 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,006 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,007 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,008 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,009 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,010 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,012 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,013 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,014 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,015 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,016 - WARNING - ⚠️ Geçersiz ürün atlandı.
+2025-08-01 13:36:08,017 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,018 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,019 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,021 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,021 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,022 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,024 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,025 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,027 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,028 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,029 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,030 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,030 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,031 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,032 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,033 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,034 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,035 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,036 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,036 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,037 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,038 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,038 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,039 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,040 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:08,040 - INFO - 🔗 Sayfa 5
+2025-08-01 13:36:14,816 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,818 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,819 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,820 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,821 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,821 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,822 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,823 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,824 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,825 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,826 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,827 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,827 - WARNING - ⚠️ Geçersiz ürün atlandı.
+2025-08-01 13:36:14,828 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,829 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,830 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,831 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,832 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,833 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,834 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,835 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,836 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,837 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,837 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,838 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,839 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,840 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,841 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,842 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,843 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,843 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,844 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,845 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,846 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,847 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,848 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,849 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,850 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/hepsiburada.py", line 137, in run_hepsiburada_bot
+    db_id = upsert_product(cur, "hepsiburada", product_id, product_link, title, brand)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/hepsiburada.py", line 59, in upsert_product
+    return row[0]
+           ~~~^^^
+KeyError: 0
+
+2025-08-01 13:36:14,924 - INFO - ✅ Hepsiburada bot tamamlandı.

@@ -5,9 +5,10 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import os
 import time
+import traceback
 from db_connection import get_db_connection
 
-# PostgreSQL bağlantısı - .env'den dinamik çekiliyor
+# === PostgreSQL bağlantısı ===
 conn = get_db_connection()
 cursor = conn.cursor()
 
@@ -32,78 +33,101 @@ try:
     """)
     urunler = cursor.fetchall()
 
-    print(f"📊 Toplam {len(urunler)} Trendyol ürünü bulundu")
+    if not urunler:
+        print("⚠️ Veritabanında işlenecek ürün bulunamadı.")
+    else:
+        for row in urunler:
+            # RealDictRow kontrolü
+            if isinstance(row, dict):
+                product_id = row.get("id")
+                url = row.get("product_link")
+            elif isinstance(row, (list, tuple)) and len(row) == 2:
+                product_id, url = row
+            else:
+                print(f"⚠️ Beklenmeyen veri yapısı: {row}")
+                continue
 
-    for product_id, url in urunler:
-        print(f"🔎 İşleniyor: Product ID {product_id} → {url}")
-        
-        try:
-            driver.get(url)
-            time.sleep(3)
+            if not url or not isinstance(url, str) or not url.startswith("http"):
+                print(f"❌ Geçersiz URL atlandı → Product ID: {product_id}, URL: {url}")
+                continue
 
-            soup = BeautifulSoup(driver.page_source, "html.parser")
+            print(f"\n🔎 İşleniyor: Product ID {product_id} → {url}")
 
-            # Açıklama
-            description_tag = soup.select_one("div.content-description")
-            description = description_tag.get_text(strip=True) if description_tag else None
+            try:
+                driver.get(url)
+                time.sleep(5)
 
-            # Mağaza Adı
-            store_tag = soup.select_one("button.content-description-popover-item-button div")
-            store_name = store_tag.get_text(strip=True) if store_tag else None
+                soup = BeautifulSoup(driver.page_source, "html.parser")
 
-            # Kargo Bilgisi
-            shipping_tag = soup.select_one("div.promotion-box-item div.title p")
-            shipping_info = shipping_tag.get_text(strip=True) if shipping_tag else None
-            free_shipping = "bedava" in (shipping_info or "").lower()
+                # === Detay Alanlar ===
+                description_items = soup.select("ul.content-descriptions-description-content li")
+                description = " ".join([li.get_text(strip=True) for li in description_items]) if description_items else None
 
-            # Puan
-            rating_tag = soup.select_one("span.reviews-summary-average-rating")
-            rating = float(rating_tag.get_text(strip=True).replace(",", ".")) if rating_tag else None
+                # === Mağaza Adı ===
+                store_name_tag = soup.select_one("div.merchant-name")
+                store_name = store_name_tag.get_text(strip=True) if store_name_tag else None
 
-            # Ürün Türü (breadcrumb)
-            breadcrumb_items = soup.select("ul.breadcrumb-list li.product-detail-new-breadcrumbs-item a")
-            product_type = breadcrumb_items[-2].get_text(strip=True) if len(breadcrumb_items) >= 2 else None
+                # === Kargo Bilgileri ===                
+                shipping_tag = soup.select_one("div.delivery-container")
+                shipping_info = shipping_tag.get_text(" ", strip=True) if shipping_tag else None
+                free_shipping = True
+                # === Ürün Puanı ===
+                rating_tag = soup.select_one("span.reviews-summary-average-rating")
+                rating = float(rating_tag.get_text(strip=True).replace(",", ".")) if rating_tag else 0.0
 
-            now = datetime.now()
+                breadcrumb_items = soup.select("ul.breadcrumb-list li.product-detail-new-breadcrumbs-item a")
+                product_type = breadcrumb_items[-2].get_text(strip=True) if len(breadcrumb_items) >= 2 else None
 
-            # Ürün detayını kaydet
-            cursor.execute("""
-                INSERT INTO product_details 
-                    (product_id, description, store_name, shipping_info, free_shipping, rating, product_type, created_at)
-                VALUES 
-                    (%s, %s, %s, %s, %s, %s, %s, %s)
-                ON CONFLICT (product_id) DO UPDATE SET
-                    description = EXCLUDED.description,
-                    store_name = EXCLUDED.store_name,
-                    shipping_info = EXCLUDED.shipping_info,
-                    free_shipping = EXCLUDED.free_shipping,
-                    rating = EXCLUDED.rating,
-                    product_type = EXCLUDED.product_type,
-                    updated_at = NOW();
-            """, (product_id, description, store_name, shipping_info, free_shipping, rating, product_type, now))
+                image_tag = soup.select_one('img[data-testid="image"]')
+                image_url = image_tag["src"] if image_tag and image_tag.has_attr("src") else None
 
-            # Önceki attribute kayıtlarını sil (çakışmasın)
-            cursor.execute("DELETE FROM product_attributes WHERE product_id = %s", (product_id,))
 
-            # Ürün özelliklerini kaydet
-            attribute_items = soup.select("div.attribute-item")
-            for attr in attribute_items:
-                name_div = attr.select_one("div.name")
-                value_div = attr.select_one("div.value")
-                if name_div and value_div:
-                    attr_name = name_div.get_text(strip=True)
-                    attr_value = value_div.get_text(strip=True)
-                    cursor.execute("""
-                        INSERT INTO product_attributes (product_id, attribute_name, attribute_value)
-                        VALUES (%s, %s, %s)
-                    """, (product_id, attr_name, attr_value))
+                # === Mağaza Puanı ===
+                store_rating_tag = soup.select_one("div.score-badge")
+                store_rating = float(store_rating_tag.get_text(strip=True).replace(",", ".")) if store_rating_tag else 0.0
 
-            conn.commit()
-            print(f"✅ Product ID {product_id} detayları ve özellikleri eklendi/güncellendi.")
-            
-        except Exception as e:
-            print(f"❌ Product ID {product_id} işlenirken hata: {e}")
-            continue
+
+                now = datetime.now()
+
+                # === product_details tablosuna yaz ===
+                cursor.execute("""
+                    INSERT INTO product_details 
+                        (product_id, description, store_name, shipping_info, free_shipping, rating, product_type, created_at, updated_at, image_url, store_rating)
+                    VALUES 
+                        (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    ON CONFLICT (product_id) DO UPDATE SET
+                        description = EXCLUDED.description,
+                        store_name = EXCLUDED.store_name,
+                        shipping_info = EXCLUDED.shipping_info,
+                        free_shipping = EXCLUDED.free_shipping,
+                        rating = EXCLUDED.rating,
+                        product_type = EXCLUDED.product_type,
+                        updated_at = NOW(),
+                        image_url = EXCLUDED.image_url,
+                        store_rating = EXCLUDED.store_rating;
+                """, (product_id, description, store_name, shipping_info, free_shipping, rating, product_type, now, now, image_url, store_rating))
+
+                # === product_attributes: öncekileri sil → yeniden ekle ===
+                cursor.execute("DELETE FROM product_attributes WHERE product_id = %s", (product_id,))
+
+                attribute_items = soup.select("div.attribute-item")
+                for attr in attribute_items:
+                    name_div = attr.select_one("div.name")
+                    value_div = attr.select_one("div.value")
+                    if name_div and value_div:
+                        attr_name = name_div.get_text(strip=True)
+                        attr_value = value_div.get_text(strip=True)
+                        cursor.execute("""
+                            INSERT INTO product_attributes (product_id, attribute_name, attribute_value)
+                            VALUES (%s, %s, %s)
+                        """, (product_id, attr_name, attr_value))
+
+                conn.commit()
+                print(f"✅ Product ID {product_id} detayları ve özellikleri güncellendi.")
+
+            except Exception:
+                print(f"❌ Product ID {product_id} işlenirken hata:\n{traceback.format_exc()}")
+                continue
 
 finally:
     driver.quit()
