@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   api:
-    container_name: api-api-1
+    container_name: api
     build:
       context: ./api
     ports:
@@ -10,12 +10,12 @@ services:
     volumes:
       - ./api:/app
     depends_on:
-      - db
+      - standalone-db
       - bot
     environment:
       - PORT=5050
       - BOT_SERVICE_URL=http://bot:8000
-      - PG_HOST=db
+      - PG_HOST=standalone-db
       - PG_PORT=5432
       - PG_DB=ikasdb
       - PG_USER=ikasuser
@@ -24,15 +24,17 @@ services:
       - marketplace_net
 
   bot:
-    container_name: api-bot-1
+    container_name: bot
     build:
       context: ./bot
     ports:
       - "8000:8000"
     volumes:
       - ./bot:/app
+    depends_on:
+      - standalone-db
     environment:
-      - PG_HOST=db
+      - PG_HOST=standalone-db
       - PG_PORT=5432
       - PG_DB=ikasdb
       - PG_USER=ikasuser
@@ -40,9 +42,9 @@ services:
     networks:
       - marketplace_net
 
-  db:
+  standalone-db:
     image: postgres:15.3
-    container_name: api-db-1
+    container_name: standalone-db
     ports:
       - "5432:5432"
     environment:

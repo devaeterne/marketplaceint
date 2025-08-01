@@ -1,26 +1,17 @@
-from dotenv import load_dotenv
-load_dotenv()
-
-import os
-import time
-import re
-from urllib.parse import quote_plus
-from datetime import datetime
-import psycopg2
-import undetected_chromedriver as uc
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
+import undetected_chromedriver as uc
+import time
+from urllib.parse import quote_plus
+from db_connection import get_db_connection
 
 # PostgreSQL bağlantısı
-conn = psycopg2.connect(
-    host=os.getenv("PG_HOST", "localhost"),
-    port=int(os.getenv("PG_PORT", 5432)),
-    dbname=os.getenv("PG_DB", "marketplace"),
-    user=os.getenv("PG_USER", "postgres"),
-    password=os.getenv("PG_PASS", "postgres")
-)
-conn.autocommit = True
+conn = get_db_connection()
 
 def upsert_product(cur, platform, platform_product_id, product_link, title, brand):
+    """Ürünü products tablosuna ekle veya güncelle"""
     cur.execute("""
         INSERT INTO products (platform, platform_product_id, product_link, title, brand)
         VALUES (%s, %s, %s, %s, %s)
@@ -31,113 +22,192 @@ def upsert_product(cur, platform, platform_product_id, product_link, title, bran
             updated_at = NOW()
         RETURNING id;
     """, (platform, platform_product_id, product_link, title, brand))
-    return cur.fetchone()[0]
 
-def insert_price_log(cur, product_id, price, campaign_price, stock_status):
-    cur.execute("""
-        INSERT INTO product_price_logs (product_id, price, campaign_price, stock_status)
-        VALUES (%s, %s, %s, %s);
-    """, (product_id, price, campaign_price, stock_status))
+    result = cur.fetchone()
+    if not result:
+        print(f"⚠️ WARNING: fetchone() None döndü - {platform_product_id}")
+        return None
 
-def run_n11_bot():
-    print("🟡 N11 bot başlatıldı...")
+    if isinstance(result, dict) and 'id' in result:
+        return result['id']
+    elif isinstance(result, (tuple, list)):
+        return result[0]
+    else:
+        print(f"⚠️ WARNING: fetchone() beklenmeyen formatta - {result}")
+        return None
 
+def setup_chrome_driver():
+    """Chrome driver'ı ayarla ve döndür"""
     options = uc.ChromeOptions()
     options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
-    # M1 Mac için ek seçenekler
-    options.add_argument("--disable-extensions")
-    options.add_argument("--disable-plugins")
-    options.add_argument("--disable-images")
-    options.add_argument("--no-first-run")
-    options.add_argument("--disable-default-apps")
-    options.add_argument("--single-process")  # M1 için önemli
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    
+    return uc.Chrome(
+        options=options,
+        browser_executable_path="/usr/bin/chromium",
+        driver_executable_path="/usr/bin/chromedriver"
+    )
 
-    # M1 Mac (ARM64) için Chromium kullan
-    try:
-        # Docker container içinde Chromium kullan
-        driver = uc.Chrome(
-            options=options,
-            browser_executable_path="/usr/bin/chromium",
-            driver_executable_path="/usr/bin/chromedriver"
-        )
-    except Exception as e:
-        print(f"❌ Chromium ile başlatma hatası: {e}")
-        # Fallback: sistem default Chrome/Chromium
-        try:
-            driver = uc.Chrome(options=options)
-        except Exception as e2:
-            print(f"❌ Fallback Chrome hatası: {e2}")
-            return
+
+
+def insert_price_log(cur, product_id, price, campaign_price, stock_status):
+    """Fiyat bilgisini product_price_logs tablosuna ekle"""
+    cur.execute("""
+        INSERT INTO product_price_logs (product_id, price, campaign_price, stock_status, created_at)
+        VALUES (%s, %s, %s, %s, NOW());
+    """, (product_id, price, campaign_price, stock_status))
+
+def run_n11_bot():
+    print("🟡 N11 bot başlatıldı...")
+    
+    # Chrome driver'ı ayarla
+    driver = setup_chrome_driver()
+    if not driver:
+        print("❌ Chrome driver başlatılamadı!")
+        return
+        
+    wait = WebDriverWait(driver, 10)
 
     with open("search_terms/terms.txt", "r", encoding="utf-8") as f:
         search_terms = [line.strip() for line in f if line.strip()]
 
     with conn.cursor() as cur:
         for term in search_terms:
-            print(f"🔍 '{term}' aranıyor...")
+            print(f"🔍 '{term}' için ürünler çekiliyor...")
             encoded_term = quote_plus(term)
+            total_items = None
+            processed_products = 0
 
-            seen_product_ids = set()
+            previous_product_links = set()
 
             for page in range(1, 6):
                 url = f"https://www.n11.com/arama?q={encoded_term}&srt=PRICE_LOW&pg={page}"
-                print(f"🔗 Sayfa: {url}")
-                
+                print(f"🔗 Sayfa URL: {url}")
+                driver.get(url)
+
                 try:
-                    driver.get(url)
-                    time.sleep(4)
-                except Exception as e:
-                    print(f"❌ Sayfa yükleme hatası: {e}")
-                    continue
-
-                soup = BeautifulSoup(driver.page_source, "html.parser")
-                items = soup.select("div.productArea li.column")
-
-                if not items:
-                    print(f"⚠️ Sayfa {page} boş.")
-                    debug_path = f"debug_n11_{term.lower().replace(' ', '_')}_sayfa{page}.html"
-                    with open(debug_path, "w", encoding="utf-8") as f:
-                        f.write(driver.page_source)
-                    print(f"📝 Debug HTML kaydedildi: {debug_path}")
+                    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.productArea")))
+                except:
+                    print(f"⚠️ Sayfa {page} yüklenemedi veya productArea bulunamadı.")
                     break
 
-                for item in items:
+                soup = BeautifulSoup(driver.page_source, "html.parser")
+
+                # Pagination kontrolü
+                pagination = soup.select_one("div.paginationArea")
+                if page > 1 and not pagination:
+                    print(f"⚠️ Sayfa {page} için pagination yok, döngü kırılıyor.")
+                    break
+
+                # Ürünler
+                product_items = soup.select("div.productArea li.column")
+                if not product_items:
+                    print(f"⚠️ Sayfa {page} içindeki ürün listesi boş.")
+                    break
+
+                current_links = set()
+                for item in product_items:
+                    a_tag = item.select_one("a.plink")
+                    if not a_tag:
+                        continue
+                    link = a_tag["href"]
+                    current_links.add(link)
+
+                # Ürün linkleri tekrar mı diye kontrol et
+                if current_links.issubset(previous_product_links):
+                    print(f"⚠️ Sayfa {page} ürünleri tekrar ediyor, döngü durduruluyor.")
+                    break
+
+                previous_product_links.update(current_links)
+
+                # Toplam ürün sayısını ilk sayfadan al
+                if total_items is None:
+                    product_area = soup.find("div", class_="productArea")
+                    if product_area:
+                        result_text_div = product_area.select_one(".resultView .resultText strong")
+                        if result_text_div:
+                            try:
+                                total_items = int(result_text_div.get_text(strip=True))
+                            except:
+                                total_items = None
+
+                for item in product_items:
                     try:
-                        link_tag = item.select_one("a.plink")
-                        if not link_tag:
-                            continue
-
-                        product_id = link_tag.get("data-id")
-                        if product_id in seen_product_ids:
-                            continue
-                        seen_product_ids.add(product_id)
-
-                        product_link = link_tag["href"]
-                        title = item.select_one("h3.productName").text.strip()
-                        brand_input = item.find("input", class_="sellerNickName")
-                        brand = brand_input["value"] if brand_input else None
-
-                        price_span = item.select_one("span.newPrice ins")
-                        raw_price = price_span.text.strip() if price_span else "0"
-                        clean_price = raw_price.replace("TL", "").replace(".", "").replace(",", ".").strip()
-
+                        # Mevcut scraping mantığını koru
+                        a_tag = item.select_one("a.plink")
+                        urun_linki = a_tag["href"] if a_tag else "Yok"
+                        
+                        # Ürün linkini tam URL yap
+                        if urun_linki and not urun_linki.startswith("http"):
+                            urun_linki = "https://www.n11.com" + urun_linki
+                        
+                        title = item.select_one("h3.productName").get_text(strip=True) if item.select_one("h3.productName") else "Başlık bulunamadı"
+                        product_id = a_tag.get("data-id") if a_tag else "Yok"
+                        
+                        marka_input = item.find("input", {"class": "sellerNickName"})
+                        marka = marka_input["value"] if marka_input else "Bilinmeyen"
+                        
+                        fiyat_span = item.select_one("span.newPrice ins")
+                        fiyat_raw = fiyat_span.get_text(strip=True) if fiyat_span else "0"
+                        fiyat_clean = fiyat_raw.replace("TL", "").replace(".", "").replace(",", ".").strip()
+                        
                         try:
-                            price = float(clean_price)
+                            fiyat = float(fiyat_clean)
                         except:
-                            price = 0.0
+                            fiyat = 0.0
 
-                        product_db_id = upsert_product(cur, "n11", product_id, product_link, title, brand)
-                        insert_price_log(cur, product_db_id, price, None, "Kontrol edilecek")
+                        # Stok durumu kontrolü
+                        item_text = item.get_text().lower()
+                        stock_status = "Tükendi" if any(word in item_text for word in ["tükendi", "stokta yok", "mevcut değil"]) else "Mevcut"
+
+                        # ===============================
+                        # DATABASE İŞLEMLERİ
+                        # ===============================
+                        
+                        if product_id and product_id != "Yok":
+                            # 1. Ürünü products tablosuna ekle/güncelle
+                            product_db_id = upsert_product(
+                                cur, 
+                                "n11",  # platform
+                                product_id,  # platform_product_id
+                                urun_linki,  # product_link
+                                title,  # title
+                                marka  # brand
+                            )
+
+                            if product_db_id:
+                                # 2. Fiyat bilgisini product_price_logs tablosuna ekle
+                                insert_price_log(
+                                    cur,
+                                    product_db_id,  # product_id
+                                    fiyat,  # price
+                                    None,  # campaign_price (şimdilik None)
+                                    stock_status  # stock_status
+                                )
+                                processed_products += 1
+                                print(f"✅ DB'ye kaydedildi: {title[:30]}... - {fiyat} TL")
+                            else:
+                                print(f"❌ DB'ye kaydedilemedi: {product_id}")
 
                     except Exception as e:
-                        print(f"❌ Ürün işleme hatası: {e}")
+                        print(f"❌ Ürün ayrıştırma hatası: {e}")
+                        continue
+
+                # Her sayfa sonrası commit yap
+                conn.commit()
+                print(f"📄 Sayfa {page} tamamlandı - İşlenen ürün: {processed_products}")
+
+            print(f"🎯 '{term}' için toplam {processed_products} ürün DB'ye kaydedildi")
+
+        # Final commit
+        conn.commit()
 
     driver.quit()
-    print("✅ N11 bot tamamlandı.")
+    print("✅ N11 bot tamamlandı.\n")
 
 if __name__ == "__main__":
     run_n11_bot()

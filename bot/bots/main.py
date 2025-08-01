@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import subprocess
 import os
@@ -10,13 +10,18 @@ class BotRequest(BaseModel):
     bot_name: str
 
 
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "service": "bot"}
+
+
 @app.post("/run-trendyol")
-async def run_bot(request: BotRequest):
+async def run_trendyol(request: BotRequest):
     bot_name = request.bot_name.strip()
     bot_path = f"/app/bots/{bot_name}.py"
 
     if not os.path.exists(bot_path):
-        return {"status": "error", "message": f"❌ Bot bulunamadı: {bot_name}.py"}
+        raise HTTPException(status_code=404, detail=f"Bot bulunamadı: {bot_name}.py")
 
     print(f"▶️ Bot çalıştırılıyor: {bot_path}")
     try:
@@ -30,20 +35,23 @@ async def run_bot(request: BotRequest):
         return {
             "status": "success" if result.returncode == 0 else "error",
             "stdout": result.stdout,
-            "stderr": result.stderr
+            "stderr": result.stderr,
+            "bot": bot_name
         }
 
+    except subprocess.TimeoutExpired:
+        return {"status": "error", "message": "Bot zaman aşımına uğradı (15 dakika)"}
     except Exception as e:
-        return {"status": "error", "message": f"⚠️ Hata: {str(e)}"}
+        return {"status": "error", "message": f"Hata: {str(e)}"}
 
 
 @app.post("/run-trendyol-detail")
-async def run_detail_bot(request: BotRequest):
+async def run_trendyol_detail(request: BotRequest):
     bot_name = request.bot_name.strip()
     detail_bot_path = f"/app/bots/{bot_name}Detay.py"
 
     if not os.path.exists(detail_bot_path):
-        return {"status": "error", "message": f"❌ Detay bot bulunamadı: {bot_name}Detay.py"}
+        raise HTTPException(status_code=404, detail=f"Detay bot bulunamadı: {bot_name}Detay.py")
 
     print(f"▶️ Detay bot çalıştırılıyor: {detail_bot_path}")
     try:
@@ -56,17 +64,21 @@ async def run_detail_bot(request: BotRequest):
         return {
             "status": "success" if result.returncode == 0 else "error",
             "stdout": result.stdout,
-            "stderr": result.stderr
+            "stderr": result.stderr,
+            "bot": f"{bot_name}Detay"
         }
 
+    except subprocess.TimeoutExpired:
+        return {"status": "error", "message": "Detay bot zaman aşımına uğradı (15 dakika)"}
     except Exception as e:
-        return {"status": "error", "message": f"⚠️ Detay bot hatası: {str(e)}"}
+        return {"status": "error", "message": f"Detay bot hatası: {str(e)}"}
+
 
 @app.post("/run-n11")
 async def run_n11():
     bot_path = "/app/bots/n11.py"
     if not os.path.exists(bot_path):
-        return {"status": "error", "message": f"❌ Bot bulunamadı: n11.py"}
+        raise HTTPException(status_code=404, detail="N11 bot bulunamadı")
 
     print(f"▶️ N11 bot çalıştırılıyor: {bot_path}")
     try:
@@ -79,17 +91,23 @@ async def run_n11():
         return {
             "status": "success" if result.returncode == 0 else "error",
             "stdout": result.stdout,
-            "stderr": result.stderr
+            "stderr": result.stderr,
+            "bot": "n11"
         }
+    except subprocess.TimeoutExpired:
+        return {"status": "error", "message": "N11 bot zaman aşımına uğradı (15 dakika)"}
     except Exception as e:
-        return {"status": "error", "message": f"⚠️ N11 bot hatası: {str(e)}"}
+        return {"status": "error", "message": f"N11 bot hatası: {str(e)}"}
 
 
 @app.post("/run-n11-detail")
 async def run_n11_detail():
     detail_bot_path = "/app/bots/n11Detay.py"
     if not os.path.exists(detail_bot_path):
-        return {"status": "error", "message": "❌ Detay bot bulunamadı."}
+        # Try lowercase version
+        detail_bot_path = "/app/bots/n11detay.py"
+        if not os.path.exists(detail_bot_path):
+            raise HTTPException(status_code=404, detail="N11 detay bot bulunamadı")
 
     print(f"▶️ N11 detay bot çalıştırılıyor: {detail_bot_path}")
     try:
@@ -102,8 +120,25 @@ async def run_n11_detail():
         return {
             "status": "success" if result.returncode == 0 else "error",
             "stdout": result.stdout,
-            "stderr": result.stderr
+            "stderr": result.stderr,
+            "bot": "n11Detay"
         }
 
+    except subprocess.TimeoutExpired:
+        return {"status": "error", "message": "N11 detay bot zaman aşımına uğradı (15 dakika)"}
     except Exception as e:
-        return {"status": "error", "message": f"⚠️ N11 detay bot hatası: {str(e)}"}
+        return {"status": "error", "message": f"N11 detay bot hatası: {str(e)}"}
+
+
+@app.get("/")
+async def root():
+    return {
+        "service": "Marketplace Bot Service",
+        "endpoints": [
+            "/health",
+            "/run-trendyol",
+            "/run-trendyol-detail",
+            "/run-n11",
+            "/run-n11-detail"
+        ]
+    }
