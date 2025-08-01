@@ -1,0 +1,180 @@
+2025-08-02 01:51:38,972 - INFO - 🟡 Avansas bot başlatıldı...
+2025-08-02 01:51:39,399 - INFO - ✅ Veritabanı bağlantısı başarılı.
+2025-08-02 01:51:39,399 - INFO - 🔍 Arama: nescafe 1 KG
+2025-08-02 01:51:39,400 - INFO - 🔗 Sayfa 1: https://www.avansas.com/search?q=nescafe+1+KG&sayfa=1
+2025-08-02 01:51:46,866 - INFO - ✅ Ürün işlendi: Nescafé Classic Çözünebilir Kahve 1 kg Teneke Kutu... → 1176.11 TL
+2025-08-02 01:51:46,868 - INFO - ✅ Ürün işlendi: Nescafé Classic Çözünebilir Kahve 1 kg Teneke Kutu Alımında ... → 1298.99 TL
+2025-08-02 01:51:46,870 - INFO - ✅ Ürün işlendi: Nescafe Gold Stick Kahve 2 g 100'lü... → 449.9 TL
+2025-08-02 01:51:46,871 - INFO - ✅ Ürün işlendi: Nescafe Mocha 17 gr 24'lü... → 219.9 TL
+2025-08-02 01:51:46,872 - INFO - ✅ Ürün işlendi: Nescafé Classic Çözünebilir Kahve 100g Ekonomik Paket... → 165.9 TL
+2025-08-02 01:51:46,873 - INFO - ✅ Ürün işlendi: Nescafe Crema Latte 14,5 gr 24'lü... → 219.9 TL
+2025-08-02 01:51:46,874 - INFO - ✅ Ürün işlendi: Nescafé Gold Çözünebilir Kahve 100g Ekonomik Paket... → 259.9 TL
+2025-08-02 01:51:46,876 - INFO - ✅ Ürün işlendi: Nescafe 2'si 1 Arada Kahve 10 gr 10'lu... → 66.9 TL
+2025-08-02 01:51:46,877 - INFO - ✅ Ürün işlendi: Nescafe 3'ü 1 Arada Kahve 17,5 g 72'li... → 519.9 TL
+2025-08-02 01:51:46,879 - INFO - ✅ Ürün işlendi: Nescafe 2'si 1 Arada Kahve 10 g 56'lı... → 419.9 TL
+2025-08-02 01:51:46,881 - INFO - ✅ Ürün işlendi: Nescafe 3'ü 1 Arada Fındık Aromalı 17,5 Gr 48'li... → 419.9 TL
+2025-08-02 01:51:46,882 - INFO - ✅ Ürün işlendi: Nescafe 3'ü 1 Arada Sütlü Köpüklü 17,5 gr 72'li... → 519.9 TL
+2025-08-02 01:51:46,884 - INFO - ✅ Ürün işlendi: Nescafe 3'ü 1 Arada Extra 48 x 16.5 gr... → 369.9 TL
+2025-08-02 01:51:46,885 - INFO - ✅ Ürün işlendi: Nescafe Gold Kahve Teneke Kutu 900 g... → 1612.87 TL
+2025-08-02 01:51:46,887 - INFO - ✅ Ürün işlendi: Nescafe Forte Filtre Kahve 500 gr 2 Adet + Nescafe Thermo mu... → 839.81 TL
+2025-08-02 01:51:46,888 - INFO - ✅ Ürün işlendi: Nescafe Gold Kahve Teneke Kutu 900 g Alımında + Gold Crema 8... → 1649.0 TL
+2025-08-02 01:51:46,889 - INFO - ✅ Ürün işlendi: Nescafé Classic Çözünebilir Kahve 200g Ekonomik Paket... → 329.67 TL
+2025-08-02 01:51:46,890 - INFO - ✅ Ürün işlendi: Nescafe Xpress Vanilla 250 ml 24'lü... → 1149.9 TL
+2025-08-02 01:51:46,892 - INFO - ✅ Ürün işlendi: Nescafé Classic Çözünebilir Kahve 600 g Ekonomik Paket... → 711.99 TL
+2025-08-02 01:51:46,893 - INFO - ✅ Ürün işlendi: Nescafé Gold Çözünebilir Kahve 200 g Ekonomik Paket Alımında... → 319.0 TL
+2025-08-02 01:51:46,894 - INFO - ✅ Ürün işlendi: Nescafe Xpress Caramel 250 ml 24'lü... → 1149.9 TL
+2025-08-02 01:51:46,895 - INFO - ✅ Ürün işlendi: Nescafe Xpress Chocolate 250 ml 24'lü... → 1149.9 TL
+2025-08-02 01:51:46,896 - INFO - ✅ Ürün işlendi: Nescafé Gold Çözünebilir Kahve 200g Cam Kavanoz... → 599.9 TL
+2025-08-02 01:51:46,897 - INFO - ✅ Ürün işlendi: Nescafe Xpress Original 250 ml 24'lü... → 1149.9 TL
+2025-08-02 01:51:46,899 - INFO - ✅ Ürün işlendi: Nescafé Classic Çözünebilir Kahve 2 g 200'lü... → 849.9 TL
+2025-08-02 01:51:46,900 - INFO - ✅ Ürün işlendi: Nescafe Xpress Zero Black 250 ml 24'lü... → 1149.9 TL
+2025-08-02 01:51:46,901 - INFO - ✅ Ürün işlendi: Nescafé Gold Çözünebilir Kahve 200 g Ekonomik Paket... → 309.47 TL
+2025-08-02 01:51:46,902 - INFO - ✅ Ürün işlendi: Nescafé Gold Çözünebilir Granül Kahve 600 g Ekonomik Paket... → 1318.38 TL
+2025-08-02 01:51:46,903 - INFO - ✅ Ürün işlendi: Nescafe Forte Filtre Kahve 500 g... → 419.9 TL
+2025-08-02 01:51:46,905 - INFO - ✅ Ürün işlendi: Nescafe Forte Filtre Kahve 250 g... → 234.5 TL
+2025-08-02 01:51:46,906 - INFO - ✅ Ürün işlendi: Nescafé Gold Cam Kavanoz 200 g Alımında  Gold Decaf Kafeinsi... → 599.0 TL
+2025-08-02 01:51:46,907 - INFO - ✅ Ürün işlendi: Ducat Gold Çözünebilir Kahve 500 gr... → 485.9 TL
+2025-08-02 01:51:46,908 - INFO - ✅ Ürün işlendi: Tchibo Gold Selection Çözünebilir Kahve Ekonomik Paket 150 g... → 299.9 TL
+2025-08-02 01:51:46,910 - INFO - ✅ Ürün işlendi: Jacobs Cronat Gold Hazır Kahve 500 gr... → 844.9 TL
+2025-08-02 01:51:46,911 - INFO - ✅ Ürün işlendi: Cafecup Gold Kahve 100 g... → 96.9 TL
+2025-08-02 01:51:46,912 - INFO - ✅ Ürün işlendi: Jacobs Monarch Gold Kahve 200 gr... → 449.9 TL
+2025-08-02 01:51:46,913 - INFO - ✅ Ürün işlendi: Tchibo Exclusive Decaf Kafeinsiz Gold Kahve 100 g... → 349.9 TL
+2025-08-02 01:51:46,914 - INFO - ✅ Ürün işlendi: Cafecup Klasik Kahve 100 g... → 89.9 TL
+2025-08-02 01:51:46,915 - INFO - ✅ Ürün işlendi: Ülker Cafe Crown 3ü1 Arada Fındıklı 17,5 g 40'lı... → 309.9 TL
+2025-08-02 01:51:46,916 - INFO - ✅ Ürün işlendi: Cafe Crown 3'ü 1 Arada Kahve 17,5 g x 40'lı... → 309.9 TL
+2025-08-02 01:51:46,917 - INFO - ✅ Ürün işlendi: Cafe Crown Colombia Filtre Kahve 250 g... → 239.9 TL
+2025-08-02 01:51:46,918 - INFO - ✅ Ürün işlendi: Cafe Crown Latin Blend Filtre Kahve 250 g... → 239.9 TL
+2025-08-02 01:51:46,920 - INFO - ✅ Ürün işlendi: Tchibo Gold Selection Öğütülmüş Filtre Kahve 250 g... → 239.66 TL
+2025-08-02 01:51:46,921 - INFO - ✅ Ürün işlendi: Caffe Milano 2'si 1 Arada Kahve 12 gr 20'li... → 99.5 TL
+2025-08-02 01:51:46,922 - INFO - ✅ Ürün işlendi: Avansas Coffee Enjoy Öğütülmüş Filtre Kahve 1000gr... → 812.3 TL
+2025-08-02 01:51:46,923 - INFO - ✅ Ürün işlendi: Caffe Milano 3'ü 1 Arada Kahve 18 gr 20'li... → 99.5 TL
+2025-08-02 01:51:46,924 - INFO - ✅ Ürün işlendi: Cafe Crown Special Filtre Kahve 250 g... → 229.9 TL
+2025-08-02 01:51:46,925 - INFO - ✅ Ürün işlendi: Mehmet Efendi Colombian Filtre Kahve 80 gr... → 79.9 TL
+2025-08-02 01:51:46,926 - INFO - ✅ Ürün işlendi: Avansas Coffee Enjoy Öğütülmüş Filtre Kahve  500gr... → 406.15 TL
+2025-08-02 01:51:46,927 - INFO - ✅ Ürün işlendi: Jacobs Monarch Aroma Filtre Kahve 500 gr... → 449.9 TL
+2025-08-02 01:51:46,928 - INFO - ✅ Ürün işlendi: Mehmet Efendi Colombian Filtre Kahve 250 g... → 218.4 TL
+2025-08-02 01:51:46,928 - INFO - ✅ Ürün işlendi: Mehmet Efendi Espresso Filtre Kahve 250 gr... → 237.9 TL
+2025-08-02 01:51:46,929 - INFO - ✅ Ürün işlendi: Cafe Crown 2'si 1 Arada Fındıklı 11 g 24'lü... → 189.9 TL
+2025-08-02 01:51:46,930 - INFO - ✅ Ürün işlendi: Jacobs Monarch Filtre Kahve 500 g... → 354.51 TL
+2025-08-02 01:51:46,931 - INFO - ✅ Ürün işlendi: Kurukahveci Mehmet Efendi Filtre Kahve Colombian 500 g... → 459.34 TL
+2025-08-02 01:51:46,932 - INFO - ✅ Ürün işlendi: Jacobs Monarch Filtre Kahve 500 g + Ülker Çikolatalı Gofret ... → 395.0 TL
+2025-08-02 01:51:46,932 - INFO - ✅ Ürün işlendi: Mehmet Efendi Guatemala Kafeinsiz Filtre Kahve 250 gr... → 259.9 TL
+2025-08-02 01:51:46,933 - INFO - ✅ Ürün işlendi: Cafe Crown 2'si 1 Arada 11 g 24'lü... → 189.9 TL
+2025-08-02 01:51:46,934 - INFO - ✅ Ürün işlendi: Mehmet Efendi Brazilian Filtre Kahve 250 gr... → 219.9 TL
+2025-08-02 01:51:46,936 - INFO - ✅ Ürün işlendi: Eduscho Strong Filtre Kahve 250 g... → 164.9 TL
+2025-08-02 01:51:46,936 - INFO - 🔗 Sayfa 2: https://www.avansas.com/search?q=nescafe+1+KG&sayfa=2
+2025-08-02 01:51:53,627 - INFO - ✅ Ürün işlendi: Eduscho Traditional Filtre Kahve 250 g... → 164.9 TL
+2025-08-02 01:51:53,629 - INFO - ✅ Ürün işlendi: Jacobs Monarch Filtre Kahve 250 gr... → 229.9 TL
+2025-08-02 01:51:53,630 - INFO - ✅ Ürün işlendi: Tchibo Professional Special Filtre Kahve 250 g... → 195.5 TL
+2025-08-02 01:51:53,631 - INFO - ✅ Ürün işlendi: Jacobs 3'ü 1 Arada Yumuşak Lezzet 18 gr 10'lu... → 99.9 TL
+2025-08-02 01:51:53,632 - INFO - ✅ Ürün işlendi: Jacobs 3'ü 1 Arada Yumuşak Lezzet 18 gr 40'lı... → 449.9 TL
+2025-08-02 01:51:53,633 - INFO - ✅ Ürün işlendi: Bialetti Delicato Öğütülmüş Filtre Kahve 250 g x 4 Paket + P... → 1476.02 TL
+2025-08-02 01:51:53,634 - INFO - ✅ Ürün işlendi: Tchibo Privat Kaffee African Blue Öğütülmüş Filtre Kahve 250... → 339.9 TL
+2025-08-02 01:51:53,636 - INFO - ✅ Ürün işlendi: Venado Luna Filtre Kahve 250 gr... → 239.9 TL
+2025-08-02 01:51:53,636 - INFO - ✅ Ürün işlendi: Nestle Coffee Mate Kahve Beyazlatıcı 2 kg Alımında + Gold Cr... → 628.99 TL
+2025-08-02 01:51:53,637 - INFO - ✅ Ürün işlendi: Nestle Coffee Mate Kahve Beyazlatıcı 2 kg... → 601.5 TL
+2025-08-02 01:51:53,638 - INFO - ✅ Ürün işlendi: Tchibo Gold Selection Çekirdek Kahve 1000 g... → 999.9 TL
+2025-08-02 01:51:53,639 - INFO - ✅ Ürün işlendi: Nestle Coffee Mate 900 g Eko Paket Kahve Beyazlatıcı... → 264.9 TL
+2025-08-02 01:51:53,640 - INFO - ✅ Ürün işlendi: Tchibo Gold Selection Çekirdek Kahve 500 g... → 549.9 TL
+2025-08-02 01:51:53,641 - INFO - ✅ Ürün işlendi: Nestle Coffee Mate 500 g Eko Paket Kahve Beyazlatıcı... → 169.33 TL
+2025-08-02 01:51:53,642 - INFO - ✅ Ürün işlendi: Nestle Coffee Mate Doypack Kahve Beyazlatıcı 200 g... → 98.9 TL
+2025-08-02 01:51:53,643 - INFO - ✅ Ürün işlendi: Bialetti Classico (Roma) Çekirdek Kahve 1000 g x 2 Paket + P... → 2118.0 TL
+2025-08-02 01:51:53,644 - INFO - ✅ Ürün işlendi: Tchibo Professional Caffe Crema Çekirdek Kahve 1000 g... → 1449.9 TL
+2025-08-02 01:51:53,644 - INFO - ✅ Ürün işlendi: Davidoff Cafe Creme Espresso Çekirdek Kahve 500 gr... → 535.5 TL
+2025-08-02 01:51:53,645 - INFO - ✅ Ürün işlendi: Nestle Coffee Mate Kahve Beyazlatıcı 400 g... → 229.9 TL
+2025-08-02 01:51:53,646 - INFO - ✅ Ürün işlendi: Tchibo Privat Kaffee Latin Grande Çekirdek Kahve 500g... → 599.9 TL
+2025-08-02 01:51:53,647 - INFO - ✅ Ürün işlendi: Venado Stella Çekirdek Kahve 1000 gr... → 889.9 TL
+2025-08-02 01:51:53,648 - INFO - ✅ Ürün işlendi: Mehmet Efendi Espresso Çekirdek Kahve 1000 gr... → 849.9 TL
+2025-08-02 01:51:53,649 - INFO - ✅ Ürün işlendi: Bialetti Pregiato (Milano) Çekirdek Kahve 1000 g x 2 Paket +... → 2238.01 TL
+2025-08-02 01:51:53,650 - INFO - ✅ Ürün işlendi: Venado Moreno Çekirdek Kahve 1000 gr... → 889.9 TL
+2025-08-02 01:51:53,651 - INFO - ✅ Ürün işlendi: Bialetti Classico (Roma) Çekirdek Kahve 1000 g... → 1059.0 TL
+2025-08-02 01:51:53,651 - INFO - ✅ Ürün işlendi: Mehmet Efendi Espresso Çekirdek Kahve 500 gr... → 419.9 TL
+2025-08-02 01:51:53,652 - INFO - ✅ Ürün işlendi: Mehmet Efendi Espresso No.3 Çekirdek Kahve 1000 gr... → 699.9 TL
+2025-08-02 01:51:53,653 - INFO - ✅ Ürün işlendi: Davidoff Espresso Çekirdek Kahve 500 gr... → 529.9 TL
+2025-08-02 01:51:53,654 - INFO - ✅ Ürün işlendi: Tchibo Professional Espresso Çekirdek Kahve 1000 g... → 999.9 TL
+2025-08-02 01:51:53,655 - INFO - ✅ Ürün işlendi: Cafe Crown Türk Kahvesi Teneke Kutu 250 g... → 159.9 TL
+2025-08-02 01:51:53,656 - INFO - ✅ Ürün işlendi: Nestle Sıcak Çikolata 1 kg... → 399.9 TL
+2025-08-02 01:51:53,657 - INFO - ✅ Ürün işlendi: Nestle Coffee-Mate Kahve Beyazlatıcı 5 g 100'lü... → 249.9 TL
+2025-08-02 01:51:53,658 - INFO - ✅ Ürün işlendi: Tchibo Professional Espresso Çekirdek Kahve 1000 g + Tchibo ... → 1059.9 TL
+2025-08-02 01:51:53,659 - INFO - ✅ Ürün işlendi: Eduscho Caffe Crema Strong Çekirdek Kahve 500 g... → 374.9 TL
+2025-08-02 01:51:53,660 - INFO - ✅ Ürün işlendi: Tchibo Barista Edition Caffè Crema Çekirdek Kahve 1000 g... → 1124.9 TL
+2025-08-02 01:51:53,661 - INFO - ✅ Ürün işlendi: Venado  Stella Çekirdek Kahve 250 gr... → 239.9 TL
+2025-08-02 01:51:53,662 - INFO - ✅ Ürün işlendi: Tchibo Privat Kaffee Brazil Mild Çekirdek Kahve 500g... → 599.9 TL
+2025-08-02 01:51:53,663 - INFO - ✅ Ürün işlendi: Bialetti Classico (Roma) Çekirdek Kahve 1000 g x 4 Paket + K... → 4235.99 TL
+2025-08-02 01:51:53,663 - INFO - ✅ Ürün işlendi: Cafecup Kahve Beyazlatıcı 200 g... → 44.9 TL
+2025-08-02 01:51:53,664 - INFO - ✅ Ürün işlendi: Venado Moreno Çekirdek Kahve 250 gr... → 239.9 TL
+2025-08-02 01:51:53,665 - INFO - ✅ Ürün işlendi: Eduscho Espresso Intenso Çekirdek Kahve 500 g... → 374.9 TL
+2025-08-02 01:51:53,666 - INFO - ✅ Ürün işlendi: Tchibo Barista Edition Espresso Çekirdek Kahve 1000 g... → 1124.9 TL
+2025-08-02 01:51:53,667 - INFO - ✅ Ürün işlendi: Bialetti Pregiato (Milano) Çekirdek Kahve 1000 g... → 1119.0 TL
+2025-08-02 01:51:53,668 - INFO - ✅ Ürün işlendi: Tchibo Professional Espresso Çekirdek Kahve 1000 g + Pınar Y... → 1179.9 TL
+2025-08-02 01:51:53,669 - INFO - ✅ Ürün işlendi: Kahve Dünyası Damla Sakızlı Türk Kahvesi 100 g... → 74.9 TL
+2025-08-02 01:51:53,670 - INFO - ✅ Ürün işlendi: Irmak Küp Şeker 1 kg 360'lı Paket... → 51.9 TL
+2025-08-02 01:51:53,671 - INFO - ✅ Ürün işlendi: Bialetti Pregiato (Milano) Çekirdek Kahve 1000 g x  4 Paket ... → 4476.01 TL
+2025-08-02 01:51:53,671 - INFO - ✅ Ürün işlendi: Bakkaliye Poşeti 15 cm x 30 cm 1 Kg... → 179.0 TL
+2025-08-02 01:51:53,672 - INFO - ✅ Ürün işlendi: Kahve Dünyası Orta Kavrulmuş Türk Kahvesi 100 g... → 79.9 TL
+2025-08-02 01:51:53,673 - INFO - ✅ Ürün işlendi: İstanbul Kahve Kreması 1000 g... → 184.9 TL
+2025-08-02 01:51:53,674 - INFO - ✅ Ürün işlendi: Ducat Kahve Kreması 1000 g... → 244.9 TL
+2025-08-02 01:51:53,675 - INFO - ✅ Ürün işlendi: Kahve Dünyası Madlen Çikolata 572 g... → 593.0 TL
+2025-08-02 01:51:53,676 - INFO - ✅ Ürün işlendi: Kent Olips Limon ve Portakal Aromalı Şeker 1 kg... → 264.62 TL
+2025-08-02 01:51:53,676 - INFO - ✅ Ürün işlendi: Bakkaliye Poşeti 23 cm x 36 cm 1 Kg... → 179.0 TL
+2025-08-02 01:51:53,677 - INFO - ✅ Ürün işlendi: Reis Dermason Fasulye 1 kg... → 118.0 TL
+2025-08-02 01:51:53,678 - INFO - ✅ Ürün işlendi: Tchibo Professional Special Filtre Kahve 250 g + Tchibo Türk... → 244.89 TL
+2025-08-02 01:51:53,679 - INFO - ✅ Ürün işlendi: Bakkaliye Poşeti 20 cm x 30 cm 1 Kg... → 179.0 TL
+2025-08-02 01:51:53,680 - INFO - ✅ Ürün işlendi: Irmak Toz Şeker 1 kg... → 46.9 TL
+2025-08-02 01:51:53,681 - INFO - ✅ Ürün işlendi: Tchibo Cafissimo Caffe Crema Colombia 10'lu... → 159.9 TL
+2025-08-02 01:51:53,681 - INFO - ✅ Ürün işlendi: Kent Olips Mentollü Şeker - 1 kg... → 264.62 TL
+2025-08-02 01:51:53,682 - INFO - 🔗 Sayfa 3: https://www.avansas.com/search?q=nescafe+1+KG&sayfa=3
+2025-08-02 01:51:59,995 - INFO - ✅ Ürün işlendi: Pekşeker Toz Şeker 1 kg... → 46.9 TL
+2025-08-02 01:51:59,998 - INFO - ✅ Ürün işlendi: Bakkaliye Poşeti 25 cm x 40 cm 1 Kg... → 179.0 TL
+2025-08-02 01:52:00,000 - INFO - ✅ Ürün işlendi: Kurukahveci Mehmet Efendi Türk Kahvesi Teneke Kutu 250 g... → 239.9 TL
+2025-08-02 01:52:00,002 - INFO - ✅ Ürün işlendi: Kurukahveci Mehmet Efendi Türk Kahvesi Teneke Kutu 500 g... → 375.9 TL
+2025-08-02 01:52:00,004 - INFO - ✅ Ürün işlendi: Tchibo Cafissimo Caffé Crema Kafeinsiz 10'lu Kapsül Kahve... → 149.9 TL
+2025-08-02 01:52:00,006 - INFO - ✅ Ürün işlendi: Pekşeker Küp Şeker 360'lı 1 kg... → 61.9 TL
+2025-08-02 01:52:00,008 - INFO - ✅ Ürün işlendi: Coffee Time Filtre Kahve Kağıdı 4 Numara 100'lü... → 79.9 TL
+2025-08-02 01:52:00,011 - INFO - ✅ Ürün işlendi: Jacobs Espresso 7 Classico Kapsül Kahve 10'lu (Nespresso Uyu... → 199.9 TL
+2025-08-02 01:52:00,014 - INFO - ✅ Ürün işlendi: Coffee Time Filtre Kahve Kağıdı No:4 40'lı... → 38.9 TL
+2025-08-02 01:52:00,016 - INFO - ✅ Ürün işlendi: Venado Clasico Kapsül Kahve 10'lu... → 179.9 TL
+2025-08-02 01:52:00,019 - INFO - ✅ Ürün işlendi: Kent Meybon Mini Meyveli Şeker 1 kg... → 245.0 TL
+2025-08-02 01:52:00,021 - INFO - ✅ Ürün işlendi: Tchibo Filtre Kahve Kağıdı No:4 80'li Paket... → 74.9 TL
+2025-08-02 01:52:00,022 - INFO - ✅ Ürün işlendi: Tchibo Caffissimo Caffè Crema Rich Aroma 10'lu Kapsül Kahve... → 149.9 TL
+2025-08-02 01:52:00,024 - INFO - ✅ Ürün işlendi: Tchibo Cafissimo Caffé Crema Fine Aroma 10'lu Kapsül Kahve... → 149.9 TL
+2025-08-02 01:52:00,025 - INFO - ✅ Ürün işlendi: Shazel Efendy Türk Kahvesi Teneke Kutu 250 g... → 154.9 TL
+2025-08-02 01:52:00,027 - INFO - ✅ Ürün işlendi: Coffee Time Filtre Kağıdı No:2  80'li... → 68.5 TL
+2025-08-02 01:52:00,028 - INFO - ✅ Ürün işlendi: Mehmet Efendi Colombian Çekirdek Kahve 1000 gr... → 829.9 TL
+2025-08-02 01:52:00,029 - INFO - 🔗 Sayfa 4: https://www.avansas.com/search?q=nescafe+1+KG&sayfa=4
+2025-08-02 01:52:07,332 - INFO - ✅ Ürün işlendi: Pekşeker Toz Şeker 1 kg... → 46.9 TL
+2025-08-02 01:52:07,335 - INFO - ✅ Ürün işlendi: Bakkaliye Poşeti 25 cm x 40 cm 1 Kg... → 179.0 TL
+2025-08-02 01:52:07,336 - INFO - ✅ Ürün işlendi: Kurukahveci Mehmet Efendi Türk Kahvesi Teneke Kutu 250 g... → 239.9 TL
+2025-08-02 01:52:07,338 - INFO - ✅ Ürün işlendi: Kurukahveci Mehmet Efendi Türk Kahvesi Teneke Kutu 500 g... → 375.9 TL
+2025-08-02 01:52:07,339 - INFO - ✅ Ürün işlendi: Tchibo Cafissimo Caffé Crema Kafeinsiz 10'lu Kapsül Kahve... → 149.9 TL
+2025-08-02 01:52:07,340 - INFO - ✅ Ürün işlendi: Pekşeker Küp Şeker 360'lı 1 kg... → 61.9 TL
+2025-08-02 01:52:07,341 - INFO - ✅ Ürün işlendi: Coffee Time Filtre Kahve Kağıdı 4 Numara 100'lü... → 79.9 TL
+2025-08-02 01:52:07,342 - INFO - ✅ Ürün işlendi: Jacobs Espresso 7 Classico Kapsül Kahve 10'lu (Nespresso Uyu... → 199.9 TL
+2025-08-02 01:52:07,343 - INFO - ✅ Ürün işlendi: Coffee Time Filtre Kahve Kağıdı No:4 40'lı... → 38.9 TL
+2025-08-02 01:52:07,344 - INFO - ✅ Ürün işlendi: Venado Clasico Kapsül Kahve 10'lu... → 179.9 TL
+2025-08-02 01:52:07,345 - INFO - ✅ Ürün işlendi: Kent Meybon Mini Meyveli Şeker 1 kg... → 245.0 TL
+2025-08-02 01:52:07,346 - INFO - ✅ Ürün işlendi: Tchibo Filtre Kahve Kağıdı No:4 80'li Paket... → 74.9 TL
+2025-08-02 01:52:07,347 - INFO - ✅ Ürün işlendi: Tchibo Caffissimo Caffè Crema Rich Aroma 10'lu Kapsül Kahve... → 149.9 TL
+2025-08-02 01:52:07,348 - INFO - ✅ Ürün işlendi: Tchibo Cafissimo Caffé Crema Fine Aroma 10'lu Kapsül Kahve... → 149.9 TL
+2025-08-02 01:52:07,348 - INFO - ✅ Ürün işlendi: Shazel Efendy Türk Kahvesi Teneke Kutu 250 g... → 154.9 TL
+2025-08-02 01:52:07,349 - INFO - ✅ Ürün işlendi: Coffee Time Filtre Kağıdı No:2  80'li... → 68.5 TL
+2025-08-02 01:52:07,350 - INFO - ✅ Ürün işlendi: Mehmet Efendi Colombian Çekirdek Kahve 1000 gr... → 829.9 TL
+2025-08-02 01:52:07,351 - INFO - 🔗 Sayfa 5: https://www.avansas.com/search?q=nescafe+1+KG&sayfa=5
+2025-08-02 01:52:14,453 - INFO - ✅ Ürün işlendi: Pekşeker Toz Şeker 1 kg... → 46.9 TL
+2025-08-02 01:52:14,455 - INFO - ✅ Ürün işlendi: Bakkaliye Poşeti 25 cm x 40 cm 1 Kg... → 179.0 TL
+2025-08-02 01:52:14,457 - INFO - ✅ Ürün işlendi: Kurukahveci Mehmet Efendi Türk Kahvesi Teneke Kutu 250 g... → 239.9 TL
+2025-08-02 01:52:14,458 - INFO - ✅ Ürün işlendi: Kurukahveci Mehmet Efendi Türk Kahvesi Teneke Kutu 500 g... → 375.9 TL
+2025-08-02 01:52:14,459 - INFO - ✅ Ürün işlendi: Tchibo Cafissimo Caffé Crema Kafeinsiz 10'lu Kapsül Kahve... → 149.9 TL
+2025-08-02 01:52:14,460 - INFO - ✅ Ürün işlendi: Pekşeker Küp Şeker 360'lı 1 kg... → 61.9 TL
+2025-08-02 01:52:14,461 - INFO - ✅ Ürün işlendi: Coffee Time Filtre Kahve Kağıdı 4 Numara 100'lü... → 79.9 TL
+2025-08-02 01:52:14,462 - INFO - ✅ Ürün işlendi: Jacobs Espresso 7 Classico Kapsül Kahve 10'lu (Nespresso Uyu... → 199.9 TL
+2025-08-02 01:52:14,463 - INFO - ✅ Ürün işlendi: Coffee Time Filtre Kahve Kağıdı No:4 40'lı... → 38.9 TL
+2025-08-02 01:52:14,464 - INFO - ✅ Ürün işlendi: Venado Clasico Kapsül Kahve 10'lu... → 179.9 TL
+2025-08-02 01:52:14,465 - INFO - ✅ Ürün işlendi: Kent Meybon Mini Meyveli Şeker 1 kg... → 245.0 TL
+2025-08-02 01:52:14,466 - INFO - ✅ Ürün işlendi: Tchibo Filtre Kahve Kağıdı No:4 80'li Paket... → 74.9 TL
+2025-08-02 01:52:14,468 - INFO - ✅ Ürün işlendi: Tchibo Caffissimo Caffè Crema Rich Aroma 10'lu Kapsül Kahve... → 149.9 TL
+2025-08-02 01:52:14,469 - INFO - ✅ Ürün işlendi: Tchibo Cafissimo Caffé Crema Fine Aroma 10'lu Kapsül Kahve... → 149.9 TL
+2025-08-02 01:52:14,470 - INFO - ✅ Ürün işlendi: Shazel Efendy Türk Kahvesi Teneke Kutu 250 g... → 154.9 TL
+2025-08-02 01:52:14,471 - INFO - ✅ Ürün işlendi: Coffee Time Filtre Kağıdı No:2  80'li... → 68.5 TL
+2025-08-02 01:52:14,472 - INFO - ✅ Ürün işlendi: Mehmet Efendi Colombian Çekirdek Kahve 1000 gr... → 829.9 TL
+2025-08-02 01:52:14,554 - INFO - ✅ Avansas bot tamamlandı.

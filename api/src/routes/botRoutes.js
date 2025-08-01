@@ -204,6 +204,85 @@ router.post("/start-hepsiburada-detail", async (req, res) => {
   }
 });
 
+/** Avansas */
+/**
+ * @swagger
+ * /api/start-avansas:
+ *   post:
+ *     summary: Avansas botunu çalıştırır
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               bot_name:
+ *                 type: string
+ *                 example: avansas
+ *     responses:
+ *       200:
+ *         description: Bot başarıyla çalıştırıldı
+ *       400:
+ *         description: Geçersiz istek
+ *       500:
+ *         description: Bot çalıştırılamadı
+ */
+router.post("/start-avansas", async (req, res) => {
+  const { bot_name } = req.body;
+  if (!bot_name) return res.status(400).json({ error: "Bot adı gerekli." });
+
+  try {
+    const response = await axios.post(`${BOT_SERVICE_URL}/run-avansas`, {
+      bot_name,
+    });
+    res.json(response.data);
+  } catch (err) {
+    console.error("❌ Avansas bot hatası:", err.message);
+    res.status(500).json({ error: "Bot çalıştırılamadı", detail: err.message });
+  }
+});
+
+/**
+ * @swagger
+ * /api/start-avansas-detail:
+ *   post:
+ *     summary: Avansas detay botunu çalıştırır
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               bot_name:
+ *                 type: string
+ *                 example: avansas
+ *     responses:
+ *       200:
+ *         description: Detay bot başarıyla çalıştırıldı
+ *       400:
+ *         description: Geçersiz istek
+ *       500:
+ *         description: Detay bot çalıştırılamadı
+ */
+router.post("/start-avansas-detail", async (req, res) => {
+  const { bot_name } = req.body;
+  if (!bot_name) return res.status(400).json({ error: "Bot adı gerekli." });
+
+  try {
+    const response = await axios.post(`${BOT_SERVICE_URL}/run-avansas-detail`, {
+      bot_name,
+    });
+    res.json(response.data);
+  } catch (err) {
+    console.error("❌ Avansas detay bot hatası:", err.message);
+    res
+      .status(500)
+      .json({ error: "Detay bot çalıştırılamadı", detail: err.message });
+  }
+});
+
 /**
  * @swagger
  * /api/health:

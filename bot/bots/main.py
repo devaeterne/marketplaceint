@@ -184,3 +184,53 @@ async def run_hepsiburada_detail(request: BotRequest = BotRequest(bot_name="heps
         return {"status": "error", "message": "Hepsiburada detay bot zaman aşımına uğradı (15 dakika)"}
     except Exception as e:
         return {"status": "error", "message": f"Hepsiburada detay bot hatası: {str(e)}"}
+    
+    # === Avansas ===
+@app.post("/run-avansas")
+async def run_hepsiburada(request: BotRequest = BotRequest(bot_name="avansas")):
+    bot_path = f"/app/bots/{request.bot_name}.py"
+    if not os.path.exists(bot_path):
+        raise HTTPException(status_code=404, detail=f"Avansas bot bulunamadı: {request.bot_name}.py")
+
+    try:
+        result = subprocess.run(
+            ["python3", bot_path],
+            capture_output=True,
+            text=True,
+            timeout=900
+        )
+        return {
+            "status": "success" if result.returncode == 0 else "error",
+            "stdout": result.stdout,
+            "stderr": result.stderr,
+            "bot": request.bot_name
+        }
+    except subprocess.TimeoutExpired:
+        return {"status": "error", "message": "Avansas bot zaman aşımına uğradı (15 dakika)"}
+    except Exception as e:
+        return {"status": "error", "message": f"Avansas bot hatası: {str(e)}"}
+
+
+@app.post("/run-avansas-detail")
+async def run_hepsiburada_detail(request: BotRequest = BotRequest(bot_name="avansas")):
+    detail_bot_path = f"/app/bots/{request.bot_name}Detay.py"
+    if not os.path.exists(detail_bot_path):
+        raise HTTPException(status_code=404, detail=f"Detay bot bulunamadı: {request.bot_name}Detay.py")
+
+    try:
+        result = subprocess.run(
+            ["python3", detail_bot_path],
+            capture_output=True,
+            text=True,
+            timeout=900
+        )
+        return {
+            "status": "success" if result.returncode == 0 else "error",
+            "stdout": result.stdout,
+            "stderr": result.stderr,
+            "bot": f"{request.bot_name}Detay"
+        }
+    except subprocess.TimeoutExpired:
+        return {"status": "error", "message": "Avansas detay bot zaman aşımına uğradı (15 dakika)"}
+    except Exception as e:
+        return {"status": "error", "message": f"Avansas detay bot hatası: {str(e)}"}
