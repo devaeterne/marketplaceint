@@ -23,6 +23,24 @@ services:
     networks:
       - marketplace_net
 
+  admin:
+    container_name: admin
+    build:
+      context: ./admin
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./admin:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - VITE_API_URL=http://localhost:5050
+      - VITE_BOT_URL=http://localhost:8000
+    depends_on:
+      - api
+    networks:
+      - marketplace_net
+
   bot:
     container_name: bot
     build:
