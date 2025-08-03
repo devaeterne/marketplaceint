@@ -1,28 +1,41 @@
-// src/routes/api.js
 import express from "express";
-import pool from "../../db.js";
+import cors from "cors"; // Bu satır var mı kontrol edin
+import dotenv from "dotenv";
+dotenv.config();
 
-const router = express.Router();
+import botRoutes from "./routes/botRoutes.js";
+import productRoutes from "./routes/productRoutes.js";
+import authRoutes from "./routes/auth.js";
+import setupSwagger from "../swagger.js";
+import createTables from "./initDb.js";
 
-// product-details endpoint
-router.get("/product-details/:productId", async (req, res) => {
-  const productId = req.params.productId;
-  try {
-    const { rows } = await pool.query(
-      `SELECT product_id, description, store_name, shipping_cost, shipping_info, rating, created_at, updated_at
-       FROM product_details WHERE product_id = $1`,
-      [productId]
-    );
-    if (rows.length === 0) {
-      return res.status(404).json({ error: "Ürün detayı bulunamadı." });
-    }
-    res.json(rows[0]);
-  } catch (error) {
-    console.error("DB error:", error);
-    res.status(500).json({ error: "Veritabanı hatası" });
-  }
+const app = express();
+
+// CORS ayarı - bu çok önemli!
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "http://127.0.0.1:3000"],
+    credentials: true,
+  })
+);
+
+app.use(express.json());
+
+await createTables();
+
+// Routes
+app.use("/api", botRoutes);
+app.use("/api", productRoutes);
+app.use("/api", authRoutes);
+
+setupSwagger(app);
+
+const PORT = process.env.PORT || 5050;
+app.listen(PORT, () => {
+  console.log(`✅ API aktif: http://localhost:${PORT}`);
+  console.log(`📚 Swagger UI: http://localhost:${PORT}/api-docs`);
+  console.log(`🔐 Auth endpoints:`);
+  console.log(`   POST /api/auth/signup`);
+  console.log(`   POST /api/auth/signin`);
+  console.log(`   GET  /api/auth/verify`);
 });
-
-// Diğer API endpointlerini de buraya ekleyebilirsin.
-
-export default router;

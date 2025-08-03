@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
+RUN mkdir -p /app/logs && chmod 777 /app/logs
 COPY package*.json ./
 RUN npm install
 

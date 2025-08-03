@@ -2,17 +2,16 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Package dosyalarını kopyala
-COPY package*.json ./
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
 
-# Bağımlılıkları kur
+COPY package*.json ./
 RUN npm install
 
-# Kaynak kodunu kopyala
 COPY . .
 
-# Port
-EXPOSE 3000
+# Inject env into .env file for Vite to access at build
+RUN echo "VITE_API_URL=$VITE_API_URL" > .env
 
-# Vite dev server
+EXPOSE 3000
 CMD ["npm", "run", "dev"]

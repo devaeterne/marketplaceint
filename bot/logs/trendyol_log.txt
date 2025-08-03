@@ -1,0 +1,79 @@
+2025-08-02 17:53:53,689 - INFO - 🔹 Trendyol bot başlatıldı...
+2025-08-02 17:53:54,316 - INFO - ✅ Database bağlantısı başarılı
+2025-08-02 17:53:54,317 - INFO - 🔍 'nescafe 1 KG' için ürünler çekiliyor...
+2025-08-02 17:53:54,318 - INFO - 🔗 Sayfa 1: https://www.trendyol.com/sr?q=nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=1
+2025-08-02 17:54:01,354 - INFO - ✅ Sayfa 1'da 24 ürün bulundu
+2025-08-02 17:54:01,367 - INFO - ✅ Kaydedildi: Sıcak Çikolata 1kg... - 395.0 TL
+2025-08-02 17:54:01,369 - INFO - ✅ Kaydedildi: 3ü 1 Arada Original... - 394.0 TL
+2025-08-02 17:54:01,370 - INFO - ✅ Kaydedildi: Nestle 12525173 Sıcak... - 399.0 TL
+2025-08-02 17:54:01,371 - INFO - ✅ Kaydedildi: Nescafé 3ü1 Arada 1... - 462.9 TL
+2025-08-02 17:54:01,373 - INFO - ✅ Kaydedildi: Nestle Nescafe 3 ü 1... - 470.0 TL
+2025-08-02 17:54:01,374 - INFO - ✅ Kaydedildi: 3 Ü 1 Arada Sütlu... - 574.9 TL
+2025-08-02 17:54:01,375 - INFO - ✅ Kaydedildi: 3u1 Arada 1kg... - 599.9 TL
+2025-08-02 17:54:01,376 - INFO - ✅ Kaydedildi: Superiore Çekirdek... - 765.0 TL
+2025-08-02 17:54:01,378 - INFO - ✅ Kaydedildi: Gold Granül (dökme)... - 788.0 TL
+2025-08-02 17:54:01,379 - INFO - ✅ Kaydedildi: superiore çekirdek... - 799.0 TL
+2025-08-02 17:54:01,380 - INFO - ✅ Kaydedildi: Nestle Coffee Mate... - 805.99 TL
+2025-08-02 17:54:01,381 - INFO - ✅ Kaydedildi: Gold Granül 1. Kalite... - 819.9 TL
+2025-08-02 17:54:01,382 - INFO - ✅ Kaydedildi: Gold Granür Kahve... - 832.5 TL
+2025-08-02 17:54:01,383 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 915.0 TL
+2025-08-02 17:54:01,385 - INFO - ✅ Kaydedildi: Gold Granül Dökme... - 949.99 TL
+2025-08-02 17:54:01,386 - INFO - ✅ Kaydedildi: Espresso Superiore... - 996.35 TL
+2025-08-02 17:54:01,387 - INFO - ✅ Kaydedildi: Nescafé 3'ü 1 Arada... - 1053.0 TL
+2025-08-02 17:54:01,388 - INFO - ✅ Kaydedildi: class... - 1130.0 TL
+2025-08-02 17:54:01,389 - INFO - ✅ Kaydedildi: Classıc 1kg Tin... - 1149.0 TL
+2025-08-02 17:54:01,390 - INFO - ✅ Kaydedildi: Classic Hazır Kahve... - 1173.55 TL
+2025-08-02 17:54:01,391 - INFO - ✅ Kaydedildi: Classic 1 kg -Kahve... - 1225.5 TL
+2025-08-02 17:54:01,392 - INFO - ✅ Kaydedildi: Classic 1kg + Coffee... - 1230.0 TL
+2025-08-02 17:54:01,393 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg... - 1250.0 TL
+2025-08-02 17:54:01,394 - INFO - ✅ Kaydedildi: Classic 1 Kg. Tin Box... - 1250.9 TL
+2025-08-02 17:54:01,394 - INFO - 🔗 Sayfa 2: https://www.trendyol.com/sr?q=nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=2
+2025-08-02 17:54:07,636 - INFO - ✅ Sayfa 2'da 24 ürün bulundu
+2025-08-02 17:54:07,640 - INFO - ✅ Kaydedildi: Espresso Superiore... - 1289.55 TL
+2025-08-02 17:54:07,642 - INFO - ✅ Kaydedildi: Classic Teneke (1kg)... - 1299.99 TL
+2025-08-02 17:54:07,644 - INFO - ✅ Kaydedildi: Classıc 1kg Teneke... - 1341.4 TL
+2025-08-02 17:54:07,646 - INFO - ✅ Kaydedildi: Classic Hazır Granül... - 1350.0 TL
+2025-08-02 17:54:07,648 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 1373.74 TL
+2025-08-02 17:54:07,650 - INFO - ✅ Kaydedildi: Classic 1000 Gr Kahve... - 1399.55 TL
+2025-08-02 17:54:07,652 - INFO - ✅ Kaydedildi: Classic Kahve Teneke... - 1395.0 TL
+2025-08-02 17:54:07,654 - INFO - ✅ Kaydedildi: Nescafé 3'ü 1 Arada... - 1404.0 TL
+2025-08-02 17:54:07,659 - INFO - ✅ Kaydedildi: Nescafé 3 Ü 1 Arada 1... - 1499.9 TL
+2025-08-02 17:54:07,661 - INFO - ✅ Kaydedildi: Superiore 1000 Gram... - 1505.0 TL
+2025-08-02 17:54:07,663 - INFO - ✅ Kaydedildi: Classic Teneke Kutu 1... - 1509.0 TL
+2025-08-02 17:54:07,666 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 1525.0 TL
+2025-08-02 17:54:07,668 - INFO - ✅ Kaydedildi: Classic Hazır Kahve 1... - 1540.0 TL
+2025-08-02 17:54:07,671 - INFO - ✅ Kaydedildi: Classic Çözünebilir... - 1559.0 TL
+2025-08-02 17:54:07,673 - INFO - ✅ Kaydedildi: Brasile %100 Arabica... - 1625.0 TL
+2025-08-02 17:54:07,675 - INFO - ✅ Kaydedildi: Classic 1 KG Teneke... - 1919.0 TL
+2025-08-02 17:54:07,676 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 1925.0 TL
+2025-08-02 17:54:07,678 - INFO - ✅ Kaydedildi: Classic 1kg + Coffee... - 1940.0 TL
+2025-08-02 17:54:07,680 - INFO - ✅ Kaydedildi: Classic 1kg ve Coffe... - 1997.0 TL
+2025-08-02 17:54:07,682 - INFO - ✅ Kaydedildi: Classic 1 Kg+nestle... - 2000.0 TL
+2025-08-02 17:54:07,684 - INFO - ✅ Kaydedildi: Classic Kahve 1 kg +... - 2375.0 TL
+2025-08-02 17:54:07,686 - INFO - ✅ Kaydedildi: Classic 1 Kg. +... - 2400.0 TL
+2025-08-02 17:54:07,687 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 2413.77 TL
+2025-08-02 17:54:07,689 - INFO - ✅ Kaydedildi: Gold Granül Kahve 900... - 2460.7 TL
+2025-08-02 17:54:07,689 - INFO - 🔗 Sayfa 3: https://www.trendyol.com/sr?q=nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=3
+2025-08-02 17:54:14,322 - INFO - ✅ Sayfa 3'da 17 ürün bulundu
+2025-08-02 17:54:14,325 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 2514.45 TL
+2025-08-02 17:54:14,327 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg x... - 2558.8 TL
+2025-08-02 17:54:14,328 - INFO - ✅ Kaydedildi: Clasic 1 kg ve  Coffe... - 2740.0 TL
+2025-08-02 17:54:14,330 - INFO - ✅ Kaydedildi: Gold Kahve 900 gr... - 2849.55 TL
+2025-08-02 17:54:14,331 - INFO - ✅ Kaydedildi: Classıc 1kg x 2... - 2865.0 TL
+2025-08-02 17:54:14,332 - INFO - ✅ Kaydedildi: Gold Teneke 900 gr -... - 3470.77 TL
+2025-08-02 17:54:14,333 - INFO - ✅ Kaydedildi: Gold 900 G + Classic... - 3684.09 TL
+2025-08-02 17:54:14,334 - INFO - ✅ Kaydedildi: Gold 900 gr+ Classic... - 4000.0 TL
+2025-08-02 17:54:14,335 - INFO - ✅ Kaydedildi: Gold 900 Gr + Classic... - 4540.0 TL
+2025-08-02 17:54:14,336 - INFO - ✅ Kaydedildi: 6 Adet Superiore... - 4580.0 TL
+2025-08-02 17:54:14,337 - INFO - ✅ Kaydedildi: Classic Hazır Kahve 1... - 4685.0 TL
+2025-08-02 17:54:14,338 - INFO - ✅ Kaydedildi: Classıc 1kgx 3 adet.... - 5900.0 TL
+2025-08-02 17:54:14,339 - INFO - ✅ Kaydedildi: Classic Çözünebilir... - 6250.0 TL
+2025-08-02 17:54:14,340 - INFO - ✅ Kaydedildi: CLASSİC 1 KG X 6 ADET... - 6990.0 TL
+2025-08-02 17:54:14,341 - INFO - ✅ Kaydedildi: Nescafé Superiore... - 7500.0 TL
+2025-08-02 17:54:14,342 - INFO - ✅ Kaydedildi: Classıc 1kg x4... - 7900.0 TL
+2025-08-02 17:54:14,343 - INFO - ✅ Kaydedildi: Classıc 6x1kg Teneke... - 11500.0 TL
+2025-08-02 17:54:14,343 - INFO - 🔗 Sayfa 4: https://www.trendyol.com/sr?q=nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=4
+2025-08-02 17:54:20,460 - WARNING - ⚠️ Sayfa 4 için ürün bulunamadı
+2025-08-02 17:54:20,461 - INFO - 🔗 Sayfa 5: https://www.trendyol.com/sr?q=nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=5
+2025-08-02 17:54:26,637 - WARNING - ⚠️ Sayfa 5 için ürün bulunamadı
+2025-08-02 17:54:26,708 - INFO - ✅ Trendyol bot başarıyla tamamlandı.
