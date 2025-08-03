@@ -1,32 +1,35 @@
 import express from "express";
-import cors from "cors"; // Bu satır var mı kontrol edin
+import cors from "cors";
 import dotenv from "dotenv";
-import searchRoutes from "./routes/searchRoutes.js";
-dotenv.config();
-
 import botRoutes from "./routes/botRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import authRoutes from "./routes/auth.js";
+import searchRoutes from "./routes/searchRoutes.js";
 import setupSwagger from "../swagger.js";
 import createTables from "./initDb.js";
 
+dotenv.config();
+
 const app = express();
 
-// CORS ayarı - bu çok önemli!
+// 🚨 CORS Ayarları – Admin container IP’si için genişletilebilir
 app.use(
   cors({
     origin: [
       "http://localhost:3000",
       "http://127.0.0.1:3000",
       "http://admin:3000",
-      "http://172.20.0.5:3000", // veya senin admin container IP’si
+      "http://172.20.0.5:3000", // Admin container IP
+      "http://admin", // DNS ile çözülüyorsa
     ],
     credentials: true,
   })
 );
 
+// Middleware
 app.use(express.json());
 
+// Veritabanı tablolarını oluştur
 await createTables();
 
 // Routes
@@ -35,8 +38,10 @@ app.use("/api", productRoutes);
 app.use("/api", authRoutes);
 app.use("/api", searchRoutes);
 
+// Swagger UI setup
 setupSwagger(app);
 
+// Sunucu başlat
 const PORT = process.env.PORT || 5050;
 app.listen(PORT, () => {
   console.log(`✅ API aktif: http://localhost:${PORT}`);

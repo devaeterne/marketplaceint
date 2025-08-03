@@ -1,68 +1,34 @@
 import express from "express";
-import fs from "fs";
-import path from "path";
+import axios from "axios";
 import { authenticateToken } from "../middleware/auth.js";
 
 const router = express.Router();
-const TERMS_FILE = path.resolve("bot/search_terms/terms.txt");
 
-// GET: Arama kelimelerini getir
-router.get("/search-terms", authenticateToken, (req, res) => {
+const BOT_SERVICE_URL = process.env.BOT_SERVICE_URL || "http://bot:8000";
+
+// GET terms
+router.get("/terms", authenticateToken, async (req, res) => {
   try {
-    const content = fs.readFileSync(TERMS_FILE, "utf-8");
-    const terms = content.split("\n").filter(Boolean);
-    res.json({ success: true, terms });
+    const response = await axios.get(`${BOT_SERVICE_URL}/terms`);
+    res.json(response.data);
   } catch (err) {
     res.status(500).json({
       success: false,
-      message: "Kelimeler okunamadı",
+      message: "Terimler alınamadı",
       error: err.message,
     });
   }
 });
 
-// POST: Yeni bir arama kelimesi ekle
-router.post("/search-terms", authenticateToken, (req, res) => {
-  const { term } = req.body;
-  if (!term || typeof term !== "string") {
-    return res
-      .status(400)
-      .json({ success: false, message: "Geçerli bir arama kelimesi gerekli" });
-  }
-
+// POST terms
+router.post("/terms", authenticateToken, async (req, res) => {
   try {
-    fs.appendFileSync(TERMS_FILE, `${term.trim()}\n`);
-    res.json({ success: true, message: "Kelime eklendi" });
+    const response = await axios.post(`${BOT_SERVICE_URL}/terms`, req.body);
+    res.json(response.data);
   } catch (err) {
     res.status(500).json({
       success: false,
-      message: "Kelime eklenemedi",
-      error: err.message,
-    });
-  }
-});
-
-// PUT: Tüm arama kelimelerini güncelle
-router.put("/search-terms", authenticateToken, (req, res) => {
-  const { terms } = req.body;
-  if (!Array.isArray(terms)) {
-    return res
-      .status(400)
-      .json({ success: false, message: "terms bir dizi olmalı" });
-  }
-
-  try {
-    const content =
-      terms
-        .map((t) => t.trim())
-        .filter(Boolean)
-        .join("\n") + "\n";
-    fs.writeFileSync(TERMS_FILE, content);
-    res.json({ success: true, message: "Arama kelimeleri güncellendi" });
-  } catch (err) {
-    res.status(500).json({
-      success: false,
-      message: "Dosya güncellenemedi",
+      message: "Terimler güncellenemedi",
       error: err.message,
     });
   }

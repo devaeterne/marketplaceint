@@ -27,32 +27,35 @@ const logBotActivity = async (botName, message) => {
   fs.writeFileSync(LOG_FILE, JSON.stringify(logs.slice(0, 1000), null, 2));
 };
 
-// GET: Terimleri al
+// --- GET TERMS ---
 router.get("/terms", authenticateToken, async (req, res) => {
   try {
     const response = await axios.get(`${BOT_SERVICE_URL}/terms`);
     res.json(response.data);
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: "Bot servisinden terimler alınamadı",
-      error: error.message,
-    });
+  } catch (err) {
+    res
+      .status(500)
+      .json({
+        success: false,
+        message: "Terimler alınamadı",
+        error: err.message,
+      });
   }
 });
 
-// POST: Yeni terim ekle
+// --- POST / UPDATE TERMS ---
 router.post("/terms", authenticateToken, async (req, res) => {
   try {
-    const { newTerm } = req.body;
-    const response = await axios.post(`${BOT_SERVICE_URL}/terms`, { newTerm });
+    const response = await axios.post(`${BOT_SERVICE_URL}/terms`, req.body);
     res.json(response.data);
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: "Bot servisine terim gönderilemedi",
-      error: error.message,
-    });
+  } catch (err) {
+    res
+      .status(500)
+      .json({
+        success: false,
+        message: "Terimler güncellenemedi",
+        error: err.message,
+      });
   }
 });
 
