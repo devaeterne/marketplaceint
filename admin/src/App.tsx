@@ -1,3 +1,4 @@
+// src/App.tsx
 import { NotificationProvider } from "./context/NotificationContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import { AuthProvider } from "./context/AuthContext";
@@ -21,6 +22,7 @@ import Blank from "./pages/Blank";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
+import ProductPage from "./pages/product";
 
 export default function App() {
   return (
@@ -45,6 +47,7 @@ export default function App() {
               <Route path="/videos" element={<Videos />} />
               <Route path="/line-chart" element={<LineChart />} />
               <Route path="/bar-chart" element={<BarChart />} />
+              <Route path="/products" element={<ProductPage />} />
             </Route>
 
           {/* Auth Layout - Public */}
