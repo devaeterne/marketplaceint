@@ -13,10 +13,11 @@ interface BotStatus {
 interface BotControlPanelProps {
   bots: BotStatus[];
   runBot: (botName: string) => Promise<boolean>;
+  runDetailBot: (botName: string) => Promise<boolean>;
   stopBot: (botName: string) => void;
 }
 
-const BotControlPanel: React.FC<BotControlPanelProps> = ({ bots, runBot, stopBot }) => {
+const BotControlPanel: React.FC<BotControlPanelProps> = ({ bots, runBot, runDetailBot, stopBot }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -45,18 +46,15 @@ const BotControlPanel: React.FC<BotControlPanelProps> = ({ bots, runBot, stopBot
     );
   };
 
-  const getRunningBotsCount = () => bots.filter(bot => bot.isRunning).length;
-  const getTotalBots = () => bots.length;
-
   const handleStart = async (botName: string) => {
     const success = await runBot(botName);
     if (success) {
-      const wantsDetail = confirm(`${botName} detay botunu da başlatmak ister misiniz?`);
-      if (wantsDetail) {
-        const detailName = `${botName}-detail`.toLowerCase();
-        await runBot(detailName);
-      }
+      
     }
+  };
+
+  const handleStartDetail = async (botName: string) => {
+    await runDetailBot(botName);
   };
 
   return (
@@ -98,9 +96,14 @@ const BotControlPanel: React.FC<BotControlPanelProps> = ({ bots, runBot, stopBot
                         Durdur
                       </button>
                     ) : (
-                      <button onClick={() => handleStart(bot.name)} className="px-3 py-1 text-xs font-medium text-green-600 bg-green-100 rounded-full hover:bg-green-200 dark:bg-green-900/30 dark:text-green-400 transition-colors">
-                        Başlat
-                      </button>
+                      <>
+                        <button onClick={() => handleStart(bot.name)} className="px-3 py-1 text-xs font-medium text-green-600 bg-green-100 rounded-full hover:bg-green-200 dark:bg-green-900/30 dark:text-green-400 transition-colors">
+                          Başlat
+                        </button>
+                        <button onClick={() => handleStartDetail(bot.name)} className="px-3 py-1 text-xs font-medium text-blue-600 bg-blue-100 rounded-full hover:bg-blue-200 dark:bg-blue-900/30 dark:text-blue-400 transition-colors">
+                          Detay
+                        </button>
+                      </>
                     )}
                   </div>
                 </div>

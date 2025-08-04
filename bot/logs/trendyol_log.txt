@@ -77,3 +77,1233 @@
 2025-08-02 17:54:20,461 - INFO - 🔗 Sayfa 5: https://www.trendyol.com/sr?q=nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=5
 2025-08-02 17:54:26,637 - WARNING - ⚠️ Sayfa 5 için ürün bulunamadı
 2025-08-02 17:54:26,708 - INFO - ✅ Trendyol bot başarıyla tamamlandı.
+2025-08-04 01:41:29,102 - INFO - 🔹 Trendyol bot başlatıldı...
+2025-08-04 01:41:29,679 - INFO - ✅ Database bağlantısı başarılı
+2025-08-04 01:41:29,680 - INFO - 🔍 'Jacobs Filtre Kahve' için ürünler çekiliyor...
+2025-08-04 01:41:29,681 - INFO - 🔗 Sayfa 1: https://www.trendyol.com/sr?q=Jacobs+Filtre+Kahve&os=1&sst=PRICE_BY_ASC&pi=1
+2025-08-04 01:41:36,416 - INFO - ✅ Sayfa 1'da 24 ürün bulundu
+2025-08-04 01:41:36,423 - INFO - ✅ Kaydedildi: Selection Filtre Kahve... - 218.0 TL
+2025-08-04 01:41:36,424 - INFO - ✅ Kaydedildi: Selection Filtre Kahve... - 225.95 TL
+2025-08-04 01:41:36,425 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 230.0 TL
+2025-08-04 01:41:36,427 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 235.0 TL
+2025-08-04 01:41:36,428 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 241.9 TL
+2025-08-04 01:41:36,430 - INFO - ✅ Kaydedildi: Barista Classic Filtre... - 245.0 TL
+2025-08-04 01:41:36,431 - INFO - ✅ Kaydedildi: Barista Yoğun Filtre... - 256.9 TL
+2025-08-04 01:41:36,433 - INFO - ✅ Kaydedildi: Barista Medium Filtre... - 256.9 TL
+2025-08-04 01:41:36,434 - INFO - ✅ Kaydedildi: Monarch Signature... - 279.95 TL
+2025-08-04 01:41:36,435 - INFO - ✅ Kaydedildi: Selection Filtre Kahve... - 295.25 TL
+2025-08-04 01:41:36,436 - INFO - ✅ Kaydedildi: Monarch Espresso... - 349.9 TL
+2025-08-04 01:41:36,438 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 352.9 TL
+2025-08-04 01:41:36,439 - INFO - ✅ Kaydedildi: BARISTA EDITION... - 360.0 TL
+2025-08-04 01:41:36,441 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 375.9 TL
+2025-08-04 01:41:36,442 - INFO - ✅ Kaydedildi: Selection Filtre Kahve... - 375.9 TL
+2025-08-04 01:41:36,443 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 375.9 TL
+2025-08-04 01:41:36,444 - INFO - ✅ Kaydedildi: Monarch Espresso... - 390.9 TL
+2025-08-04 01:41:36,445 - INFO - ✅ Kaydedildi: Monarch Fıltre Kahve... - 395.9 TL
+2025-08-04 01:41:36,447 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 399.99 TL
+2025-08-04 01:41:36,448 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 400.0 TL
+2025-08-04 01:41:36,449 - INFO - ✅ Kaydedildi: Cafe Crema Çekirdek... - 409.0 TL
+2025-08-04 01:41:36,451 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 420.49 TL
+2025-08-04 01:41:36,452 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve 2... - 429.8 TL
+2025-08-04 01:41:36,454 - INFO - ✅ Kaydedildi: Café Espresso Çekirdek... - 439.99 TL
+2025-08-04 01:41:36,454 - INFO - 🔗 Sayfa 2: https://www.trendyol.com/sr?q=Jacobs+Filtre+Kahve&os=1&sst=PRICE_BY_ASC&pi=2
+2025-08-04 01:41:42,739 - INFO - ✅ Sayfa 2'da 24 ürün bulundu
+2025-08-04 01:41:42,742 - INFO - ✅ Kaydedildi: Monarch Aroma Filtre... - 449.9 TL
+2025-08-04 01:41:42,745 - INFO - ✅ Kaydedildi: Monarch Aromalı Filtre... - 449.9 TL
+2025-08-04 01:41:42,747 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 469.0 TL
+2025-08-04 01:41:42,748 - INFO - ✅ Kaydedildi: Kaffeeplus Kahve... - 475.0 TL
+2025-08-04 01:41:42,749 - INFO - ✅ Kaydedildi: Kaffeeplus Kahve... - 517.05 TL
+2025-08-04 01:41:42,751 - INFO - ✅ Kaydedildi: Filtre Kahve 2x250gr... - 544.0 TL
+2025-08-04 01:41:42,752 - INFO - ✅ Kaydedildi: Barista Filtre Kahve... - 576.9 TL
+2025-08-04 01:41:42,754 - INFO - ✅ Kaydedildi: Maxwell House Mild... - 599.95 TL
+2025-08-04 01:41:42,755 - INFO - ✅ Kaydedildi: Maxwell House Mild... - 650.0 TL
+2025-08-04 01:41:42,756 - INFO - ✅ Kaydedildi: Selection Filtre Kahve... - 654.9 TL
+2025-08-04 01:41:42,757 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 654.9 TL
+2025-08-04 01:41:42,759 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 654.9 TL
+2025-08-04 01:41:42,760 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 675.9 TL
+2025-08-04 01:41:42,762 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 675.9 TL
+2025-08-04 01:41:42,763 - INFO - ✅ Kaydedildi: 3 Ü 1 Arada Gold Yoğun... - 679.95 TL
+2025-08-04 01:41:42,765 - INFO - ✅ Kaydedildi: Intensive Espresso... - 684.0 TL
+2025-08-04 01:41:42,766 - INFO - ✅ Kaydedildi: Banquet Medium... - 686.0 TL
+2025-08-04 01:41:42,767 - INFO - ✅ Kaydedildi: Barista Medium Filtre... - 696.9 TL
+2025-08-04 01:41:42,769 - INFO - ✅ Kaydedildi: Barista Intense Filtre... - 736.9 TL
+2025-08-04 01:41:42,770 - INFO - ✅ Kaydedildi: Barista Classic Filtre... - 736.9 TL
+2025-08-04 01:41:42,771 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 699.9 TL
+2025-08-04 01:41:42,773 - INFO - ✅ Kaydedildi: Selection Filtre Kahve... - 714.9 TL
+2025-08-04 01:41:42,774 - INFO - ✅ Kaydedildi: Banquet Medium... - 717.9 TL
+2025-08-04 01:41:42,775 - INFO - ✅ Kaydedildi: Monarch 500 Gr +... - 728.9 TL
+2025-08-04 01:41:42,775 - INFO - 🔗 Sayfa 3: https://www.trendyol.com/sr?q=Jacobs+Filtre+Kahve&os=1&sst=PRICE_BY_ASC&pi=3
+2025-08-04 01:41:49,149 - INFO - ✅ Sayfa 3'da 24 ürün bulundu
+2025-08-04 01:41:49,153 - INFO - ✅ Kaydedildi: Jacobs Monarch Filtre... - 768.9 TL
+2025-08-04 01:41:49,155 - INFO - ✅ Kaydedildi: Monarch Aroma Filtre... - 773.17 TL
+2025-08-04 01:41:49,158 - INFO - ✅ Kaydedildi: Cafe Crema Çekirdek... - 799.9 TL
+2025-08-04 01:41:49,164 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 791.9 TL
+2025-08-04 01:41:49,171 - INFO - ✅ Kaydedildi: Çekirdek Kahve Tanışma... - 799.99 TL
+2025-08-04 01:41:49,174 - INFO - ✅ Kaydedildi: Monarch Aromalı Filtre... - 803.9 TL
+2025-08-04 01:41:49,175 - INFO - ✅ Kaydedildi: Monarch Aromalı Filtre... - 803.9 TL
+2025-08-04 01:41:49,176 - INFO - ✅ Kaydedildi: Monarch Aromalı Filtre... - 803.9 TL
+2025-08-04 01:41:49,178 - INFO - ✅ Kaydedildi: Café Espresso Çekirdek... - 804.9 TL
+2025-08-04 01:41:49,180 - INFO - ✅ Kaydedildi: Monarch Gold Kahve 400... - 808.9 TL
+2025-08-04 01:41:49,182 - INFO - ✅ Kaydedildi: Monarch Gold Kahve 400... - 813.9 TL
+2025-08-04 01:41:49,183 - INFO - ✅ Kaydedildi: Gold Instant... - 825.0 TL
+2025-08-04 01:41:49,184 - INFO - ✅ Kaydedildi: Barista Editions... - 839.9 TL
+2025-08-04 01:41:49,185 - INFO - ✅ Kaydedildi: Monarch Espresso... - 848.99 TL
+2025-08-04 01:41:49,186 - INFO - ✅ Kaydedildi: Cronat Gold Instant... - 849.9 TL
+2025-08-04 01:41:49,188 - INFO - ✅ Kaydedildi: Selection Filtre Kahve... - 850.9 TL
+2025-08-04 01:41:49,189 - INFO - ✅ Kaydedildi: Barista Editions... - 869.0 TL
+2025-08-04 01:41:49,190 - INFO - ✅ Kaydedildi: Selection Filtre Kahve... - 879.9 TL
+2025-08-04 01:41:49,192 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 890.0 TL
+2025-08-04 01:41:49,193 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 900.9 TL
+2025-08-04 01:41:49,194 - INFO - ✅ Kaydedildi: Monarch Gold Kahve 600... - 954.9 TL
+2025-08-04 01:41:49,196 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 970.19 TL
+2025-08-04 01:41:49,197 - INFO - ✅ Kaydedildi: Banquet Medium... - 1011.77 TL
+2025-08-04 01:41:49,198 - INFO - ✅ Kaydedildi: Banquet Medium... - 1154.3 TL
+2025-08-04 01:41:49,199 - INFO - 🔗 Sayfa 4: https://www.trendyol.com/sr?q=Jacobs+Filtre+Kahve&os=1&sst=PRICE_BY_ASC&pi=4
+2025-08-04 01:41:55,346 - INFO - ✅ Sayfa 4'da 24 ürün bulundu
+2025-08-04 01:41:55,349 - INFO - ✅ Kaydedildi: Selection Filtre Kahve... - 1212.9 TL
+2025-08-04 01:41:55,351 - INFO - ✅ Kaydedildi: Monarch Gold Kahve 800... - 1240.9 TL
+2025-08-04 01:41:55,352 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 1253.9 TL
+2025-08-04 01:41:55,354 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 1253.9 TL
+2025-08-04 01:41:55,356 - INFO - ✅ Kaydedildi: Banquet Medium... - 1274.0 TL
+2025-08-04 01:41:55,357 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve 2... - 1299.9 TL
+2025-08-04 01:41:55,358 - INFO - ✅ Kaydedildi: Banquet Medium... - 1335.9 TL
+2025-08-04 01:41:55,359 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 1448.36 TL
+2025-08-04 01:41:55,361 - INFO - ✅ Kaydedildi: Cafe Espresso Çekirdek... - 1499.9 TL
+2025-08-04 01:41:55,363 - INFO - ✅ Kaydedildi: Cafe Crema Çekirdek... - 1699.9 TL
+2025-08-04 01:41:55,364 - INFO - ✅ Kaydedildi: Monarch Aromalı Filtre... - 1509.9 TL
+2025-08-04 01:41:55,365 - INFO - ✅ Kaydedildi: Monarch Aromalı Filtre... - 1536.9 TL
+2025-08-04 01:41:55,367 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve 2... - 1589.41 TL
+2025-08-04 01:41:55,368 - INFO - ✅ Kaydedildi: Barista Editions... - 1599.0 TL
+2025-08-04 01:41:55,369 - INFO - ✅ Kaydedildi: Barista Çekirdek Kahve... - 1632.9 TL
+2025-08-04 01:41:55,371 - INFO - ✅ Kaydedildi: Barista Editions... - 1632.9 TL
+2025-08-04 01:41:55,373 - INFO - ✅ Kaydedildi: 2 Adet 1 Kg... - 1771.11 TL
+2025-08-04 01:41:55,375 - INFO - ✅ Kaydedildi: Selection Filtre Kahve... - 1796.9 TL
+2025-08-04 01:41:55,376 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve 2... - 1899.9 TL
+2025-08-04 01:41:55,377 - INFO - ✅ Kaydedildi: Banquet Medium... - 1940.39 TL
+2025-08-04 01:41:55,378 - INFO - ✅ Kaydedildi: Banquet Medium... - 1982.9 TL
+2025-08-04 01:41:55,380 - INFO - ✅ Kaydedildi: Monarch Aromalı Filtre... - 2264.9 TL
+2025-08-04 01:41:55,382 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 2390.84 TL
+2025-08-04 01:41:55,384 - INFO - ✅ Kaydedildi: Banquet Medium... - 2425.0 TL
+2025-08-04 01:41:55,384 - INFO - 🔗 Sayfa 5: https://www.trendyol.com/sr?q=Jacobs+Filtre+Kahve&os=1&sst=PRICE_BY_ASC&pi=5
+2025-08-04 01:42:01,565 - INFO - ✅ Sayfa 5'da 24 ürün bulundu
+2025-08-04 01:42:01,567 - INFO - ✅ Kaydedildi: Banquet Medium... - 2499.0 TL
+2025-08-04 01:42:01,569 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve 2... - 2499.9 TL
+2025-08-04 01:42:01,571 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 2841.29 TL
+2025-08-04 01:42:01,572 - INFO - ✅ Kaydedildi: Banquet Medium... - 2896.73 TL
+2025-08-04 01:42:01,573 - INFO - ✅ Kaydedildi: Barista Editions... - 3179.9 TL
+2025-08-04 01:42:01,574 - INFO - ✅ Kaydedildi: Barista Editions... - 3199.0 TL
+2025-08-04 01:42:01,576 - INFO - ✅ Kaydedildi: Barista Editions... - 3219.9 TL
+2025-08-04 01:42:01,577 - INFO - ✅ Kaydedildi: Barista Editions... - 3219.9 TL
+2025-08-04 01:42:01,578 - INFO - ✅ Kaydedildi: Barista Editions... - 3524.9 TL
+2025-08-04 01:42:01,580 - INFO - ✅ Kaydedildi: Banquet Medium... - 3250.0 TL
+2025-08-04 01:42:01,581 - INFO - ✅ Kaydedildi: Medium Çekirdek Kahve... - 3229.37 TL
+2025-08-04 01:42:01,582 - INFO - ✅ Kaydedildi: Banquet Medium... - 3699.0 TL
+2025-08-04 01:42:01,583 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve 2... - 3776.84 TL
+2025-08-04 01:42:01,584 - INFO - ✅ Kaydedildi: Banquet Medium... - 3811.49 TL
+2025-08-04 01:42:01,586 - INFO - ✅ Kaydedildi: BARİSTA EDİTİONS CREMA... - 3990.0 TL
+2025-08-04 01:42:01,587 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 4192.64 TL
+2025-08-04 01:42:01,588 - INFO - ✅ Kaydedildi: Banquet Medium... - 4747.04 TL
+2025-08-04 01:42:01,590 - INFO - ✅ Kaydedildi: Banquet Medium... - 4800.0 TL
+2025-08-04 01:42:01,591 - INFO - ✅ Kaydedildi: Medium Çekirdek Kahve... - 4826.24 TL
+2025-08-04 01:42:01,592 - INFO - ✅ Kaydedildi: Banquet Medium... - 5149.0 TL
+2025-08-04 01:42:01,593 - INFO - ✅ Kaydedildi: Kahve Kreması 1 KG x... - 5399.0 TL
+2025-08-04 01:42:01,594 - INFO - ✅ Kaydedildi: Banquet Medium... - 5543.99 TL
+2025-08-04 01:42:01,595 - INFO - ✅ Kaydedildi: Monarch Filtre Kahve... - 5543.99 TL
+2025-08-04 01:42:01,596 - INFO - ✅ Kaydedildi: MONARCH FİLTRE KAHVE 1... - 5850.0 TL
+2025-08-04 01:42:01,669 - INFO - ✅ Trendyol bot başarıyla tamamlandı.
+2025-08-04 03:53:08,585 - INFO - 🔹 Trendyol bot başlatıldı...
+2025-08-04 03:53:08,882 - INFO - ✅ Database bağlantısı başarılı
+2025-08-04 03:53:08,883 - INFO - 🔍 'Nescafe 1 KG' için ürünler çekiliyor...
+2025-08-04 03:53:08,883 - INFO - 🔗 Sayfa 1: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=1
+2025-08-04 03:53:16,034 - INFO - ✅ Sayfa 1'da 24 ürün bulundu
+2025-08-04 03:53:16,039 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InvalidColumnReference: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+
+2025-08-04 03:53:16,040 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,042 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,043 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,044 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,045 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,047 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,048 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,049 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,050 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,051 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,052 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,053 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,054 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,055 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,057 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,058 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,059 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,060 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,061 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,062 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,064 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,065 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,066 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:16,067 - INFO - 🔗 Sayfa 2: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=2
+2025-08-04 03:53:22,360 - INFO - ✅ Sayfa 2'da 24 ürün bulundu
+2025-08-04 03:53:22,362 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,363 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,365 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,366 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,367 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,368 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,369 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,370 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,372 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,373 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,374 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,375 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,376 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,377 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,378 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,379 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,380 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,381 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,382 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,384 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,385 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,386 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,387 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,390 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:22,391 - INFO - 🔗 Sayfa 3: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=3
+2025-08-04 03:53:28,974 - INFO - ✅ Sayfa 3'da 17 ürün bulundu
+2025-08-04 03:53:28,976 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,978 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,979 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,980 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,982 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,984 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,986 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,988 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,989 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,990 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,991 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,992 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,994 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,995 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,996 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,998 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,999 - ERROR - ❌ Ürün işleme hatası:
+Traceback (most recent call last):
+  File "/app/bots/trendyol.py", line 165, in run_trendyol_bot
+    product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bots/trendyol.py", line 45, in upsert_product
+    cur.execute("""
+  File "/opt/venv/lib/python3.11/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+2025-08-04 03:53:28,999 - INFO - 🔗 Sayfa 4: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=4
+2025-08-04 03:53:34,974 - WARNING - ⚠️ Sayfa 4 için ürün bulunamadı
+2025-08-04 03:53:34,975 - INFO - 🔗 Sayfa 5: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=5
+2025-08-04 03:53:40,927 - WARNING - ⚠️ Sayfa 5 için ürün bulunamadı
+2025-08-04 03:53:40,999 - INFO - ✅ Trendyol bot başarıyla tamamlandı.
+2025-08-04 04:17:50,409 - INFO - 🔹 Trendyol bot başlatıldı...
+2025-08-04 04:17:50,721 - INFO - ✅ Database bağlantısı başarılı
+2025-08-04 04:17:50,722 - INFO - 🔍 'Nescafe 1 KG' için ürünler çekiliyor...
+2025-08-04 04:17:50,722 - INFO - 🔗 Sayfa 1: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=1
+2025-08-04 04:17:57,961 - INFO - ✅ Sayfa 1'da 24 ürün bulundu
+2025-08-04 04:17:57,967 - INFO - ✅ Kaydedildi: Sıcak Çikolata 1kg... - 395.0 TL
+2025-08-04 04:17:57,969 - INFO - ✅ Kaydedildi: 3ü 1 Arada Original... - 385.0 TL
+2025-08-04 04:17:57,971 - INFO - ✅ Kaydedildi: Nestle 12525173 Sıcak... - 399.0 TL
+2025-08-04 04:17:57,972 - INFO - ✅ Kaydedildi: Nestle Nescafe 3 ü 1... - 470.0 TL
+2025-08-04 04:17:57,973 - INFO - ✅ Kaydedildi: Nescafé 3ü1 Arada 1... - 489.9 TL
+2025-08-04 04:17:57,975 - INFO - ✅ Kaydedildi: 3 Ü 1 Arada Sütlu... - 574.9 TL
+2025-08-04 04:17:57,976 - INFO - ✅ Kaydedildi: 3u1 Arada 1kg... - 599.9 TL
+2025-08-04 04:17:57,978 - INFO - ✅ Kaydedildi: Superiore Çekirdek... - 765.0 TL
+2025-08-04 04:17:57,979 - INFO - ✅ Kaydedildi: superiore çekirdek... - 799.0 TL
+2025-08-04 04:17:57,980 - INFO - ✅ Kaydedildi: Nestle Coffee Mate... - 805.99 TL
+2025-08-04 04:17:57,981 - INFO - ✅ Kaydedildi: Gold Granül 1. Kalite... - 819.9 TL
+2025-08-04 04:17:57,983 - INFO - ✅ Kaydedildi: Gold Granür Kahve... - 850.0 TL
+2025-08-04 04:17:57,984 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 915.0 TL
+2025-08-04 04:17:57,985 - INFO - ✅ Kaydedildi: Gold Granül (dökme)... - 949.9 TL
+2025-08-04 04:17:57,987 - INFO - ✅ Kaydedildi: Gold Granül Dökme... - 990.0 TL
+2025-08-04 04:17:57,988 - INFO - ✅ Kaydedildi: Espresso Superiore... - 996.35 TL
+2025-08-04 04:17:57,989 - INFO - ✅ Kaydedildi: Nescafé 3'ü 1 Arada... - 1053.0 TL
+2025-08-04 04:17:57,990 - INFO - ✅ Kaydedildi: class... - 1130.0 TL
+2025-08-04 04:17:57,991 - INFO - ✅ Kaydedildi: Classıc 1kg Tin... - 1149.0 TL
+2025-08-04 04:17:57,992 - INFO - ✅ Kaydedildi: Classic Hazır Kahve... - 1173.55 TL
+2025-08-04 04:17:57,994 - INFO - ✅ Kaydedildi: Classic 1 kg -Kahve... - 1225.5 TL
+2025-08-04 04:17:57,995 - INFO - ✅ Kaydedildi: Classic 1kg + Coffee... - 1230.0 TL
+2025-08-04 04:17:57,996 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg... - 1250.0 TL
+2025-08-04 04:17:57,997 - INFO - ✅ Kaydedildi: Classic 1 Kg. Tin Box... - 1250.9 TL
+2025-08-04 04:17:57,997 - INFO - 🔗 Sayfa 2: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=2
+2025-08-04 04:18:04,238 - INFO - ✅ Sayfa 2'da 24 ürün bulundu
+2025-08-04 04:18:04,241 - INFO - ✅ Kaydedildi: Espresso Superiore... - 1289.55 TL
+2025-08-04 04:18:04,244 - INFO - ✅ Kaydedildi: Classic Teneke (1kg)... - 1299.99 TL
+2025-08-04 04:18:04,246 - INFO - ✅ Kaydedildi: Classıc 1kg Teneke... - 1341.4 TL
+2025-08-04 04:18:04,247 - INFO - ✅ Kaydedildi: Classic Hazır Granül... - 1350.0 TL
+2025-08-04 04:18:04,249 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 1373.74 TL
+2025-08-04 04:18:04,251 - INFO - ✅ Kaydedildi: Classic 1000 Gr Kahve... - 1399.55 TL
+2025-08-04 04:18:04,252 - INFO - ✅ Kaydedildi: Classic Kahve Teneke... - 1395.0 TL
+2025-08-04 04:18:04,254 - INFO - ✅ Kaydedildi: Nescafé 3'ü 1 Arada... - 1404.0 TL
+2025-08-04 04:18:04,255 - INFO - ✅ Kaydedildi: Nescafé 3 Ü 1 Arada 1... - 1499.9 TL
+2025-08-04 04:18:04,256 - INFO - ✅ Kaydedildi: Superiore 1000 Gram... - 1505.0 TL
+2025-08-04 04:18:04,258 - INFO - ✅ Kaydedildi: Classic Teneke Kutu 1... - 1509.0 TL
+2025-08-04 04:18:04,259 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 1525.0 TL
+2025-08-04 04:18:04,261 - INFO - ✅ Kaydedildi: Classic Hazır Kahve 1... - 1540.0 TL
+2025-08-04 04:18:04,262 - INFO - ✅ Kaydedildi: Classic Çözünebilir... - 1559.0 TL
+2025-08-04 04:18:04,263 - INFO - ✅ Kaydedildi: Brasile %100 Arabica... - 1625.0 TL
+2025-08-04 04:18:04,264 - INFO - ✅ Kaydedildi: Classic 1 KG Teneke... - 1919.0 TL
+2025-08-04 04:18:04,265 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 1925.0 TL
+2025-08-04 04:18:04,267 - INFO - ✅ Kaydedildi: Classic 1kg + Coffee... - 1940.0 TL
+2025-08-04 04:18:04,268 - INFO - ✅ Kaydedildi: Classic 1kg ve Coffe... - 1997.0 TL
+2025-08-04 04:18:04,270 - INFO - ✅ Kaydedildi: Classic 1 Kg+nestle... - 2000.0 TL
+2025-08-04 04:18:04,271 - INFO - ✅ Kaydedildi: Classic Kahve 1 kg +... - 2375.0 TL
+2025-08-04 04:18:04,272 - INFO - ✅ Kaydedildi: Classic 1 Kg. +... - 2400.0 TL
+2025-08-04 04:18:04,273 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 2413.77 TL
+2025-08-04 04:18:04,275 - INFO - ✅ Kaydedildi: Gold Granül Kahve 900... - 2460.7 TL
+2025-08-04 04:18:04,276 - INFO - 🔗 Sayfa 3: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=3
+2025-08-04 04:18:10,799 - INFO - ✅ Sayfa 3'da 17 ürün bulundu
+2025-08-04 04:18:10,801 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 2514.45 TL
+2025-08-04 04:18:10,803 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg x... - 2558.8 TL
+2025-08-04 04:18:10,805 - INFO - ✅ Kaydedildi: Clasic 1 kg ve  Coffe... - 2740.0 TL
+2025-08-04 04:18:10,806 - INFO - ✅ Kaydedildi: Gold Kahve 900 gr... - 2849.55 TL
+2025-08-04 04:18:10,808 - INFO - ✅ Kaydedildi: Classıc 1kg x 2... - 2865.0 TL
+2025-08-04 04:18:10,809 - INFO - ✅ Kaydedildi: Gold Teneke 900 gr -... - 3470.77 TL
+2025-08-04 04:18:10,810 - INFO - ✅ Kaydedildi: Gold 900 G + Classic... - 3877.99 TL
+2025-08-04 04:18:10,811 - INFO - ✅ Kaydedildi: Gold 900 gr+ Classic... - 4000.0 TL
+2025-08-04 04:18:10,812 - INFO - ✅ Kaydedildi: Gold 900 Gr + Classic... - 4540.0 TL
+2025-08-04 04:18:10,813 - INFO - ✅ Kaydedildi: 6 Adet Superiore... - 4580.0 TL
+2025-08-04 04:18:10,815 - INFO - ✅ Kaydedildi: Classıc 1kgx 3 adet.... - 5900.0 TL
+2025-08-04 04:18:10,816 - INFO - ✅ Kaydedildi: Classic Çözünebilir... - 6470.0 TL
+2025-08-04 04:18:10,817 - INFO - ✅ Kaydedildi: Classic Hazır Kahve 1... - 6977.32 TL
+2025-08-04 04:18:10,818 - INFO - ✅ Kaydedildi: CLASSİC 1 KG X 6 ADET... - 6990.0 TL
+2025-08-04 04:18:10,819 - INFO - ✅ Kaydedildi: Nescafé Superiore... - 7500.0 TL
+2025-08-04 04:18:10,820 - INFO - ✅ Kaydedildi: Classıc 1kg x4... - 7900.0 TL
+2025-08-04 04:18:10,822 - INFO - ✅ Kaydedildi: Classıc 6x1kg Teneke... - 11500.0 TL
+2025-08-04 04:18:10,822 - INFO - 🔗 Sayfa 4: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=4
+2025-08-04 04:18:16,804 - WARNING - ⚠️ Sayfa 4 için ürün bulunamadı
+2025-08-04 04:18:16,805 - INFO - 🔗 Sayfa 5: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=5
+2025-08-04 04:18:22,706 - WARNING - ⚠️ Sayfa 5 için ürün bulunamadı
+2025-08-04 04:18:22,780 - INFO - ✅ Trendyol bot başarıyla tamamlandı.
+2025-08-04 04:35:43,599 - INFO - 🔹 Trendyol bot başlatıldı...
+2025-08-04 04:35:44,117 - INFO - ✅ Database bağlantısı başarılı
+2025-08-04 04:35:44,118 - INFO - 🔍 'Nescafe 1 KG' için ürünler çekiliyor...
+2025-08-04 04:35:44,119 - INFO - 🔗 Sayfa 1: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=1
+2025-08-04 04:35:51,286 - INFO - ✅ Sayfa 1'da 24 ürün bulundu
+2025-08-04 04:35:51,292 - INFO - ✅ Kaydedildi: Sıcak Çikolata 1kg... - 395.0 TL
+2025-08-04 04:35:51,293 - INFO - ✅ Kaydedildi: 3ü 1 Arada Original... - 385.0 TL
+2025-08-04 04:35:51,295 - INFO - ✅ Kaydedildi: Nestle 12525173 Sıcak... - 399.0 TL
+2025-08-04 04:35:51,297 - INFO - ✅ Kaydedildi: Nestle Nescafe 3 ü 1... - 470.0 TL
+2025-08-04 04:35:51,298 - INFO - ✅ Kaydedildi: Nescafé 3ü1 Arada 1... - 489.9 TL
+2025-08-04 04:35:51,299 - INFO - ✅ Kaydedildi: 3 Ü 1 Arada Sütlu... - 574.9 TL
+2025-08-04 04:35:51,300 - INFO - ✅ Kaydedildi: 3u1 Arada 1kg... - 599.9 TL
+2025-08-04 04:35:51,301 - INFO - ✅ Kaydedildi: Superiore Çekirdek... - 765.0 TL
+2025-08-04 04:35:51,303 - INFO - ✅ Kaydedildi: superiore çekirdek... - 799.0 TL
+2025-08-04 04:35:51,304 - INFO - ✅ Kaydedildi: Nestle Coffee Mate... - 805.99 TL
+2025-08-04 04:35:51,305 - INFO - ✅ Kaydedildi: Gold Granül 1. Kalite... - 819.9 TL
+2025-08-04 04:35:51,307 - INFO - ✅ Kaydedildi: Gold Granür Kahve... - 850.0 TL
+2025-08-04 04:35:51,309 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 915.0 TL
+2025-08-04 04:35:51,310 - INFO - ✅ Kaydedildi: Gold Granül (dökme)... - 949.9 TL
+2025-08-04 04:35:51,311 - INFO - ✅ Kaydedildi: Gold Granül Dökme... - 990.0 TL
+2025-08-04 04:35:51,312 - INFO - ✅ Kaydedildi: Espresso Superiore... - 996.35 TL
+2025-08-04 04:35:51,314 - INFO - ✅ Kaydedildi: Nescafé 3'ü 1 Arada... - 1053.0 TL
+2025-08-04 04:35:51,315 - INFO - ✅ Kaydedildi: class... - 1130.0 TL
+2025-08-04 04:35:51,316 - INFO - ✅ Kaydedildi: Classıc 1kg Tin... - 1149.0 TL
+2025-08-04 04:35:51,317 - INFO - ✅ Kaydedildi: Classic Hazır Kahve... - 1173.55 TL
+2025-08-04 04:35:51,319 - INFO - ✅ Kaydedildi: Classic 1 kg -Kahve... - 1225.5 TL
+2025-08-04 04:35:51,320 - INFO - ✅ Kaydedildi: Classic 1kg + Coffee... - 1230.0 TL
+2025-08-04 04:35:51,321 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg... - 1250.0 TL
+2025-08-04 04:35:51,322 - INFO - ✅ Kaydedildi: Classic 1 Kg. Tin Box... - 1250.9 TL
+2025-08-04 04:35:51,322 - INFO - 🔗 Sayfa 2: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=2
+2025-08-04 04:35:57,597 - INFO - ✅ Sayfa 2'da 24 ürün bulundu
+2025-08-04 04:35:57,606 - INFO - ✅ Kaydedildi: Espresso Superiore... - 1289.55 TL
+2025-08-04 04:35:57,608 - INFO - ✅ Kaydedildi: Classic Teneke (1kg)... - 1299.99 TL
+2025-08-04 04:35:57,609 - INFO - ✅ Kaydedildi: Classıc 1kg Teneke... - 1341.4 TL
+2025-08-04 04:35:57,611 - INFO - ✅ Kaydedildi: Classic Hazır Granül... - 1350.0 TL
+2025-08-04 04:35:57,613 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 1373.74 TL
+2025-08-04 04:35:57,614 - INFO - ✅ Kaydedildi: Classic 1000 Gr Kahve... - 1399.55 TL
+2025-08-04 04:35:57,615 - INFO - ✅ Kaydedildi: Classic Kahve Teneke... - 1395.0 TL
+2025-08-04 04:35:57,617 - INFO - ✅ Kaydedildi: Nescafé 3'ü 1 Arada... - 1404.0 TL
+2025-08-04 04:35:57,618 - INFO - ✅ Kaydedildi: Nescafé 3 Ü 1 Arada 1... - 1499.9 TL
+2025-08-04 04:35:57,619 - INFO - ✅ Kaydedildi: Superiore 1000 Gram... - 1505.0 TL
+2025-08-04 04:35:57,620 - INFO - ✅ Kaydedildi: Classic Teneke Kutu 1... - 1509.0 TL
+2025-08-04 04:35:57,621 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 1525.0 TL
+2025-08-04 04:35:57,623 - INFO - ✅ Kaydedildi: Classic Hazır Kahve 1... - 1540.0 TL
+2025-08-04 04:35:57,624 - INFO - ✅ Kaydedildi: Classic Çözünebilir... - 1559.0 TL
+2025-08-04 04:35:57,625 - INFO - ✅ Kaydedildi: Brasile %100 Arabica... - 1625.0 TL
+2025-08-04 04:35:57,626 - INFO - ✅ Kaydedildi: Classic 1 KG Teneke... - 1919.0 TL
+2025-08-04 04:35:57,627 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 1925.0 TL
+2025-08-04 04:35:57,628 - INFO - ✅ Kaydedildi: Classic 1kg + Coffee... - 1940.0 TL
+2025-08-04 04:35:57,630 - INFO - ✅ Kaydedildi: Classic 1kg ve Coffe... - 1997.0 TL
+2025-08-04 04:35:57,631 - INFO - ✅ Kaydedildi: Classic 1 Kg+nestle... - 2000.0 TL
+2025-08-04 04:35:57,632 - INFO - ✅ Kaydedildi: Classic Kahve 1 kg +... - 2375.0 TL
+2025-08-04 04:35:57,633 - INFO - ✅ Kaydedildi: Classic 1 Kg. +... - 2400.0 TL
+2025-08-04 04:35:57,634 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 2413.77 TL
+2025-08-04 04:35:57,636 - INFO - ✅ Kaydedildi: Gold Granül Kahve 900... - 2460.7 TL
+2025-08-04 04:35:57,636 - INFO - 🔗 Sayfa 3: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=3
+2025-08-04 04:36:04,283 - INFO - ✅ Sayfa 3'da 17 ürün bulundu
+2025-08-04 04:36:04,287 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 2514.45 TL
+2025-08-04 04:36:04,289 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg x... - 2558.8 TL
+2025-08-04 04:36:04,291 - INFO - ✅ Kaydedildi: Clasic 1 kg ve  Coffe... - 2740.0 TL
+2025-08-04 04:36:04,292 - INFO - ✅ Kaydedildi: Gold Kahve 900 gr... - 2849.55 TL
+2025-08-04 04:36:04,294 - INFO - ✅ Kaydedildi: Classıc 1kg x 2... - 2865.0 TL
+2025-08-04 04:36:04,295 - INFO - ✅ Kaydedildi: Gold Teneke 900 gr -... - 3470.77 TL
+2025-08-04 04:36:04,297 - INFO - ✅ Kaydedildi: Gold 900 G + Classic... - 3877.99 TL
+2025-08-04 04:36:04,298 - INFO - ✅ Kaydedildi: Gold 900 gr+ Classic... - 4000.0 TL
+2025-08-04 04:36:04,299 - INFO - ✅ Kaydedildi: Gold 900 Gr + Classic... - 4540.0 TL
+2025-08-04 04:36:04,301 - INFO - ✅ Kaydedildi: 6 Adet Superiore... - 4580.0 TL
+2025-08-04 04:36:04,302 - INFO - ✅ Kaydedildi: Classıc 1kgx 3 adet.... - 5900.0 TL
+2025-08-04 04:36:04,304 - INFO - ✅ Kaydedildi: Classic Çözünebilir... - 6470.0 TL
+2025-08-04 04:36:04,305 - INFO - ✅ Kaydedildi: Classic Hazır Kahve 1... - 6977.32 TL
+2025-08-04 04:36:04,307 - INFO - ✅ Kaydedildi: CLASSİC 1 KG X 6 ADET... - 6990.0 TL
+2025-08-04 04:36:04,308 - INFO - ✅ Kaydedildi: Nescafé Superiore... - 7500.0 TL
+2025-08-04 04:36:04,309 - INFO - ✅ Kaydedildi: Classıc 1kg x4... - 7900.0 TL
+2025-08-04 04:36:04,310 - INFO - ✅ Kaydedildi: Classıc 6x1kg Teneke... - 11500.0 TL
+2025-08-04 04:36:04,311 - INFO - 🔗 Sayfa 4: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=4
+2025-08-04 04:36:10,285 - WARNING - ⚠️ Sayfa 4 için ürün bulunamadı
+2025-08-04 04:36:10,287 - INFO - 🔗 Sayfa 5: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=5
+2025-08-04 04:36:16,282 - WARNING - ⚠️ Sayfa 5 için ürün bulunamadı
+2025-08-04 04:36:16,354 - INFO - ✅ Trendyol bot başarıyla tamamlandı.
+2025-08-04 05:00:12,574 - INFO - 🔹 Trendyol bot başlatıldı...
+2025-08-04 05:00:12,889 - INFO - ✅ Database bağlantısı başarılı
+2025-08-04 05:00:12,892 - INFO - 🔍 'Nescafe 1 KG' için ürünler çekiliyor...
+2025-08-04 05:00:12,894 - INFO - 🔗 Sayfa 1: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=1
+2025-08-04 05:00:19,934 - INFO - ✅ Sayfa 1'da 24 ürün bulundu
+2025-08-04 05:00:19,939 - INFO - ✅ Kaydedildi: Sıcak Çikolata 1kg... - 395.0 TL
+2025-08-04 05:00:19,941 - INFO - ✅ Kaydedildi: 3ü 1 Arada Original... - 385.0 TL
+2025-08-04 05:00:19,943 - INFO - ✅ Kaydedildi: Nestle 12525173 Sıcak... - 399.0 TL
+2025-08-04 05:00:19,945 - INFO - ✅ Kaydedildi: Nestle Nescafe 3 ü 1... - 470.0 TL
+2025-08-04 05:00:19,946 - INFO - ✅ Kaydedildi: Nescafé 3ü1 Arada 1... - 489.9 TL
+2025-08-04 05:00:19,948 - INFO - ✅ Kaydedildi: 3 Ü 1 Arada Sütlu... - 574.9 TL
+2025-08-04 05:00:19,949 - INFO - ✅ Kaydedildi: 3u1 Arada 1kg... - 599.9 TL
+2025-08-04 05:00:19,951 - INFO - ✅ Kaydedildi: Superiore Çekirdek... - 765.0 TL
+2025-08-04 05:00:19,953 - INFO - ✅ Kaydedildi: superiore çekirdek... - 799.0 TL
+2025-08-04 05:00:19,954 - INFO - ✅ Kaydedildi: Nestle Coffee Mate... - 805.99 TL
+2025-08-04 05:00:19,956 - INFO - ✅ Kaydedildi: Gold Granül 1. Kalite... - 819.9 TL
+2025-08-04 05:00:19,957 - INFO - ✅ Kaydedildi: Gold Granür Kahve... - 850.0 TL
+2025-08-04 05:00:19,959 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 915.0 TL
+2025-08-04 05:00:19,961 - INFO - ✅ Kaydedildi: Gold Granül (dökme)... - 949.9 TL
+2025-08-04 05:00:19,962 - INFO - ✅ Kaydedildi: Gold Granül Dökme... - 990.0 TL
+2025-08-04 05:00:19,964 - INFO - ✅ Kaydedildi: Espresso Superiore... - 996.35 TL
+2025-08-04 05:00:19,965 - INFO - ✅ Kaydedildi: Nescafé 3'ü 1 Arada... - 1053.0 TL
+2025-08-04 05:00:19,967 - INFO - ✅ Kaydedildi: class... - 1130.0 TL
+2025-08-04 05:00:19,969 - INFO - ✅ Kaydedildi: Classıc 1kg Tin... - 1149.0 TL
+2025-08-04 05:00:19,970 - INFO - ✅ Kaydedildi: Classic Hazır Kahve... - 1173.55 TL
+2025-08-04 05:00:19,972 - INFO - ✅ Kaydedildi: Classic 1 kg -Kahve... - 1225.5 TL
+2025-08-04 05:00:19,973 - INFO - ✅ Kaydedildi: Classic 1kg + Coffee... - 1230.0 TL
+2025-08-04 05:00:19,975 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg... - 1250.0 TL
+2025-08-04 05:00:19,976 - INFO - ✅ Kaydedildi: Classic 1 Kg. Tin Box... - 1250.9 TL
+2025-08-04 05:00:19,977 - INFO - 🔗 Sayfa 2: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=2
+2025-08-04 05:00:26,619 - INFO - ✅ Sayfa 2'da 24 ürün bulundu
+2025-08-04 05:00:26,623 - INFO - ✅ Kaydedildi: Espresso Superiore... - 1289.55 TL
+2025-08-04 05:00:26,625 - INFO - ✅ Kaydedildi: Classic Teneke (1kg)... - 1299.99 TL
+2025-08-04 05:00:26,628 - INFO - ✅ Kaydedildi: Classıc 1kg Teneke... - 1341.4 TL
+2025-08-04 05:00:26,629 - INFO - ✅ Kaydedildi: Classic Hazır Granül... - 1350.0 TL
+2025-08-04 05:00:26,631 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 1373.74 TL
+2025-08-04 05:00:26,633 - INFO - ✅ Kaydedildi: Classic 1000 Gr Kahve... - 1399.55 TL
+2025-08-04 05:00:26,634 - INFO - ✅ Kaydedildi: Classic Kahve Teneke... - 1395.0 TL
+2025-08-04 05:00:26,635 - INFO - ✅ Kaydedildi: Nescafé 3'ü 1 Arada... - 1404.0 TL
+2025-08-04 05:00:26,637 - INFO - ✅ Kaydedildi: Nescafé 3 Ü 1 Arada 1... - 1499.9 TL
+2025-08-04 05:00:26,638 - INFO - ✅ Kaydedildi: Superiore 1000 Gram... - 1505.0 TL
+2025-08-04 05:00:26,640 - INFO - ✅ Kaydedildi: Classic Teneke Kutu 1... - 1509.0 TL
+2025-08-04 05:00:26,641 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 1525.0 TL
+2025-08-04 05:00:26,643 - INFO - ✅ Kaydedildi: Classic Hazır Kahve 1... - 1540.0 TL
+2025-08-04 05:00:26,644 - INFO - ✅ Kaydedildi: Classic Çözünebilir... - 1559.0 TL
+2025-08-04 05:00:26,645 - INFO - ✅ Kaydedildi: Brasile %100 Arabica... - 1625.0 TL
+2025-08-04 05:00:26,647 - INFO - ✅ Kaydedildi: Classic 1 KG Teneke... - 1919.0 TL
+2025-08-04 05:00:26,648 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 1925.0 TL
+2025-08-04 05:00:26,650 - INFO - ✅ Kaydedildi: Classic 1kg + Coffee... - 1940.0 TL
+2025-08-04 05:00:26,651 - INFO - ✅ Kaydedildi: Classic 1kg ve Coffe... - 1997.0 TL
+2025-08-04 05:00:26,652 - INFO - ✅ Kaydedildi: Classic 1 Kg+nestle... - 2000.0 TL
+2025-08-04 05:00:26,654 - INFO - ✅ Kaydedildi: Classic Kahve 1 kg +... - 2375.0 TL
+2025-08-04 05:00:26,655 - INFO - ✅ Kaydedildi: Classic 1 Kg. +... - 2400.0 TL
+2025-08-04 05:00:26,657 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg +... - 2413.77 TL
+2025-08-04 05:00:26,659 - INFO - ✅ Kaydedildi: Gold Granül Kahve 900... - 2460.7 TL
+2025-08-04 05:00:26,660 - INFO - 🔗 Sayfa 3: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=3
+2025-08-04 05:00:33,482 - INFO - ✅ Sayfa 3'da 17 ürün bulundu
+2025-08-04 05:00:33,485 - INFO - ✅ Kaydedildi: Espresso Çekirdek... - 2514.45 TL
+2025-08-04 05:00:33,486 - INFO - ✅ Kaydedildi: Classic Kahve 1 Kg x... - 2558.8 TL
+2025-08-04 05:00:33,488 - INFO - ✅ Kaydedildi: Clasic 1 kg ve  Coffe... - 2740.0 TL
+2025-08-04 05:00:33,489 - INFO - ✅ Kaydedildi: Gold Kahve 900 gr... - 2849.55 TL
+2025-08-04 05:00:33,491 - INFO - ✅ Kaydedildi: Classıc 1kg x 2... - 2865.0 TL
+2025-08-04 05:00:33,492 - INFO - ✅ Kaydedildi: Gold Teneke 900 gr -... - 3470.77 TL
+2025-08-04 05:00:33,493 - INFO - ✅ Kaydedildi: Gold 900 G + Classic... - 3877.99 TL
+2025-08-04 05:00:33,494 - INFO - ✅ Kaydedildi: Gold 900 gr+ Classic... - 4000.0 TL
+2025-08-04 05:00:33,495 - INFO - ✅ Kaydedildi: Gold 900 Gr + Classic... - 4540.0 TL
+2025-08-04 05:00:33,496 - INFO - ✅ Kaydedildi: 6 Adet Superiore... - 4580.0 TL
+2025-08-04 05:00:33,497 - INFO - ✅ Kaydedildi: Classıc 1kgx 3 adet.... - 5900.0 TL
+2025-08-04 05:00:33,498 - INFO - ✅ Kaydedildi: Classic Çözünebilir... - 6470.0 TL
+2025-08-04 05:00:33,499 - INFO - ✅ Kaydedildi: Classic Hazır Kahve 1... - 6977.32 TL
+2025-08-04 05:00:33,500 - INFO - ✅ Kaydedildi: CLASSİC 1 KG X 6 ADET... - 6990.0 TL
+2025-08-04 05:00:33,501 - INFO - ✅ Kaydedildi: Nescafé Superiore... - 7500.0 TL
+2025-08-04 05:00:33,502 - INFO - ✅ Kaydedildi: Classıc 1kg x4... - 7900.0 TL
+2025-08-04 05:00:33,503 - INFO - ✅ Kaydedildi: Classıc 6x1kg Teneke... - 11500.0 TL
+2025-08-04 05:00:33,504 - INFO - 🔗 Sayfa 4: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=4
+2025-08-04 05:00:39,531 - WARNING - ⚠️ Sayfa 4 için ürün bulunamadı
+2025-08-04 05:00:39,532 - INFO - 🔗 Sayfa 5: https://www.trendyol.com/sr?q=Nescafe+1+KG&os=1&sst=PRICE_BY_ASC&pi=5
+2025-08-04 05:00:45,441 - WARNING - ⚠️ Sayfa 5 için ürün bulunamadı
+2025-08-04 05:00:45,511 - INFO - ✅ Trendyol bot başarıyla tamamlandı.

@@ -7,7 +7,7 @@ import { authenticateToken, requireRole } from "../middleware/auth.js";
 
 const router = express.Router();
 const BOT_SERVICE_URL = process.env.BOT_SERVICE_URL || "http://bot:8000";
-const LOG_FILE = path.resolve("logs", "bot-logs.json");
+const LOG_FILE = path.join(process.cwd(), "logs", "bot-logs.json");
 
 const logBotActivity = async (botName, message) => {
   const log = {
@@ -33,13 +33,11 @@ router.get("/terms", authenticateToken, async (req, res) => {
     const response = await axios.get(`${BOT_SERVICE_URL}/terms`);
     res.json(response.data);
   } catch (err) {
-    res
-      .status(500)
-      .json({
-        success: false,
-        message: "Terimler alınamadı",
-        error: err.message,
-      });
+    res.status(500).json({
+      success: false,
+      message: "Terimler alınamadı",
+      error: err.message,
+    });
   }
 });
 
@@ -49,13 +47,11 @@ router.post("/terms", authenticateToken, async (req, res) => {
     const response = await axios.post(`${BOT_SERVICE_URL}/terms`, req.body);
     res.json(response.data);
   } catch (err) {
-    res
-      .status(500)
-      .json({
-        success: false,
-        message: "Terimler güncellenemedi",
-        error: err.message,
-      });
+    res.status(500).json({
+      success: false,
+      message: "Terimler güncellenemedi",
+      error: err.message,
+    });
   }
 });
 
@@ -73,11 +69,15 @@ const botEndpoints = [
     logMsg: "Trendyol botu başlatıldı",
   },
   {
-    path: "/run-trendyol-detail",
+    path: "/start-trendyol-detail",
     backend: "/run-trendyol-detail",
     logMsg: "Trendyol detay botu başlatıldı",
   },
-  { path: "/start-n11", backend: "/run-n11", logMsg: "N11 botu başlatıldı" },
+  {
+    path: "/start-n11",
+    backend: "/run-n11",
+    logMsg: "N11 botu başlatıldı",
+  },
   {
     path: "/start-n11-detail",
     backend: "/run-n11-detail",

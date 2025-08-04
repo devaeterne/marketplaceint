@@ -29,12 +29,12 @@ const navItems: NavItem[] = [
   {
     icon: <GridIcon />,
     name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+    subItems: [{ name: "Analysis", path: "/", pro: true }],
   },
   {
     icon: <CalenderIcon />,
-    name: "Calendar",
-    path: "/calendar",
+    name: "Products",
+    path: "/Products",
   },
   {
     icon: <UserCircleIcon />,
@@ -42,21 +42,10 @@ const navItems: NavItem[] = [
     path: "/profile",
   },
   {
-    name: "Forms",
+    name: "Reports",
     icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
-  },
-  {
-    name: "Tables",
-    icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
-  },
-  {
-    name: "Pages",
-    icon: <PageIcon />,
-    subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+    subItems: [{ name: "Price Report", path: "/price-report", pro: false },
+      { name: "Campaign Report", path: "/campaign-report", pro: false },
     ],
   },
 ];
