@@ -20,6 +20,7 @@ interface Product {
   platform: string;
   product_type: string;
   image_url: string;
+  rating: string;
   latest_price: number;
 }
 
@@ -178,11 +179,18 @@ export default function ProductTable() {
         <Table>
           <TableHeader>
             <TableRow className="text-gray-800 dark:text-white">
-              <TableCell isHeader>Görsel</TableCell>
-              <TableCell isHeader>Ürün İsmi</TableCell>
-              <TableCell isHeader>Ürün Tipi</TableCell>
-              <TableCell isHeader>Platform</TableCell>
-              <TableCell isHeader>Fiyat</TableCell>
+              <TableCell isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400">Görsel</TableCell>
+              <TableCell isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400">Ürün İsmi</TableCell>
+              <TableCell isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400">Ürün Tipi</TableCell>
+              <TableCell isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400">Platform</TableCell>
+              <TableCell isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400">Rating</TableCell>
+              <TableCell isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400">Fiyat</TableCell>
             </TableRow>
           </TableHeader>
 
@@ -202,7 +210,7 @@ export default function ProductTable() {
             ) : (
               products.map((product) => (
                 <TableRow key={product.id}>
-                  <TableCell className="px-5 py-4 sm:px-6 text-start">
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
                     <div className="flex items-center gap-3">
                       <div className="w-15 h-15 overflow-hidden rounded-lg">
                         <img
@@ -214,7 +222,7 @@ export default function ProductTable() {
                       </div>
                     </div>
                   </TableCell>
-                  <TableCell>
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
                     <button
                       onClick={() => navigate(`/products/${product.id}`)}
                       className="text-blue-700 hover:underline font-medium"
@@ -223,10 +231,10 @@ export default function ProductTable() {
                     </button>
                     <div className="text-xs text-gray-500">{product.brand}</div>
                   </TableCell>
-                  <TableCell className="text-gray-800 dark:text-white">
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
                     {product.product_type || "-"}
                   </TableCell>
-                  <TableCell>
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
                     <a
                       href={product.product_link}
                       target="_blank"
@@ -240,6 +248,9 @@ export default function ProductTable() {
                         {product.platform}
                       </span>
                     </a>
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-md dark:text-gray-400">
+                    {product.rating} ⭐
                   </TableCell>
                   <TableCell>
                     <button

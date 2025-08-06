@@ -100,6 +100,7 @@ router.get("/products", authenticateToken, async (req, res) => {
         p.platform,
         p.product_link,
         pd.product_type,
+        pd.rating,
         pd.image_url,
         pl.price AS latest_price
       FROM products p
