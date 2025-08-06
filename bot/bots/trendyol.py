@@ -68,31 +68,44 @@ def clean_price(value):
         return 0.0
 
 def upsert_product(cur, platform, platform_product_id, product_link, title, brand):
-    """Ürünü veritabanına ekle veya güncelle"""
+    """Ürünü veritabanına ekle veya güncelle, (product_id, is_new) tuple döner"""
     try:
+        # Önce var mı diye kontrol et
         cur.execute("""
-            INSERT INTO products (platform, platform_product_id, product_link, title, brand)
-            VALUES (%s, %s, %s, %s, %s)
-            ON CONFLICT (platform, platform_product_id) DO UPDATE
-            SET product_link = EXCLUDED.product_link,
-                title = EXCLUDED.title,
-                brand = EXCLUDED.brand,
-                updated_at = NOW()
-            RETURNING id;
-        """, (platform, platform_product_id, product_link, title, brand))
+            SELECT id FROM products
+            WHERE platform = %s AND platform_product_id = %s
+        """, (platform, platform_product_id))
 
-        row = cur.fetchone()
-        if row is None:
-            logger.error("🛑 fetchone() boş döndü – ürün ID alınamadı")
-            return None
-
-        if isinstance(row, tuple):
-            return row[0]
-        elif isinstance(row, dict):
-            return row.get("id") or row.get(0)
+        result = cur.fetchone()
+        if result:
+            # Varsa güncelle ve mevcut ID'yi döndür
+            product_id = result[0] if isinstance(result, tuple) else result.get('id')
+            cur.execute("""
+                UPDATE products
+                SET product_link = %s,
+                    title = %s,
+                    brand = %s,
+                    updated_at = NOW()
+                WHERE platform = %s AND platform_product_id = %s
+                RETURNING id
+            """, (product_link, title, brand, platform, platform_product_id))
+            return (product_id, False)  # (id, is_new=False)
         else:
-            logger.error(f"🛑 fetchone() beklenmedik tip döndürdü: {type(row)}")
-            return None
+            # Yoksa ekle ve yeni ID'yi döndür
+            cur.execute("""
+                INSERT INTO products (platform, platform_product_id, product_link, title, brand)
+                VALUES (%s, %s, %s, %s, %s)
+                RETURNING id
+            """, (platform, platform_product_id, product_link, title, brand))
+            
+            new_result = cur.fetchone()
+            if new_result:
+                product_id = new_result[0] if isinstance(new_result, tuple) else new_result.get('id')
+                return (product_id, True)  # (id, is_new=True)
+            else:
+                logger.error("❌ Yeni ürün eklendi ama ID alınamadı")
+                return (None, False)
+                
     except Exception as e:
         logger.error(f"❌ Ürün ekleme hatası: {e}")
         raise
@@ -109,6 +122,31 @@ def insert_price_log(cur, product_id, price, campaign_price, stock_status):
         logger.error(f"❌ Fiyat log ekleme hatası: {e}")
         raise
 
+def increment_search_term_count(cur, term, new_product_count):
+    """Arama terimi için bulunan yeni ürün sayısını ekle"""
+    try:
+        # İlk kayıtta direkt new_product_count değerini yaz
+        # Sonraki güncellemelerde mevcut değere ekle
+        cur.execute("""
+            INSERT INTO search_terms (term, platform, count)
+            VALUES (%s, %s, %s)
+            ON CONFLICT (term, platform)
+            DO UPDATE SET count = search_terms.count + %s
+        """, (term, "trendyol", new_product_count, new_product_count))
+        
+        # Güncel count değerini öğren
+        cur.execute("""
+            SELECT count FROM search_terms 
+            WHERE term = %s AND platform = %s
+        """, (term, "trendyol"))
+        
+        result = cur.fetchone()
+        current_count = result[0] if result else new_product_count
+        
+        logger.info(f"📊 '{term}' terimi için +{new_product_count} yeni ürün (Toplam: {current_count})")
+    except Exception as e:
+        logger.warning(f"⚠️ search_terms güncellenemedi: {e}")
+        
 def run_trendyol_bot():
     global total_processed, total_errors, error_products
     
@@ -157,6 +195,7 @@ def run_trendyol_bot():
                 logger.info(f"🔍 [{term_index}/{len(search_terms)}] '{term}' için ürünler çekiliyor...")
                 encoded_term = quote_plus(term)
                 term_product_count = 0
+                new_products_count = 0  # Bu terim için yeni ürün sayısı
 
                 for page in range(1, 6):  # Max 5 sayfa
                     try:
@@ -230,14 +269,19 @@ def run_trendyol_bot():
                                 logger.debug(f"📝 Ürün: {title[:30]}... - Fiyat: {price} TL")
 
                                 # Veritabanına kaydet
-                                product_db_id = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
+                                product_db_id, is_new = upsert_product(cur, "trendyol", product_id, product_link, title, brand)
                                 
                                 if product_db_id:
                                     insert_price_log(cur, product_db_id, price, campaign_price, stock_status)
                                     conn.commit()
                                     term_product_count += 1
                                     total_processed += 1
-                                    logger.info(f"✅ [{product_index}/{len(products)}] {title[:50]}... - {campaign_price or price} TL")
+                                    
+                                    if is_new:
+                                        new_products_count += 1
+                                        logger.info(f"🆕 [{product_index}/{len(products)}] YENİ ÜRÜN: {title[:50]}... - {campaign_price or price} TL")
+                                    else:
+                                        logger.info(f"✅ [{product_index}/{len(products)}] {title[:50]}... - {campaign_price or price} TL")
                                 else:
                                     logger.error(f"❌ DB ID alınamadı: {product_id}")
                                     total_errors += 1
@@ -261,7 +305,14 @@ def run_trendyol_bot():
                         logger.debug(f"Stack trace:\n{traceback.format_exc()}")
                         continue
 
-                logger.info(f"🎯 '{term}' için toplam {term_product_count} ürün işlendi")
+                # Bu terim için özet
+                logger.info(f"🎯 '{term}' için toplam {term_product_count} ürün işlendi ({new_products_count} yeni)")
+                
+                # Eğer bu terim için en az 1 yeni ürün eklendiyse, search_terms tablosunu güncelle
+                if new_products_count > 0:
+                    increment_search_term_count(cur, term, new_products_count)
+                    conn.commit()
+                    logger.info(f"📈 '{term}' için search_terms sayacı güncellendi (+{new_products_count} yeni ürün)")
 
     except Exception as e:
         logger.error(f"🚨 Genel bot hatası: {e}")

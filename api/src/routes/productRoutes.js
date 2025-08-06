@@ -1050,5 +1050,25 @@ router.get(
     }
   }
 );
+router.get("/search-terms-log", authenticateToken, async (req, res) => {
+  try {
+    const result = await pool.query(`
+      SELECT
+        term,
+        MAX(CASE WHEN platform = 'hepsiburada' THEN count ELSE 0 END) AS "hepsiburadaCount",
+        MAX(CASE WHEN platform = 'trendyol' THEN count ELSE 0 END) AS "trendyolCount",
+        MAX(CASE WHEN platform = 'avansas' THEN count ELSE 0 END) AS "avansasCount",
+        MAX(CASE WHEN platform = 'n11' THEN count ELSE 0 END) AS "n11Count"
+      FROM public.search_terms
+      GROUP BY term
+      ORDER BY term
+    `);
+
+    res.json({ success: true, data: result.rows });
+  } catch (err) {
+    console.error("🔴 Arama özet hatası:", err);
+    res.status(500).json({ success: false, error: "Sunucu hatası" });
+  }
+});
 
 export default router;

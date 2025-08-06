@@ -9,6 +9,7 @@ import setupSwagger from "../swagger.js";
 import createTables from "./initDb.js";
 import botLogRoutes from "./routes/botLogRoutes.js";
 import botLogStreamRoutes from "./routes/botLogStreamRaoutes.js";
+import reportRoutes from "./routes/reportRoutes.js";
 
 dotenv.config();
 
@@ -41,6 +42,7 @@ app.use("/api", authRoutes);
 app.use("/api", searchRoutes);
 app.use("/api", botLogRoutes);
 app.use("/api", botLogStreamRoutes);
+app.use("/api", reportRoutes);
 
 // Swagger UI setup
 setupSwagger(app);

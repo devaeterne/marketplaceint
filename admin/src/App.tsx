@@ -29,6 +29,8 @@ import CategoryCreateForm from "@/components/product/CategoryCreateForm";
 import TagsPage from "./pages/product/Tag";
 import TagsCreateForm from "./components/product/TagsCreateForm";
 import FinalProductEditPage from "./pages/product/finalProductEdit";
+import TermsReportPage from "@/pages/Report/TermsReport"
+import PriceReportPage from "./pages/Report/PriceReportPage";
 
 export default function App() {
   return (
@@ -62,6 +64,8 @@ export default function App() {
                 <Route path="/categories/create" element={<CategoryCreateForm />} />
                 <Route path="/tags" element={<TagsPage />} />
                 <Route path="/tags/create" element={<TagsCreateForm />} />
+                <Route path="/terms-report" element={<TermsReportPage />} />
+                <Route path="/price-report" element={<PriceReportPage />} />
               </Route>
             </Route>
 

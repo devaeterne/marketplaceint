@@ -45,31 +45,44 @@ total_errors = 0
 error_products = []
 
 def upsert_product(cur, platform, platform_product_id, product_link, title, brand):
-    """Ürünü products tablosuna ekle veya güncelle"""
+    """Ürünü veritabanına ekle veya güncelle, (product_id, is_new) tuple döner"""
     try:
+        # Önce var mı diye kontrol et
         cur.execute("""
-            INSERT INTO products (platform, platform_product_id, product_link, title, brand)
-            VALUES (%s, %s, %s, %s, %s)
-            ON CONFLICT (platform, platform_product_id) DO UPDATE
-            SET product_link = EXCLUDED.product_link,
-                title = EXCLUDED.title,
-                brand = EXCLUDED.brand,
-                updated_at = NOW()
-            RETURNING id;
-        """, (platform, platform_product_id, product_link, title, brand))
+            SELECT id FROM products
+            WHERE platform = %s AND platform_product_id = %s
+        """, (platform, platform_product_id))
 
         result = cur.fetchone()
-        if not result:
-            logger.warning(f"⚠️ fetchone() None döndü - {platform_product_id}")
-            return None
-
-        if isinstance(result, dict) and 'id' in result:
-            return result['id']
-        elif isinstance(result, (tuple, list)):
-            return result[0]
+        if result:
+            # Varsa güncelle ve mevcut ID'yi döndür
+            product_id = result[0] if isinstance(result, tuple) else result.get('id')
+            cur.execute("""
+                UPDATE products
+                SET product_link = %s,
+                    title = %s,
+                    brand = %s,
+                    updated_at = NOW()
+                WHERE platform = %s AND platform_product_id = %s
+                RETURNING id
+            """, (product_link, title, brand, platform, platform_product_id))
+            return (product_id, False)  # (id, is_new=False)
         else:
-            logger.warning(f"⚠️ fetchone() beklenmeyen formatta - {result}")
-            return None
+            # Yoksa ekle ve yeni ID'yi döndür
+            cur.execute("""
+                INSERT INTO products (platform, platform_product_id, product_link, title, brand)
+                VALUES (%s, %s, %s, %s, %s)
+                RETURNING id
+            """, (platform, platform_product_id, product_link, title, brand))
+            
+            new_result = cur.fetchone()
+            if new_result:
+                product_id = new_result[0] if isinstance(new_result, tuple) else new_result.get('id')
+                return (product_id, True)  # (id, is_new=True)
+            else:
+                logger.error("❌ Yeni ürün eklendi ama ID alınamadı")
+                return (None, False)
+                
     except Exception as e:
         logger.error(f"❌ Ürün ekleme hatası: {e}")
         raise
@@ -108,6 +121,29 @@ def insert_price_log(cur, product_id, price, campaign_price, stock_status):
         logger.error(f"❌ Fiyat log ekleme hatası: {e}")
         raise
 
+def increment_search_term_count(cur, term, new_product_count):
+    """Arama terimi için bulunan yeni ürün sayısını ekle"""
+    try:
+        cur.execute("""
+            INSERT INTO search_terms (term, platform, count)
+            VALUES (%s, %s, %s)
+            ON CONFLICT (term, platform)
+            DO UPDATE SET count = search_terms.count + %s
+        """, (term, "n11", new_product_count, new_product_count))
+        
+        # Güncel count değerini öğren
+        cur.execute("""
+            SELECT count FROM search_terms 
+            WHERE term = %s AND platform = %s
+        """, (term, "n11"))
+        
+        result = cur.fetchone()
+        current_count = result[0] if result else new_product_count
+        
+        logger.info(f"📊 '{term}' terimi için +{new_product_count} yeni ürün (Toplam: {current_count})")
+    except Exception as e:
+        logger.warning(f"⚠️ search_terms güncellenemedi: {e}")
+
 def run_n11_bot():
     global total_processed, total_errors, error_products
     
@@ -143,6 +179,7 @@ def run_n11_bot():
                 logger.info(f"🔍 [{term_index}/{len(search_terms)}] '{term}' için ürünler çekiliyor...")
                 encoded_term = quote_plus(term)
                 term_product_count = 0
+                new_products_count = 0  # Bu terim için yeni ürün sayısı
                 previous_product_links = set()
 
                 for page in range(1, 6):  # Max 5 sayfa
@@ -228,9 +265,11 @@ def run_n11_bot():
                                 item_text = item.get_text().lower()
                                 stock_status = "Tükendi" if any(word in item_text for word in ["tükendi", "stokta yok", "mevcut değil"]) else "Mevcut"
 
+                                logger.debug(f"📝 Ürün: {title[:30]}... - Fiyat: {fiyat} TL")
+
                                 # Veritabanına kaydet
                                 if product_id and product_id != "Yok":
-                                    product_db_id = upsert_product(
+                                    product_db_id, is_new = upsert_product(
                                         cur, 
                                         "n11",
                                         product_id,
@@ -247,9 +286,15 @@ def run_n11_bot():
                                             None,  # campaign_price
                                             stock_status
                                         )
+                                        conn.commit()
                                         term_product_count += 1
                                         total_processed += 1
-                                        logger.info(f"✅ [{item_index}/{len(product_items)}] {title[:50]}... - {fiyat} TL")
+                                        
+                                        if is_new:
+                                            new_products_count += 1
+                                            logger.info(f"🆕 [{item_index}/{len(product_items)}] YENİ ÜRÜN: {title[:50]}... - {fiyat} TL")
+                                        else:
+                                            logger.info(f"✅ [{item_index}/{len(product_items)}] {title[:50]}... - {fiyat} TL")
                                     else:
                                         logger.error(f"❌ DB ID alınamadı: {product_id}")
                                         total_errors += 1
@@ -265,16 +310,21 @@ def run_n11_bot():
                                 logger.debug(f"Stack trace:\n{traceback.format_exc()}")
                                 continue
 
-                        # Her sayfa sonrası commit
-                        conn.commit()
-                        logger.info(f"💾 Sayfa {page} kaydedildi - Bu sayfada {len(product_items)} ürün işlendi")
+                        logger.info(f"💾 Sayfa {page} tamamlandı")
 
                     except Exception as e:
                         logger.error(f"❌ Sayfa {page} genel hatası: {e}")
                         logger.debug(f"Stack trace:\n{traceback.format_exc()}")
                         continue
 
-                logger.info(f"🎯 '{term}' için toplam {term_product_count} ürün işlendi")
+                # Bu terim için özet
+                logger.info(f"🎯 '{term}' için toplam {term_product_count} ürün işlendi ({new_products_count} yeni)")
+                
+                # Eğer bu terim için en az 1 yeni ürün eklendiyse, search_terms tablosunu güncelle
+                if new_products_count > 0:
+                    increment_search_term_count(cur, term, new_products_count)
+                    conn.commit()
+                    logger.info(f"📈 '{term}' için search_terms sayacı güncellendi (+{new_products_count} yeni ürün)")
 
     except Exception as e:
         logger.error(f"🚨 Genel bot hatası: {e}")

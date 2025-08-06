@@ -50,6 +50,7 @@ const navItems: NavItem[] = [
     icon: <ListIcon />,
     subItems: [{ name: "Price Report", path: "/price-report", pro: false },
       { name: "Campaign Report", path: "/campaign-report", pro: false },
+      { name: "Search Terms", path: "/terms-report", pro: false },
     ],
   },
 ];
