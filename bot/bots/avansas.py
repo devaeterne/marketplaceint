@@ -13,13 +13,25 @@ import traceback
 import logging
 from db_connection import get_db_connection
 
-# === Log Ayarı ===
-os.makedirs("/app/logs", exist_ok=True)
+# === Loglama ayarları ===
+base_dir = os.path.dirname(os.path.abspath(__file__))  # /app/bots gibi tam path
+log_dir = os.path.join(base_dir, "..", "bot_logs")
+os.makedirs(log_dir, exist_ok=True)
+
+log_path = os.path.join(log_dir, "avansas_latest.log")
+log_dir = "bot_logs"
+
+
 logging.basicConfig(
-    filename="/app/logs/avansas_log.txt",
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler(log_path, encoding="utf-8"),
+        logging.StreamHandler()  # konsola da yaz
+    ]
 )
+
+logger = logging.getLogger(__name__)
 
 # === Yardımcı Fonksiyonlar ===
 

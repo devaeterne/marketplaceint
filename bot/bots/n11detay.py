@@ -6,10 +6,23 @@ from bs4 import BeautifulSoup
 import time
 import re
 from db_connection import get_db_connection
+import logging
+import os
 
 # PostgreSQL bağlantısı
 conn = get_db_connection()
+log_dir = "bot_logs"
+os.makedirs(log_dir, exist_ok=True)
+log_path = os.path.join(log_dir, "avansas-detail_latest.log")  # veya f"{bot_name}_latest.log"
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler(log_path, encoding="utf-8"),
+        logging.StreamHandler()  # konsola da yaz
+    ]
+)
 def setup_chrome_driver():
     options = uc.ChromeOptions()
     options.add_argument("--headless=new")

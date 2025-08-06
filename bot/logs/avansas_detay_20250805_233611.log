@@ -1,0 +1,418 @@
+2025-08-05 23:36:11,510 - INFO - ✅ Veritabanı bağlantısı başarılı
+2025-08-05 23:36:12,554 - INFO - ✅ Chrome driver başlatıldı
+2025-08-05 23:36:12,565 - INFO - 📊 Toplam 193 ürün bulundu
+2025-08-05 23:36:12,566 - INFO - 
+============================================================
+2025-08-05 23:36:12,567 - INFO - 🔍 İşleniyor [1/193]: Product ID 24
+2025-08-05 23:36:12,568 - INFO - 📌 URL: https://www.avansas.com/nescafe-classic-cozunebilir-kahve-1-kg-teneke-kutu-p-50139
+2025-08-05 23:36:13,587 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:16,838 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:16,840 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:16,856 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:16,858 - INFO - ⭐ Ürün puanı: 5.0
+2025-08-05 23:36:16,861 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/50139/nescafe-classic-kahve-teneke-kutu-1-kg-zoom-1.jpg
+2025-08-05 23:36:16,868 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:16,877 - INFO - ✅ Product ID 24 başarıyla güncellendi
+2025-08-05 23:36:16,877 - INFO - 
+============================================================
+2025-08-05 23:36:16,878 - INFO - 🔍 İşleniyor [2/193]: Product ID 25
+2025-08-05 23:36:16,878 - INFO - 📌 URL: https://www.avansas.com/nescafe-classic-cozunebilir-kahve-1-kg-teneke-kutu-aliminda--nescafe-gold-crema-80-g--2-paket-nescafe-gold-decaf-70-g-cozulebilir-kahve-hediye-p-20KZEK
+2025-08-05 23:36:17,488 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:21,190 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:21,193 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:21,207 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:21,214 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/20KZEK/nescafe-classic-cozunebilir-kahve-1-kg-teneke-kutu-aliminda--nescafe-gold-crema-80-g--2-paket-nescafe-gold-decaf-70-g-cozulebilir-kahve-hediye-zoom-1.jpg
+2025-08-05 23:36:21,221 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:21,222 - INFO - ✅ Product ID 25 başarıyla güncellendi
+2025-08-05 23:36:21,223 - INFO - 
+============================================================
+2025-08-05 23:36:21,223 - INFO - 🔍 İşleniyor [3/193]: Product ID 26
+2025-08-05 23:36:21,224 - INFO - 📌 URL: https://www.avansas.com/nescafe-mocha-17-gr-24-lu-p-92346
+2025-08-05 23:36:21,831 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:25,600 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:25,603 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:25,617 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:25,619 - INFO - ⭐ Ürün puanı: 4.5
+2025-08-05 23:36:25,622 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/92346/nescafe-mocha-17-9-gr-24lu-paket-zoom-1.jpg
+2025-08-05 23:36:25,629 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:25,631 - INFO - ✅ Product ID 26 başarıyla güncellendi
+2025-08-05 23:36:25,631 - INFO - 
+============================================================
+2025-08-05 23:36:25,632 - INFO - 🔍 İşleniyor [4/193]: Product ID 27
+2025-08-05 23:36:25,632 - INFO - 📌 URL: https://www.avansas.com/nescafe-classic-cozunebilir-kahve-100g-ekonomik-paket-p-99549
+2025-08-05 23:36:26,210 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:30,079 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:30,082 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:30,097 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:30,100 - INFO - ⭐ Ürün puanı: 4.2
+2025-08-05 23:36:30,103 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/99549/nescafe-classic-100gr-zoom-1.jpg
+2025-08-05 23:36:30,110 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:30,112 - INFO - ✅ Product ID 27 başarıyla güncellendi
+2025-08-05 23:36:30,112 - INFO - 
+============================================================
+2025-08-05 23:36:30,113 - INFO - 🔍 İşleniyor [5/193]: Product ID 28
+2025-08-05 23:36:30,113 - INFO - 📌 URL: https://www.avansas.com/nescafe-crema-latte-14-5-gr-24-lu-p-92345
+2025-08-05 23:36:30,548 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:34,157 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:34,161 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:34,174 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:34,176 - INFO - ⭐ Ürün puanı: 4.8
+2025-08-05 23:36:34,179 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/92345/nescafe-crema-latte-17-gr-24lu-paket-zoom-1.jpg
+2025-08-05 23:36:34,186 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:34,187 - INFO - ✅ Product ID 28 başarıyla güncellendi
+2025-08-05 23:36:34,188 - INFO - 
+============================================================
+2025-08-05 23:36:34,188 - INFO - 🔍 İşleniyor [6/193]: Product ID 29
+2025-08-05 23:36:34,188 - INFO - 📌 URL: https://www.avansas.com/nescafe-gold-cozunebilir-kahve-100g-ekonomik-paket-p-59833
+2025-08-05 23:36:34,631 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:38,304 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:38,307 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:38,320 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:38,323 - INFO - ⭐ Ürün puanı: 4.5
+2025-08-05 23:36:38,325 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/59833/nescafe-gold-kahve-eko-paket-100-gr-zoom-1.jpg
+2025-08-05 23:36:38,332 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:38,334 - INFO - ✅ Product ID 29 başarıyla güncellendi
+2025-08-05 23:36:38,334 - INFO - 
+============================================================
+2025-08-05 23:36:38,335 - INFO - 🔍 İşleniyor [7/193]: Product ID 30
+2025-08-05 23:36:38,335 - INFO - 📌 URL: https://www.avansas.com/nescafe-2-si-1-arada-kahve-10-gr-10-lu-p-84541
+2025-08-05 23:36:38,836 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:42,400 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:42,404 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:42,417 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:42,420 - INFO - ⭐ Ürün puanı: 4.7
+2025-08-05 23:36:42,423 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/84541/nescafe-2in1-10lu-paket-zoom-1.jpg
+2025-08-05 23:36:42,431 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:42,435 - INFO - ✅ Product ID 30 başarıyla güncellendi
+2025-08-05 23:36:42,436 - INFO - 
+============================================================
+2025-08-05 23:36:42,436 - INFO - 🔍 İşleniyor [8/193]: Product ID 31
+2025-08-05 23:36:42,437 - INFO - 📌 URL: https://www.avansas.com/nescafe-3-u-1-arada-kahve-17-5-g-72-li-p-60270
+2025-08-05 23:36:42,941 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:46,495 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:46,499 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:46,513 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:46,515 - INFO - ⭐ Ürün puanı: 4.9
+2025-08-05 23:36:46,517 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/60270/nescafe-3-u-1-arada-kahve-18-5-gr-72-li-paket-zoom-1.jpg
+2025-08-05 23:36:46,524 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:46,528 - INFO - ✅ Product ID 31 başarıyla güncellendi
+2025-08-05 23:36:46,528 - INFO - 
+============================================================
+2025-08-05 23:36:46,529 - INFO - 🔍 İşleniyor [9/193]: Product ID 32
+2025-08-05 23:36:46,529 - INFO - 📌 URL: https://www.avansas.com/nescafe-2-si-1-arada-kahve-10-g-56-li-p-64227
+2025-08-05 23:36:46,984 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:50,562 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:50,565 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:50,580 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:50,583 - INFO - ⭐ Ürün puanı: 4.8
+2025-08-05 23:36:50,585 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/64227/nescafe-2-si-1-arada-kahve-11-gr-48-li-paket-zoom-1.jpg
+2025-08-05 23:36:50,592 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:50,594 - INFO - ✅ Product ID 32 başarıyla güncellendi
+2025-08-05 23:36:50,595 - INFO - 
+============================================================
+2025-08-05 23:36:50,595 - INFO - 🔍 İşleniyor [10/193]: Product ID 33
+2025-08-05 23:36:50,595 - INFO - 📌 URL: https://www.avansas.com/nescafe-3-u-1-arada-findik-aromali-17-5-gr-48-li-p-92347
+2025-08-05 23:36:51,006 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:54,627 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:54,631 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:54,647 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:54,649 - INFO - ⭐ Ürün puanı: 4.3
+2025-08-05 23:36:54,652 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/92347/nescafe-3in1-fndk-armli-17-gr-48li-pakt-zoom-1.jpg
+2025-08-05 23:36:54,660 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:54,663 - INFO - ✅ Product ID 33 başarıyla güncellendi
+2025-08-05 23:36:54,663 - INFO - 
+============================================================
+2025-08-05 23:36:54,663 - INFO - 🔍 İşleniyor [11/193]: Product ID 34
+2025-08-05 23:36:54,664 - INFO - 📌 URL: https://www.avansas.com/nescafe-3-u-1-arada-sutlu-kopuklu-17-5-gr-72-li-p-78320
+2025-08-05 23:36:55,083 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:36:58,688 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:36:58,691 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:36:58,705 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:36:58,707 - INFO - ⭐ Ürün puanı: 4.6
+2025-08-05 23:36:58,710 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/78320/nescafe-3u1-arda-stlu-kopkl-17-5gr-72li-zoom-1.jpg
+2025-08-05 23:36:58,717 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:36:58,720 - INFO - ✅ Product ID 34 başarıyla güncellendi
+2025-08-05 23:36:58,720 - INFO - 
+============================================================
+2025-08-05 23:36:58,721 - INFO - 🔍 İşleniyor [12/193]: Product ID 35
+2025-08-05 23:36:58,721 - INFO - 📌 URL: https://www.avansas.com/nescafe-3-u-1-arada-extra-48-x-16-5-gr-p-92344
+2025-08-05 23:36:59,174 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:02,721 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:02,725 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:02,739 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:02,741 - INFO - ⭐ Ürün puanı: 4.8
+2025-08-05 23:37:02,744 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/92344/nescafe-3in1-extra-16-5-gr-48li-paket-zoom-1.jpg
+2025-08-05 23:37:02,752 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:02,757 - INFO - ✅ Product ID 35 başarıyla güncellendi
+2025-08-05 23:37:02,757 - INFO - 
+============================================================
+2025-08-05 23:37:02,758 - INFO - 🔍 İşleniyor [13/193]: Product ID 36
+2025-08-05 23:37:02,758 - INFO - 📌 URL: https://www.avansas.com/nescafe-gold-kahve-teneke-kutu-900-g-p-70029
+2025-08-05 23:37:03,294 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:07,136 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:07,139 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:07,153 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:07,156 - INFO - ⭐ Ürün puanı: 5.0
+2025-08-05 23:37:07,158 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/70029/nescafe-gold-kahve-teneke-kutu-900-gr-zoom-1.jpg
+2025-08-05 23:37:07,166 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:07,168 - INFO - ✅ Product ID 36 başarıyla güncellendi
+2025-08-05 23:37:07,169 - INFO - 
+============================================================
+2025-08-05 23:37:07,169 - INFO - 🔍 İşleniyor [14/193]: Product ID 37
+2025-08-05 23:37:07,170 - INFO - 📌 URL: https://www.avansas.com/nescafe-forte-filtre-kahve-500-gr-2-adet--nescafe-thermo-mug-400-ml-tekli-hediye-p-20G15S
+2025-08-05 23:37:07,698 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:11,302 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:11,306 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:11,320 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:11,327 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/20G15S/nescafe-forte-filtre-kahve-500-gr-2-adet--nescafe-thermo-mug-400-ml-tekli-hediye-zoom-1.jpg
+2025-08-05 23:37:11,335 - INFO - 🏷️ Ürün tipi: Filtre Kahveler
+2025-08-05 23:37:11,337 - INFO - ✅ Product ID 37 başarıyla güncellendi
+2025-08-05 23:37:11,337 - INFO - 
+============================================================
+2025-08-05 23:37:11,338 - INFO - 🔍 İşleniyor [15/193]: Product ID 38
+2025-08-05 23:37:11,338 - INFO - 📌 URL: https://www.avansas.com/nescafe-gold-kahve-teneke-kutu-900-g-aliminda--gold-crema-80-g--2-paket-nescafe-gold-decaf-kafeinsiz-cozunebilir-kahve-70-g-hediye-p-20KZEL
+2025-08-05 23:37:11,787 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:15,324 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:15,328 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:15,342 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:15,350 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/20KZEL/nescafe-gold-kahve-teneke-kutu-900-g-aliminda--gold-crema-80-g--2-paket-nescafe-gold-decaf-kafeinsiz-cozunebilir-kahve-70-g-hediye-zoom-1.jpg
+2025-08-05 23:37:15,358 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:15,359 - INFO - ✅ Product ID 38 başarıyla güncellendi
+2025-08-05 23:37:15,360 - INFO - 
+============================================================
+2025-08-05 23:37:15,360 - INFO - 🔍 İşleniyor [16/193]: Product ID 39
+2025-08-05 23:37:15,361 - INFO - 📌 URL: https://www.avansas.com/nescafe-classic-cozunebilir-kahve-200g-ekonomik-paket-p-56836
+2025-08-05 23:37:16,352 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:19,561 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:19,564 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:19,579 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:19,581 - INFO - ⭐ Ürün puanı: 4.9
+2025-08-05 23:37:19,584 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/56836/nescafe-classic-kahve-ekonomik-paket-200-gr-zoom-1.jpg
+2025-08-05 23:37:19,592 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:19,593 - INFO - ✅ Product ID 39 başarıyla güncellendi
+2025-08-05 23:37:19,594 - INFO - 
+============================================================
+2025-08-05 23:37:19,594 - INFO - 🔍 İşleniyor [17/193]: Product ID 40
+2025-08-05 23:37:19,594 - INFO - 📌 URL: https://www.avansas.com/nescafe-xpress-vanilla-250-ml-24-lu-p-132125
+2025-08-05 23:37:20,024 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:23,652 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:23,655 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:23,669 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:23,676 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/132125/nescafe-xpress-vanilla-250-ml-24lu-zoom-1.jpg
+2025-08-05 23:37:23,684 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:23,686 - INFO - ✅ Product ID 40 başarıyla güncellendi
+2025-08-05 23:37:23,686 - INFO - 
+============================================================
+2025-08-05 23:37:23,687 - INFO - 🔍 İşleniyor [18/193]: Product ID 41
+2025-08-05 23:37:23,687 - INFO - 📌 URL: https://www.avansas.com/nescafe-classic-cozunebilir-kahve-600-g-ekonomik-paket-p-69338
+2025-08-05 23:37:24,150 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:27,687 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:27,691 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:27,705 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:27,708 - INFO - ⭐ Ürün puanı: 4.6
+2025-08-05 23:37:27,710 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/69338/nescafe-classic-kahve-600-gr-zoom-1.jpg
+2025-08-05 23:37:27,718 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:27,720 - INFO - ✅ Product ID 41 başarıyla güncellendi
+2025-08-05 23:37:27,720 - INFO - 
+============================================================
+2025-08-05 23:37:27,721 - INFO - 🔍 İşleniyor [19/193]: Product ID 42
+2025-08-05 23:37:27,721 - INFO - 📌 URL: https://www.avansas.com/nescafe-gold-cozunebilir-kahve-200-g-ekonomik-paket-aliminda--nescafe-gold-crema-80-g-eko-paket-cozunebilir-kahve-hediye-p-20KZEJ
+2025-08-05 23:37:28,223 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:31,813 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:31,816 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:31,830 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:31,838 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/20KZEJ/nescafe-gold-cozunebilir-kahve-200-g-ekonomik-paket-aliminda--nescafe-gold-crema-80-g-eko-paket-cozunebilir-kahve-hediye-zoom-1.jpg
+2025-08-05 23:37:31,846 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:31,848 - INFO - ✅ Product ID 42 başarıyla güncellendi
+2025-08-05 23:37:31,848 - INFO - 
+============================================================
+2025-08-05 23:37:31,849 - INFO - 🔍 İşleniyor [20/193]: Product ID 43
+2025-08-05 23:37:31,849 - INFO - 📌 URL: https://www.avansas.com/nescafe-xpress-caramel-250-ml-24-lu-p-132122
+2025-08-05 23:37:32,382 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:35,988 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:35,991 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:36,005 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:36,013 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/132122/nescafe-xpress-caramel-500-ml-24lu-zoom-1.jpg
+2025-08-05 23:37:36,021 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:36,023 - INFO - ✅ Product ID 43 başarıyla güncellendi
+2025-08-05 23:37:36,023 - INFO - 
+============================================================
+2025-08-05 23:37:36,024 - INFO - 🔍 İşleniyor [21/193]: Product ID 44
+2025-08-05 23:37:36,024 - INFO - 📌 URL: https://www.avansas.com/nescafe-xpress-chocolate-250-ml-24-lu-p-132123
+2025-08-05 23:37:36,545 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:40,137 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:40,141 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:40,155 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:40,163 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/132123/nescafe-xpress-chocolate-500-ml-24lu-zoom-1.jpg
+2025-08-05 23:37:40,172 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:40,174 - INFO - ✅ Product ID 44 başarıyla güncellendi
+2025-08-05 23:37:40,175 - INFO - 
+============================================================
+2025-08-05 23:37:40,176 - INFO - 🔍 İşleniyor [22/193]: Product ID 45
+2025-08-05 23:37:40,176 - INFO - 📌 URL: https://www.avansas.com/nescafe-gold-cozunebilir-kahve-200g-cam-kavanoz-p-52325
+2025-08-05 23:37:40,585 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:44,237 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:44,240 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:44,254 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:44,256 - INFO - ⭐ Ürün puanı: 5.0
+2025-08-05 23:37:44,259 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/52325/nescafe-gold-kahve-kavanoz-200-gr-zoom-1.jpg
+2025-08-05 23:37:44,268 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:44,269 - INFO - ✅ Product ID 45 başarıyla güncellendi
+2025-08-05 23:37:44,270 - INFO - 
+============================================================
+2025-08-05 23:37:44,270 - INFO - 🔍 İşleniyor [23/193]: Product ID 46
+2025-08-05 23:37:44,270 - INFO - 📌 URL: https://www.avansas.com/nescafe-xpress-original-250-ml-24-lu-p-132126
+2025-08-05 23:37:44,791 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:48,349 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:48,352 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:48,366 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:48,369 - INFO - ⭐ Ürün puanı: 5.0
+2025-08-05 23:37:48,371 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/132126/nescafe-xpress-white-250-ml-24lu-zoom-1.jpg
+2025-08-05 23:37:48,381 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:48,382 - INFO - ✅ Product ID 46 başarıyla güncellendi
+2025-08-05 23:37:48,383 - INFO - 
+============================================================
+2025-08-05 23:37:48,383 - INFO - 🔍 İşleniyor [24/193]: Product ID 47
+2025-08-05 23:37:48,384 - INFO - 📌 URL: https://www.avansas.com/nescafe-xpress-zero-black-250-ml-24-lu-p-132124
+2025-08-05 23:37:48,791 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:52,434 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:52,439 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:52,453 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:52,462 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/132124/nescafe-xpress-zero-black-250-ml-24lu-zoom-1.jpg
+2025-08-05 23:37:52,471 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:52,474 - INFO - ✅ Product ID 47 başarıyla güncellendi
+2025-08-05 23:37:52,475 - INFO - 
+============================================================
+2025-08-05 23:37:52,478 - INFO - 🔍 İşleniyor [25/193]: Product ID 48
+2025-08-05 23:37:52,478 - INFO - 📌 URL: https://www.avansas.com/nescafe-gold-cozunebilir-kahve-200-g-ekonomik-paket-p-71189
+2025-08-05 23:37:52,999 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:37:56,523 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:37:56,527 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:37:56,542 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:37:56,545 - INFO - ⭐ Ürün puanı: 4.9
+2025-08-05 23:37:56,547 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/71189/nescafe-gold-kahve-poset-200-gr-zoom-1.jpg
+2025-08-05 23:37:56,557 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:37:56,559 - INFO - ✅ Product ID 48 başarıyla güncellendi
+2025-08-05 23:37:56,560 - INFO - 
+============================================================
+2025-08-05 23:37:56,561 - INFO - 🔍 İşleniyor [26/193]: Product ID 49
+2025-08-05 23:37:56,561 - INFO - 📌 URL: https://www.avansas.com/nescafe-gold-cozunebilir-granul-kahve-600-g-ekonomik-paket-p-109871
+2025-08-05 23:37:56,936 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:38:00,595 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:38:00,598 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:38:00,612 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:38:00,614 - INFO - ⭐ Ürün puanı: 5.0
+2025-08-05 23:38:00,617 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/109871/nescafe-gold-poset-600-gr-zoom-1.jpg
+2025-08-05 23:38:00,626 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:38:00,627 - INFO - ✅ Product ID 49 başarıyla güncellendi
+2025-08-05 23:38:00,628 - INFO - 
+============================================================
+2025-08-05 23:38:00,628 - INFO - 🔍 İşleniyor [27/193]: Product ID 50
+2025-08-05 23:38:00,628 - INFO - 📌 URL: https://www.avansas.com/nescafe-forte-filtre-kahve-500-g-p-79869
+2025-08-05 23:38:01,110 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:38:04,666 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:38:04,669 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:38:04,683 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:38:04,685 - INFO - ⭐ Ürün puanı: 4.5
+2025-08-05 23:38:04,688 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/79869/nestle-bonka-filtre-kahve-zoom-1.jpg
+2025-08-05 23:38:04,696 - INFO - 🏷️ Ürün tipi: Filtre Kahveler
+2025-08-05 23:38:04,702 - INFO - ✅ Product ID 50 başarıyla güncellendi
+2025-08-05 23:38:04,702 - INFO - 
+============================================================
+2025-08-05 23:38:04,702 - INFO - 🔍 İşleniyor [28/193]: Product ID 51
+2025-08-05 23:38:04,703 - INFO - 📌 URL: https://www.avansas.com/nescafe-forte-filtre-kahve-250-g-p-135973
+2025-08-05 23:38:05,106 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:38:08,776 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:38:08,780 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:38:08,794 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:38:08,802 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/135973/nescafe-forte-filtre-kahve-250-g-zoom-1.jpg
+2025-08-05 23:38:08,811 - INFO - 🏷️ Ürün tipi: Filtre Kahveler
+2025-08-05 23:38:08,813 - INFO - ✅ Product ID 51 başarıyla güncellendi
+2025-08-05 23:38:08,814 - INFO - 
+============================================================
+2025-08-05 23:38:08,814 - INFO - 🔍 İşleniyor [29/193]: Product ID 52
+2025-08-05 23:38:08,815 - INFO - 📌 URL: https://www.avansas.com/nescafe-gold-cam-kavanoz-200-g-aliminda-gold-decaf-kafeinsiz-70-g--gold-crema-80-g-cozunebilir-kahve-hediye-p-20KZEI
+2025-08-05 23:38:09,349 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:38:12,861 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:38:12,864 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:38:12,878 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:38:12,887 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/20KZEI/nescafe-gold-cam-kavanoz-200-g-aliminda-gold-decaf-kafeinsiz-70-g--gold-crema-80-g-cozunebilir-kahve-hediye-zoom-1.jpg
+2025-08-05 23:38:12,897 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:38:12,898 - INFO - ✅ Product ID 52 başarıyla güncellendi
+2025-08-05 23:38:12,899 - INFO - 
+============================================================
+2025-08-05 23:38:12,899 - INFO - 🔍 İşleniyor [30/193]: Product ID 53
+2025-08-05 23:38:12,899 - INFO - 📌 URL: https://www.avansas.com/ducat-gold-cozunebilir-kahve-500-gr-p-127580
+2025-08-05 23:38:13,374 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:38:16,920 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:38:16,924 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:38:16,938 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:38:16,941 - INFO - ⭐ Ürün puanı: 4.7
+2025-08-05 23:38:16,943 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/127580/ducat-gold-cozunebilir-kahve-500-gr-zoom-1.jpg
+2025-08-05 23:38:16,952 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:38:16,954 - INFO - ✅ Product ID 53 başarıyla güncellendi
+2025-08-05 23:38:16,954 - INFO - 
+============================================================
+2025-08-05 23:38:16,954 - INFO - 🔍 İşleniyor [31/193]: Product ID 54
+2025-08-05 23:38:16,955 - INFO - 📌 URL: https://www.avansas.com/tchibo-gold-selection-cozunebilir-kahve-ekonomik-paket-150-g-p-98610
+2025-08-05 23:38:17,476 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:38:21,087 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:38:21,090 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:38:21,103 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:38:21,106 - INFO - ⭐ Ürün puanı: 4.9
+2025-08-05 23:38:21,108 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/98610/tchibo-gold-select-coz-kahve-eko-pk-150g-zoom-1.jpg
+2025-08-05 23:38:21,118 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:38:21,120 - INFO - ✅ Product ID 54 başarıyla güncellendi
+2025-08-05 23:38:21,120 - INFO - 
+============================================================
+2025-08-05 23:38:21,120 - INFO - 🔍 İşleniyor [32/193]: Product ID 55
+2025-08-05 23:38:21,121 - INFO - 📌 URL: https://www.avansas.com/jacobs-cronat-gold-hazir-kahve-500-gr-p-59498
+2025-08-05 23:38:21,609 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:38:25,129 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:38:25,132 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:38:25,146 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:38:25,148 - INFO - ⭐ Ürün puanı: 5.0
+2025-08-05 23:38:25,151 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/59498/jacobs-cronat-gold-hazir-kahve-500-gr-zoom-1.jpg
+2025-08-05 23:38:25,160 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:38:25,164 - INFO - ✅ Product ID 55 başarıyla güncellendi
+2025-08-05 23:38:25,164 - INFO - 
+============================================================
+2025-08-05 23:38:25,164 - INFO - 🔍 İşleniyor [33/193]: Product ID 56
+2025-08-05 23:38:25,165 - INFO - 📌 URL: https://www.avansas.com/cafecup-gold-kahve-100-g-p-134558
+2025-08-05 23:38:25,652 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:38:29,241 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:38:29,244 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:38:29,258 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:38:29,261 - INFO - ⭐ Ürün puanı: 5.0
+2025-08-05 23:38:29,263 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/134558/cafecup-gold-kahve-100g-zoom-1.jpg
+2025-08-05 23:38:29,273 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:38:29,275 - INFO - ✅ Product ID 56 başarıyla güncellendi
+2025-08-05 23:38:29,276 - INFO - 
+============================================================
+2025-08-05 23:38:29,277 - INFO - 🔍 İşleniyor [34/193]: Product ID 57
+2025-08-05 23:38:29,277 - INFO - 📌 URL: https://www.avansas.com/jacobs-monarch-gold-kahve-200-gr-p-74186
+2025-08-05 23:38:29,702 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:38:33,392 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:38:33,395 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:38:33,409 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:38:33,411 - INFO - ⭐ Ürün puanı: 4.9
+2025-08-05 23:38:33,414 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/74186/jacobs-monarch-gold-kahve-200-gr-zoom-1.jpg
+2025-08-05 23:38:33,424 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:38:33,426 - INFO - ✅ Product ID 57 başarıyla güncellendi
+2025-08-05 23:38:33,426 - INFO - 
+============================================================
+2025-08-05 23:38:33,427 - INFO - 🔍 İşleniyor [35/193]: Product ID 58
+2025-08-05 23:38:33,427 - INFO - 📌 URL: https://www.avansas.com/tchibo-exclusive-decaf-kafeinsiz-gold-kahve-100-g-p-98608
+2025-08-05 23:38:33,941 - INFO - ⏳ Sayfa yükleniyor...
+2025-08-05 23:38:37,497 - INFO - ✅ Sayfa başarıyla yüklendi
+2025-08-05 23:38:37,501 - INFO - 📝 Açıklama: Bulundu
+2025-08-05 23:38:37,515 - INFO - 🚚 Kargo bilgisi: 1 günde teslimat bilgisi için tıklayın
+2025-08-05 23:38:37,517 - INFO - ⭐ Ürün puanı: 5.0
+2025-08-05 23:38:37,520 - INFO - 🖼️ Görsel URL: https://cdnsta.avansas.com/mnresize/900/-/urun/98608/tchibo-excl-decaf-kaf-siz-coz-kahve-100g-zoom-1.jpg
+2025-08-05 23:38:37,530 - INFO - 🏷️ Ürün tipi: Hazır Kahveler
+2025-08-05 23:38:37,532 - INFO - ✅ Product ID 58 başarıyla güncellendi
+2025-08-05 23:38:37,533 - INFO - 
+============================================================
+2025-08-05 23:38:37,533 - INFO - 🔍 İşleniyor [36/193]: Product ID 59
+2025-08-05 23:38:37,534 - INFO - 📌 URL: https://www.avansas.com/cafecup-klasik-kahve-100-g-p-134559
+2025-08-05 23:38:37,985 - INFO - ⏳ Sayfa yükleniyor...

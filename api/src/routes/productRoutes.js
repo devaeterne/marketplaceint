@@ -10,9 +10,54 @@ const router = express.Router();
  * /api/products:
  *   get:
  *     summary: Tüm ürünleri getirir
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           default: 1
+ *         description: Sayfa numarası
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 20
+ *         description: Sayfa başına ürün sayısı
+ *       - in: query
+ *         name: platform
+ *         schema:
+ *           type: string
+ *         description: Platform adı
+ *       - in: query
+ *         name: product_type
+ *         schema:
+ *           type: string
+ *         description: Ürün tipi
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *         description: Arama terimi
  *     responses:
  *       200:
  *         description: Ürün listesi
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 total:
+ *                   type: integer
+ *                 page:
+ *                   type: integer
+ *                 limit:
+ *                   type: integer
+ *                 products:
+ *                   type: array
+ *                   items:
+ *                     type: object
  */
 router.get("/products", authenticateToken, async (req, res) => {
   const {
@@ -126,6 +171,65 @@ router.get("/products", authenticateToken, async (req, res) => {
 
 /**
  * @swagger
+ * /api/final_products:
+ *   get:
+ *     summary: Tüm final ürünleri getirir
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           default: 1
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 10
+ *     responses:
+ *       200:
+ *         description: Final ürün listesi
+ */
+router.get("/final_products", authenticateToken, async (req, res) => {
+  try {
+    const { page = 1, limit = 10 } = req.query;
+    const offset = (parseInt(page) - 1) * parseInt(limit);
+
+    // Toplam sayıyı al
+    const countResult = await pool.query("SELECT COUNT(*) FROM final_products");
+    const total = parseInt(countResult.rows[0].count);
+
+    // Ürünleri al ve eşleşme sayılarını hesapla
+    const productsResult = await pool.query(
+      `SELECT 
+        fp.*,
+        COUNT(fpm.product_id) as matched_count
+      FROM final_products fp
+      LEFT JOIN final_product_matches fpm ON fp.id = fpm.final_product_id
+      GROUP BY fp.id
+      ORDER BY fp.created_at DESC
+      LIMIT $1 OFFSET $2`,
+      [parseInt(limit), offset]
+    );
+
+    res.json({
+      success: true,
+      total,
+      page: parseInt(page),
+      limit: parseInt(limit),
+      products: productsResult.rows,
+    });
+  } catch (err) {
+    console.error("Final ürünler alınamadı:", err);
+    res.status(500).json({
+      success: false,
+      message: "Final ürünler alınamadı",
+      error: err.message,
+    });
+  }
+});
+
+/**
+ * @swagger
  * /api/product_price_logs:
  *   get:
  *     summary: Tüm fiyat kayıtlarını getirir
@@ -143,6 +247,471 @@ router.get("/product_price_logs", authenticateToken, async (req, res) => {
     res.status(500).json({ error: "Veritabanı hatası", detail: err.message });
   }
 });
+
+/**
+ * @swagger
+ * /api/product_price_logs/{product_id}:
+ *   get:
+ *     summary: Belirli bir ürüne ait fiyat kayıtlarını getirir
+ *     parameters:
+ *       - in: path
+ *         name: product_id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: Ürün ID'si
+ *     responses:
+ *       200:
+ *         description: Fiyat geçmişi listesi
+ *       400:
+ *         description: Geçersiz product_id
+ */
+router.get(
+  "/product_price_logs/:product_id",
+  authenticateToken,
+  async (req, res) => {
+    try {
+      const { product_id } = req.params;
+
+      if (!product_id) {
+        return res
+          .status(400)
+          .json({ error: "product_id parametresi zorunlu" });
+      }
+
+      const result = await pool.query(
+        `
+      SELECT * FROM product_price_logs 
+      WHERE product_id = $1
+      ORDER BY created_at DESC
+      `,
+        [parseInt(product_id)]
+      );
+
+      res.json(result.rows);
+    } catch (err) {
+      console.error("❌ Fiyat logları alınamadı:", err);
+      res.status(500).json({ error: "Veritabanı hatası", detail: err.message });
+    }
+  }
+);
+
+/**
+ * @swagger
+ * /api/final_products/{id}/matches:
+ *   get:
+ *     summary: Final ürüne eşleşmiş ürünleri getirir
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Eşleşmiş ürün listesi
+ */
+router.get(
+  "/final_products/:id/matches",
+  authenticateToken,
+  async (req, res) => {
+    const { id } = req.params;
+
+    try {
+      const result = await pool.query(
+        `
+      SELECT p.*, 
+             pd.product_type,
+             pd.image_url,
+             pl.price AS latest_price
+      FROM final_product_matches m
+      JOIN products p ON m.product_id = p.id
+      LEFT JOIN product_details pd ON pd.product_id = p.id
+      LEFT JOIN LATERAL (
+        SELECT price FROM product_price_logs
+        WHERE product_id = p.id
+        ORDER BY created_at DESC
+        LIMIT 1
+      ) pl ON true
+      WHERE m.final_product_id = $1
+    `,
+        [id]
+      );
+
+      res.json(result.rows);
+    } catch (err) {
+      res
+        .status(500)
+        .json({ error: "Eşleşmiş ürünler getirilemedi", detail: err.message });
+    }
+  }
+);
+
+/**
+ * @swagger
+ * /api/final_products/{id}/unmatched-products:
+ *   get:
+ *     summary: Final ürüne henüz eşleşmemiş ürünleri getirir
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Eşleşmemiş ürün listesi
+ */
+router.get(
+  "/final_products/:id/unmatched-products",
+  authenticateToken,
+  async (req, res) => {
+    const { id } = req.params;
+
+    try {
+      const result = await pool.query(
+        `
+      SELECT p.*, 
+             pd.product_type,
+             pd.image_url,
+             pl.price AS latest_price
+      FROM products p
+      LEFT JOIN product_details pd ON pd.product_id = p.id
+      LEFT JOIN LATERAL (
+        SELECT price FROM product_price_logs
+        WHERE product_id = p.id
+        ORDER BY created_at DESC
+        LIMIT 1
+      ) pl ON true
+      WHERE p.id NOT IN (
+        SELECT product_id FROM final_product_matches WHERE final_product_id = $1
+      )
+    `,
+        [id]
+      );
+
+      res.json(result.rows);
+    } catch (err) {
+      res.status(500).json({
+        error: "Henüz eşleşmemiş ürünler getirilemedi",
+        detail: err.message,
+      });
+    }
+  }
+);
+
+/**
+ * @swagger
+ * /api/final_products:
+ *   post:
+ *     summary: Yeni bir final ürün ekler
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               short_description:
+ *                 type: string
+ *               description:
+ *                 type: string
+ *               image_url:
+ *                 type: string
+ *               image_file:
+ *                 type: string
+ *               brand:
+ *                 type: string
+ *               brand_id:
+ *                 type: string
+ *               category:
+ *                 type: string
+ *               category_id:
+ *                 type: string
+ *               weight:
+ *                 type: number
+ *               total_stock:
+ *                 type: number
+ *               max_quantity_per_cart:
+ *                 type: integer
+ *               google_taxonomy_id:
+ *                 type: string
+ *               product_option_set_id:
+ *                 type: string
+ *               product_volume_discount_id:
+ *                 type: string
+ *               base_unit:
+ *                 type: string
+ *               sales_channel_ids:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               hidden_sales_channel_ids:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               tag_ids:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               ikas_product_id:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *               campaign_price:
+ *                 type: number
+ *     responses:
+ *       201:
+ *         description: Final ürün başarıyla oluşturuldu
+ */
+router.post("/final_products", authenticateToken, async (req, res) => {
+  try {
+    const {
+      name,
+      short_description,
+      description,
+      image_url,
+      image_file,
+      brand,
+      brand_id,
+      category,
+      category_id,
+      weight,
+      total_stock,
+      max_quantity_per_cart,
+      google_taxonomy_id,
+      product_option_set_id,
+      product_volume_discount_id,
+      base_unit,
+      sales_channel_ids,
+      hidden_sales_channel_ids,
+      tag_ids,
+      ikas_product_id,
+      price,
+      campaign_price,
+    } = req.body;
+
+    const result = await pool.query(
+      `
+      INSERT INTO final_products (
+        name, short_description, description,
+        image_url, image_file,
+        brand, brand_id,
+        category, category_id,
+        weight, total_stock, max_quantity_per_cart,
+        google_taxonomy_id, product_option_set_id,
+        product_volume_discount_id, base_unit,
+        sales_channel_ids, hidden_sales_channel_ids, tag_ids,
+        ikas_product_id, price, campaign_price
+      ) VALUES (
+        $1, $2, $3,
+        $4, $5,
+        $6, $7,
+        $8, $9,
+        $10, $11, $12,
+        $13, $14,
+        $15, $16,
+        $17, $18, $19,
+        $20, $21, $22
+      )
+      RETURNING *;
+      `,
+      [
+        name,
+        short_description,
+        description,
+        image_url,
+        image_file,
+        brand,
+        brand_id,
+        category,
+        category_id,
+        weight,
+        total_stock,
+        max_quantity_per_cart,
+        google_taxonomy_id,
+        product_option_set_id,
+        product_volume_discount_id,
+        base_unit,
+        sales_channel_ids,
+        hidden_sales_channel_ids,
+        tag_ids,
+        ikas_product_id,
+        price,
+        campaign_price,
+      ]
+    );
+
+    res.json({
+      success: true,
+      product: result.rows[0],
+    });
+  } catch (err) {
+    console.error("❌ Final ürün eklenemedi:", err.message);
+    res.status(500).json({
+      success: false,
+      message: "Final ürün eklenirken hata oluştu.",
+      error: err.message,
+    });
+  }
+});
+
+/**
+ * @swagger
+ * /api/categories:
+ *   get:
+ *     summary: Tüm standart kategorileri getirir
+ *     responses:
+ *       200:
+ *         description: Kategori listesi
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *                   name:
+ *                     type: string
+ *                     description: Kategorinin adı
+ *                   created_at:
+ *                     type: string
+ *                     format: date-time
+ *                     description: Kategorinin oluşturulma tarihi
+ *                     example: "2023-10-01T12:00:00Z"
+ */
+router.get("/categories", authenticateToken, async (req, res) => {
+  const result = await pool.query(
+    "SELECT * FROM standard_categories ORDER BY name ASC"
+  );
+  res.json(result.rows);
+});
+
+/**
+ * @swagger
+ * /api/tags:
+ *   get:
+ *     summary: Tüm etiketleri getirir
+ *     responses:
+ *       200:
+ *         description: Etiket listesi
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id:
+ *                     type: integer
+ *                   name:
+ *                     type: string
+ *                     description: Etiketin adı
+ *                   created_at:
+ *                     type: string
+ *                     format: date-time
+ *                     description: Etiketin oluşturulma tarihi
+ *                     example: "2023-10-01T12:00:00Z"
+ */
+router.get("/tags", authenticateToken, async (req, res) => {
+  const result = await pool.query(
+    "SELECT * FROM product_tags ORDER BY name ASC"
+  );
+  res.json(result.rows);
+});
+
+/**
+ * @swagger
+ * /api/final_products/{id}/match/{product_id}:
+ *   delete:
+ *     summary: Final ürün eşleşmesini kaldırır
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *       - in: path
+ *         name: product_id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Eşleşme başarıyla kaldırıldı
+ */
+router.delete(
+  "/final_products/:id/match/:product_id",
+  authenticateToken,
+  async (req, res) => {
+    const { id, product_id } = req.params;
+
+    try {
+      await pool.query(
+        "DELETE FROM final_product_matches WHERE final_product_id = $1 AND product_id = $2",
+        [id, product_id]
+      );
+      res.json({ success: true, message: "Eşleşme kaldırıldı." });
+    } catch (err) {
+      res.status(500).json({ success: false, error: err.message });
+    }
+  }
+);
+
+/**
+ * @swagger
+ * /api/final_products/{id}/matches:
+ *   post:
+ *     summary: Final ürüne yeni eşleşmeler ekler
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               product_ids:
+ *                 type: array
+ *                 items:
+ *                   type: integer
+ *     responses:
+ *       200:
+ *         description: Eşleşmeler başarıyla eklendi
+ */
+router.post(
+  "/final_products/:id/matches",
+  authenticateToken,
+  async (req, res) => {
+    const { id } = req.params;
+    const { product_ids } = req.body;
+
+    try {
+      if (!product_ids || product_ids.length === 0) {
+        return res.json({ success: true, message: "Eşleşme eklenmedi." });
+      }
+
+      const values = product_ids.map((pid) => `(${id}, ${pid})`).join(",");
+      await pool.query(
+        `INSERT INTO final_product_matches (final_product_id, product_id)
+       VALUES ${values}
+       ON CONFLICT DO NOTHING`
+      );
+      res.json({ success: true });
+    } catch (err) {
+      res.status(500).json({ success: false, error: err.message });
+    }
+  }
+);
 
 /**
  * @swagger
@@ -183,5 +752,81 @@ router.get("/product_attributes", authenticateToken, async (req, res) => {
     res.status(500).json({ error: "Veritabanı hatası", detail: err.message });
   }
 });
+
+router.get(
+  "/final_products/:id/selectable-products",
+  authenticateToken,
+  async (req, res) => {
+    const { id } = req.params;
+    const {
+      platform = "",
+      product_type = "",
+      search = "",
+      page = 1,
+      limit = 10,
+    } = req.query;
+
+    const offset = (parseInt(page) - 1) * parseInt(limit);
+
+    try {
+      const baseParams = [id, platform, product_type, search];
+
+      const countQuery = `
+        SELECT COUNT(*) FROM products p
+        LEFT JOIN product_details pd ON pd.product_id = p.id
+        WHERE p.id NOT IN (
+          SELECT product_id FROM final_product_matches
+          WHERE final_product_id != $1
+        )
+        AND ($2 = '' OR p.platform = $2)
+        AND ($3 = '' OR pd.product_type ILIKE '%' || $3 || '%')
+        AND ($4 = '' OR p.title ILIKE '%' || $4 || '%' OR p.brand ILIKE '%' || $4 || '%')
+      `;
+
+      const dataQuery = `
+        SELECT p.*, 
+               pd.product_type,
+               pd.image_url,
+               pl.price AS latest_price
+        FROM products p
+        LEFT JOIN product_details pd ON pd.product_id = p.id
+        LEFT JOIN LATERAL (
+          SELECT price FROM product_price_logs
+          WHERE product_id = p.id
+          ORDER BY created_at DESC
+          LIMIT 1
+        ) pl ON true
+        WHERE p.id NOT IN (
+          SELECT product_id FROM final_product_matches
+          WHERE final_product_id != $1
+        )
+        AND ($2 = '' OR p.platform = $2)
+        AND ($3 = '' OR pd.product_type ILIKE '%' || $3 || '%')
+        AND ($4 = '' OR p.title ILIKE '%' || $4 || '%' OR p.brand ILIKE '%' || $4 || '%')
+        ORDER BY p.created_at DESC
+        LIMIT $5 OFFSET $6
+      `;
+
+      const countResult = await pool.query(countQuery, baseParams);
+      const dataResult = await pool.query(dataQuery, [
+        ...baseParams,
+        limit,
+        offset,
+      ]);
+
+      res.json({
+        success: true,
+        total: parseInt(countResult.rows[0].count),
+        products: dataResult.rows,
+      });
+    } catch (err) {
+      console.error("❌ Seçilebilir ürünler alınamadı:", err.message);
+      res.status(500).json({
+        error: "Seçilebilir ürünler getirilemedi",
+        detail: err.message,
+      });
+    }
+  }
+);
 
 export default router;

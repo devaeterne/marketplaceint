@@ -32,9 +32,14 @@ const navItems: NavItem[] = [
     subItems: [{ name: "Analysis", path: "/", pro: true }],
   },
   {
+    name: "Porducts",
     icon: <CalenderIcon />,
-    name: "Products",
-    path: "/products",
+    subItems: [{ name: "Platforms", path: "/products", pro: false },
+      { name: "Final Products", path: "/final-products", pro: false },
+      { name: "Categories", path: "/categories", pro: false },
+      { name: "Tags", path: "/tags", pro: false },
+      { name: "Brands", path: "/brands", pro: false },
+    ],
   },
   {
     icon: <UserCircleIcon />,

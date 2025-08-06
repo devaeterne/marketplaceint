@@ -22,7 +22,9 @@ import Blank from "./pages/Blank";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
-import ProductPage from "./pages/product";
+import ProductPage from "./pages/product/index";
+import FinalProductPage from "./pages/product/finalProduct";
+import FinalProductCreatePage from "./pages/product/finalProductCreate";
 
 export default function App() {
   return (
@@ -48,6 +50,8 @@ export default function App() {
               <Route path="/line-chart" element={<LineChart />} />
               <Route path="/bar-chart" element={<BarChart />} />
               <Route path="/products" element={<ProductPage />} />
+              <Route path="/final-products" element={<FinalProductPage />} />
+              <Route path="/final-products/create" element={<FinalProductCreatePage />} />
             </Route>
 
           {/* Auth Layout - Public */}

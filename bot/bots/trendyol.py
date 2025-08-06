@@ -9,16 +9,18 @@ import traceback
 import logging
 from db_connection import get_db_connection
 
-# Log klasörü oluştur
-os.makedirs("/app/logs", exist_ok=True)
+log_dir = "bot_logs"
+os.makedirs(log_dir, exist_ok=True)
+log_path = os.path.join(log_dir, "avansas-detail_latest.log")  # veya f"{bot_name}_latest.log"
 
-# Logging yapılandırması
 logging.basicConfig(
-    filename="/app/logs/trendyol_log.txt",
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler(log_path, encoding="utf-8"),
+        logging.StreamHandler()  # konsola da yaz
+    ]
 )
-
 def get_driver():
     chrome_options = Options()
     chrome_options.add_argument("--headless")

@@ -112,6 +112,47 @@ async function createTables() {
       );
     `);
 
+    // === Final Products ===
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS final_products (
+        id SERIAL PRIMARY KEY,
+        name TEXT NOT NULL,
+        short_description TEXT,
+        description TEXT,
+        image_url TEXT,
+        image_file TEXT,
+        brand TEXT,
+        brand_id TEXT,
+        category TEXT,
+        category_id TEXT,
+        weight NUMERIC,
+        total_stock NUMERIC DEFAULT 0,
+        max_quantity_per_cart INTEGER,
+        google_taxonomy_id TEXT,
+        product_option_set_id TEXT,
+        product_volume_discount_id TEXT,
+        base_unit TEXT,
+        sales_channel_ids TEXT[],
+        hidden_sales_channel_ids TEXT[],
+        tag_ids TEXT[],
+        ikas_product_id TEXT,
+        price NUMERIC,
+        campaign_price NUMERIC,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+
+    // === PRODUCT FINAL MATCHES ===
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS final_product_matches (
+        id SERIAL PRIMARY KEY,
+        final_product_id INTEGER REFERENCES final_products(id),
+        product_id INTEGER REFERENCES products(id),
+        match_group_id INTEGER REFERENCES product_match_groups(id),
+        matched_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+
     // === BOT RUN LOGS ===
     await db.query(`
       CREATE TABLE IF NOT EXISTS bot_run_logs (
@@ -169,6 +210,35 @@ async function createTables() {
         platform_category_name TEXT NOT NULL,
         standard_category_id INTEGER REFERENCES standard_categories(id),
         UNIQUE (platform, platform_category_name)
+      );
+    `);
+
+    // === PRODUCT CATEGORIES ===
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS product_categories (
+        id SERIAL PRIMARY KEY,
+        name TEXT NOT NULL,
+        ikas_category_id TEXT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+
+    // === PRODUCT TAGS ===
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS product_tags (
+        id SERIAL PRIMARY KEY,
+        name TEXT NOT NULL,
+        ikas_tag_id TEXT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+
+    // === FINAL PRODUCT TAGS ===
+    await db.query(`
+      CREATE TABLE IF NOT EXISTS final_product_tags (
+        final_product_id INTEGER REFERENCES final_products(id),
+        tag_id INTEGER REFERENCES product_tags(id),
+        PRIMARY KEY (final_product_id, tag_id)
       );
     `);
 

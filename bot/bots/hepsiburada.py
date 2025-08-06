@@ -12,11 +12,17 @@ import logging
 from db_connection import get_db_connection
 
 # === Log Ayarı ===
-os.makedirs("/app/logs", exist_ok=True)
+log_dir = "bot_logs"
+os.makedirs(log_dir, exist_ok=True)
+log_path = os.path.join(log_dir, "avansas-detail_latest.log")  # veya f"{bot_name}_latest.log"
+
 logging.basicConfig(
-    filename="/app/logs/hepsiburada_log.txt",
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler(log_path, encoding="utf-8"),
+        logging.StreamHandler()  # konsola da yaz
+    ]
 )
 
 # === Yardımcı Fonksiyonlar ===

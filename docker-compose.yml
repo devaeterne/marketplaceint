@@ -9,6 +9,7 @@ services:
       - "5050:5050"
     volumes:
       - ./api:/app
+      - bot_logs:/app/bot_logs  # Paylaşılan log volume
     depends_on:
       - standalone-db
       - bot
@@ -50,6 +51,7 @@ services:
     volumes:
       - ./bot:/app
       - ./bot/search_terms:/app/search_terms
+      - bot_logs:/app/bot_logs   # Paylaşılan log volume - Python logs dizinine
     depends_on:
       - standalone-db
     environment:
@@ -77,6 +79,7 @@ services:
 
 volumes:
   postgres_data:
+  bot_logs:  # Log volume tanımı eklendi
 
 networks:
   marketplace_net:

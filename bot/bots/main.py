@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException,Request
 from pydantic import BaseModel
 from typing import List
 import subprocess
@@ -124,6 +124,7 @@ async def run_hepsiburada_detail(request: BotRequest = BotRequest(bot_name="heps
 @app.post("/run-avansas")
 async def run_avansas(request: BotRequest = BotRequest(bot_name="avansas")):
     return run_bot_file(f"/app/bots/{request.bot_name}.py", request.bot_name)
+
 
 @app.post("/run-avansas-detail")
 async def run_avansas_detail(request: BotRequest = BotRequest(bot_name="avansas")):
