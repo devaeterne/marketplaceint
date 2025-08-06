@@ -12,7 +12,8 @@ const LOG_DIR = path.join(process.cwd(), "bot_logs");
 
 // Log dosyası adını al
 const getLogFileName = (botName) => {
-  return path.join(LOG_DIR, `${botName}_latest.log`);
+  const normalizedName = botName.toLowerCase();
+  return path.join(LOG_DIR, `${normalizedName}_latest.log`);
 };
 
 /**

@@ -11,19 +11,24 @@ import traceback
 import logging
 from db_connection import get_db_connection
 
-# === Log Ayarı ===
-log_dir = "bot_logs"
+# === Log ayarları ===
+base_dir = os.path.dirname(os.path.abspath(__file__))
+log_dir = os.path.join(base_dir, "..", "bot_logs")
 os.makedirs(log_dir, exist_ok=True)
-log_path = os.path.join(log_dir, "avansas-detail_latest.log")  # veya f"{bot_name}_latest.log"
+
+log_path = os.path.join(log_dir, "hepsiburada_latest.log")
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
         logging.FileHandler(log_path, encoding="utf-8"),
-        logging.StreamHandler()  # konsola da yaz
+        logging.StreamHandler()
     ]
 )
+
+logger = logging.getLogger(__name__)
+
 
 # === Yardımcı Fonksiyonlar ===
 def clean_price(raw):
@@ -53,7 +58,6 @@ def get_driver():
     return webdriver.Chrome(service=Service("/usr/bin/chromedriver"), options=options)
 
 def upsert_product(cur, platform, platform_product_id, product_link, title, brand):
-    """Ürünü products tablosuna ekle veya güncelle"""
     cur.execute("""
         INSERT INTO products (platform, platform_product_id, product_link, title, brand)
         VALUES (%s, %s, %s, %s, %s)
@@ -66,22 +70,24 @@ def upsert_product(cur, platform, platform_product_id, product_link, title, bran
     """, (platform, platform_product_id, product_link, title, brand))
 
     result = cur.fetchone()
+
     if not result:
-        print(f"⚠️ WARNING: fetchone() None döndü - {platform_product_id}")
+        logger.warning(f"⚠️ fetchone() boş döndü → {platform_product_id}")
         return None
 
-    if isinstance(result, dict) and 'id' in result:
-        return result['id']
+    # Hem tuple hem dict destekle
+    if isinstance(result, dict):
+        return result.get("id")
     elif isinstance(result, (tuple, list)):
         return result[0]
     else:
-        print(f"⚠️ WARNING: fetchone() beklenmeyen formatta - {result}")
+        logger.warning(f"⚠️ fetchone() beklenmeyen formatta: {type(result)} → {result}")
         return None
 
 def insert_price_log(cur, product_id, price, campaign_price, stock_status):
     cur.execute("""
-        INSERT INTO product_price_logs (product_id, price, campaign_price, stock_status)
-        VALUES (%s, %s, %s, %s);
+        INSERT INTO product_price_logs (product_id, price, campaign_price, stock_status, created_at)
+        VALUES (%s, %s, %s, %s, NOW())
     """, (product_id, price, campaign_price, stock_status))
 
 # === Ana Bot Fonksiyonu ===
@@ -123,6 +129,10 @@ def run_hepsiburada_bot():
                         soup = BeautifulSoup(driver.page_source, "html.parser")
                         product_cards = soup.find_all("li", class_=re.compile("productListContent-"))
 
+                        if not product_cards:
+                            logger.warning(f"⚠️ Sayfa {page} boş geçti.")
+                            continue
+                        
                         for card in product_cards:
                             try:
                                 title_tag = card.find("h2", class_=re.compile("title-module_titleRoot"))
