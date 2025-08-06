@@ -5,6 +5,227 @@ import { authenticateToken } from "../middleware/auth.js";
 
 const router = express.Router();
 
+// POST /api/categories
+router.post("/categories", authenticateToken, async (req, res) => {
+  const { name, parent_id } = req.body;
+
+  if (!name || name.trim() === "") {
+    return res.status(400).json({
+      success: false,
+      message: "Kategori adı zorunludur.",
+    });
+  }
+
+  try {
+    const existing = await pool.query(
+      "SELECT * FROM standard_categories WHERE name = $1",
+      [name]
+    );
+
+    if (existing.rows.length > 0) {
+      return res.status(400).json({
+        success: false,
+        message: "Bu kategori zaten mevcut.",
+      });
+    }
+
+    const result = await pool.query(
+      "INSERT INTO standard_categories (name, parent_id) VALUES ($1, $2) RETURNING *",
+      [name.trim(), parent_id || null]
+    );
+
+    return res.status(201).json({
+      success: true,
+      category: result.rows[0],
+    });
+  } catch (err) {
+    console.error("Kategori eklenemedi:", err.message);
+    res.status(500).json({ success: false, message: "Sunucu hatası." });
+  }
+});
+// GET /api/categories
+router.get("/categories", authenticateToken, async (req, res) => {
+  try {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const offset = (page - 1) * limit;
+
+    const result = await pool.query(
+      "SELECT id, name, parent_id FROM public.standard_categories ORDER BY id ASC LIMIT $1 OFFSET $2",
+      [limit, offset]
+    );
+    res.json({
+      success: true,
+      categories: result.rows,
+      total: result.rows.length,
+    });
+  } catch (err) {
+    console.error("Kategori sorgusu hatası:", err); // 🔍
+    res.status(500).json({ error: "Veritabanı hatası", detail: err.message });
+  }
+});
+router.get("/tags", authenticateToken, async (req, res) => {
+  try {
+    const result = await pool.query(
+      "SELECT id, name, ikas_tag_id, created_at FROM product_tags ORDER BY id DESC"
+    );
+
+    return res.json({
+      success: true,
+      tags: result.rows,
+      total: result.rowCount,
+    });
+  } catch (err) {
+    console.error("Etiketler alınamadı:", err.message);
+    return res
+      .status(500)
+      .json({ success: false, message: "Etiketler alınamadı" });
+  }
+});
+// Edit Final Products
+// GET /api/final_products/:id
+router.get("/final_products/:id", authenticateToken, async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const result = await pool.query(
+      "SELECT * FROM final_products WHERE id = $1",
+      [id]
+    );
+
+    if (result.rows.length === 0) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Ürün bulunamadı." });
+    }
+
+    return res.json({ success: true, product: result.rows[0] });
+  } catch (err) {
+    console.error("Final ürün getirme hatası:", err);
+    res.status(500).json({ success: false, message: "Sunucu hatası." });
+  }
+});
+// PUT /api/final_products/:id
+router.put("/final_products/:id", authenticateToken, async (req, res) => {
+  const { id } = req.params;
+  const {
+    name,
+    short_description,
+    description,
+    image_url,
+    image_file,
+    brand,
+    brand_id,
+    category,
+    category_id,
+    weight,
+    total_stock,
+    max_quantity_per_cart,
+    google_taxonomy_id,
+    product_option_set_id,
+    product_volume_discount_id,
+    base_unit,
+    sales_channel_ids,
+    hidden_sales_channel_ids,
+    tag_ids,
+    ikas_product_id,
+    price,
+    campaign_price,
+  } = req.body;
+
+  try {
+    const result = await pool.query(
+      `UPDATE final_products SET
+        name = $1,
+        short_description = $2,
+        description = $3,
+        image_url = $4,
+        image_file = $5,
+        brand = $6,
+        brand_id = $7,
+        category = $8,
+        category_id = $9,
+        weight = $10,
+        total_stock = $11,
+        max_quantity_per_cart = $12,
+        google_taxonomy_id = $13,
+        product_option_set_id = $14,
+        product_volume_discount_id = $15,
+        base_unit = $16,
+        sales_channel_ids = $17,
+        hidden_sales_channel_ids = $18,
+        tag_ids = $19,
+        ikas_product_id = $20,
+        price = $21,
+        campaign_price = $22
+      WHERE id = $23 RETURNING *`,
+      [
+        name,
+        short_description,
+        description,
+        image_url,
+        image_file,
+        brand,
+        brand_id,
+        category,
+        category_id,
+        weight,
+        total_stock,
+        max_quantity_per_cart,
+        google_taxonomy_id,
+        product_option_set_id,
+        product_volume_discount_id,
+        base_unit,
+        sales_channel_ids,
+        hidden_sales_channel_ids,
+        tag_ids,
+        ikas_product_id,
+        price,
+        campaign_price,
+        id,
+      ]
+    );
+
+    res.json({ success: true, product: result.rows[0] });
+  } catch (err) {
+    console.error("Final ürün güncelleme hatası:", err);
+    res.status(500).json({ success: false, message: "Sunucu hatası." });
+  }
+});
+
+router.post("/tags", authenticateToken, async (req, res) => {
+  const { name, ikas_tag_id } = req.body;
+
+  if (!name || name.trim() === "") {
+    return res
+      .status(400)
+      .json({ success: false, message: "Etiket adı zorunludur." });
+  }
+
+  try {
+    const existing = await pool.query(
+      "SELECT * FROM product_tags WHERE name = $1",
+      [name]
+    );
+
+    if (existing.rows.length > 0) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Bu etiket zaten mevcut." });
+    }
+
+    const insertResult = await pool.query(
+      "INSERT INTO product_tags (name, ikas_tag_id) VALUES ($1, $2) RETURNING *",
+      [name, ikas_tag_id || null]
+    );
+
+    return res.status(201).json({ success: true, tag: insertResult.rows[0] });
+  } catch (err) {
+    console.error("Etiket eklenemedi:", err.message);
+    return res.status(500).json({ success: false, message: "Sunucu hatası." });
+  }
+});
+
 /**
  * @swagger
  * /api/products:

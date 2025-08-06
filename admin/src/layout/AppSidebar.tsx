@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation } from "react-router-dom";
 
 // Assume these icons are imported from an icon library
 import {
@@ -38,7 +38,6 @@ const navItems: NavItem[] = [
       { name: "Final Products", path: "/final-products", pro: false },
       { name: "Categories", path: "/categories", pro: false },
       { name: "Tags", path: "/tags", pro: false },
-      { name: "Brands", path: "/brands", pro: false },
     ],
   },
   {

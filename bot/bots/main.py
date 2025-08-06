@@ -14,9 +14,6 @@ class TermsPayload(BaseModel):
     terms: List[str]
 
 
-@app.get("/health")
-async def health_check():
-    return {"status": "healthy", "service": "bot"}
 
 
 @app.get("/terms")

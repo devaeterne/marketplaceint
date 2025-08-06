@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import {
   Table,
   TableBody,
@@ -7,24 +7,34 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { formatCurrency } from "@/utils/format";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { MatchModalContent } from "./ProductMatchModal";
+import { Pencil, Link2 } from "lucide-react";
 
 const MySwal = withReactContent(Swal);
 
+// Final ürün Interfaceler tanımlamalara dikkat etmelisin!
 interface FinalProduct {
   id: number;
   name: string;
   brand: string;
   image_url: string;
   category: string;
+  category_id: number;
   price: number;
   campaign_price: number;
   matched_count?: number;
 }
 
+// Final ürün Interfaceler tanımlamalara dikkat etmelisin!
+interface Category {
+  id: number;
+  name: string;
+  parent_id: number | null;
+}
+// Tablonun yüklenmesi için filtreler ve limit bilgilleri pagination kısmı da bunun içinde
 export default function FinalProductTable() {
   const [products, setProducts] = useState<FinalProduct[]>([]);
   const [loading, setLoading] = useState(true);
@@ -33,6 +43,7 @@ export default function FinalProductTable() {
   const [total, setTotal] = useState(0);
   const navigate = useNavigate();
 
+  // Final ürün çekmek için fonksiyon
   const fetchProducts = async () => {
     try {
       const token = localStorage.getItem("authToken");
@@ -55,7 +66,43 @@ export default function FinalProductTable() {
       setLoading(false);
     }
   };
+  // Kategori Bilgilerini çekip altkategori mantığı ile eşleştiriyor.
+  const [categories, setCategories] = useState<Category[]>([]);
 
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const token = localStorage.getItem("authToken");
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/categories`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+      const data = await res.json();
+      setCategories(data.categories || []);
+    };
+
+    fetchCategories();
+  }, []);
+
+  // Kategori Mapping
+  const categoryMap = useMemo(() => {
+    const map: Record<number, Category> = {};
+    categories.forEach((c) => {
+      map[c.id] = c;
+    });
+    return map;
+  }, [categories]);
+
+  // Kategori ismi oluşturma fonksiyonu
+  const getCategoryFullName = (categoryId: number) => {
+    const category = categoryMap[categoryId];
+    if (!category) return "—";
+    const parent = category.parent_id ? categoryMap[category.parent_id] : null;
+    return parent ? `${parent.name} > ${category.name}` : category.name;
+  };
+
+  // Eşleştirme Fonksiyonu
   const handleMatch = async (finalProductId: number) => {
     const token = localStorage.getItem("authToken");
 
@@ -78,29 +125,30 @@ export default function FinalProductTable() {
 
     const isDarkMode = document.documentElement.classList.contains("dark");
 
-const { value: result } = await MySwal.fire({
-  title: "Ürün Eşleştirme",
-  width: "90%",
-  showCancelButton: true,
-  confirmButtonText: "Kaydet",
-  cancelButtonText: "İptal",
-  background: isDarkMode ? "#1f2937" : "#ffffff", // Tailwind dark:bg-gray-800 vs light:bg-white
-  color: isDarkMode ? "#f9fafb" : "#111827",      // Tailwind text-gray-100 vs text-gray-900
-  customClass: {
-    popup: "rounded-lg shadow-lg",
-  },
-  html: (
-    <MatchModalContent
-      finalProductId={finalProductId}
-      initialSelected={matchedIds}
-    />
-  ),
-  preConfirm: () => {
-    const checkboxes =
-      Swal.getPopup()?.querySelectorAll('input[type="checkbox"]:checked') || [];
-    return Array.from(checkboxes).map((cb: any) => parseInt(cb.value));
-  },
-});
+    const { value: result } = await MySwal.fire({
+      title: "Ürün Eşleştirme",
+      width: "90%",
+      showCancelButton: true,
+      confirmButtonText: "Kaydet",
+      cancelButtonText: "İptal",
+      background: isDarkMode ? "#1f2937" : "#ffffff", // Tailwind dark:bg-gray-800 vs light:bg-white
+      color: isDarkMode ? "#f9fafb" : "#111827", // Tailwind text-gray-100 vs text-gray-900
+      customClass: {
+        popup: "rounded-lg shadow-lg",
+      },
+      html: (
+        <MatchModalContent
+          finalProductId={finalProductId}
+          initialSelected={matchedIds}
+        />
+      ),
+      preConfirm: () => {
+        const checkboxes =
+          Swal.getPopup()?.querySelectorAll('input[type="checkbox"]:checked') ||
+          [];
+        return Array.from(checkboxes).map((cb: any) => parseInt(cb.value));
+      },
+    });
     if (result) {
       try {
         // Önce tüm eşleşmeleri temizle
@@ -155,6 +203,10 @@ const { value: result } = await MySwal.fire({
     }
   };
 
+  // Düzenleme Fonksiyonu
+  const handleEdit = (productId: number) => {
+    navigate(`/final-products/edit/${productId}`);
+  };
   useEffect(() => {
     fetchProducts();
   }, [page, limit]);
@@ -252,7 +304,9 @@ const { value: result } = await MySwal.fire({
                     key={product.id}
                     className="hover:bg-gray-50 dark:hover:bg-gray-800/50 table-auto"
                   >
-                    <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">{product.id}</TableCell>
+                    <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
+                      {product.id}
+                    </TableCell>
                     <TableCell>
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 overflow-hidden rounded-full">
@@ -272,7 +326,9 @@ const { value: result } = await MySwal.fire({
                       {product.name}
                     </TableCell>
                     <TableCell>{product.brand}</TableCell>
-                    <TableCell>{product.category || "—"}</TableCell>
+                    <TableCell>
+                      {getCategoryFullName(product.category_id)}
+                    </TableCell>
                     <TableCell className="font-semibold">
                       {product.campaign_price ? (
                         <div>
@@ -299,12 +355,32 @@ const { value: result } = await MySwal.fire({
                       </span>
                     </TableCell>
                     <TableCell>
-                      <button
-                        onClick={() => handleMatch(product.id)}
-                        className="text-sm text-indigo-600 hover:text-indigo-800 font-medium"
-                      >
-                        Eşleştir
-                      </button>
+                      <div className="flex gap-2">
+                        <div className="relative group inline-block:">
+                          <button
+                            onClick={() => handleMatch(product.id)}
+                            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full"
+                          >
+                            <Link2 className="w-4 h-4 text-indigo-600 hover:text-indigo-800"/>
+                          </button>
+                          <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 scale-0 group-hover:scale-100 
+                          transition-transform bg-gray-800 text-white text-xs rounded py-1 px-2 z-10 whitespace-nowrap">
+                            Eşleştir
+                          </span>
+                        </div>
+                        <div className="relative group inline-block:">
+                          <button
+                            onClick={() => handleEdit(product.id)}
+                            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full"
+                          >
+                            <Pencil className="w-4 h-4 text-indigo-600 hover:text-indigo-800"/>
+                          </button>
+                          <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 scale-0 group-hover:scale-100 
+                          transition-transform bg-gray-800 text-white text-xs rounded py-1 px-2 z-10 whitespace-nowrap">
+                            Düzenle
+                          </span>
+                        </div>
+                      </div>
                     </TableCell>
                   </TableRow>
                 ))

@@ -1,8 +1,10 @@
-// src/components/product/FinalProductCreateForm.tsx
+// src/components/product/FinalProductEditForm.tsx
 import React, { useEffect, useState, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import { ArrowLeft, Save, Upload, X, Plus, Info } from "lucide-react";
+
+
 
 interface Category {
   id: string;
@@ -15,7 +17,31 @@ interface Tag {
   name: string;
 }
 
-export default function FinalProductCreateForm() {
+export default function FinalProductEditForm() {
+  const { id } = useParams();
+  useEffect(() => {
+  if (!id) return;
+
+  const fetchProduct = async () => {
+    const token = localStorage.getItem("authToken");
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/final_products/${id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    const data = await res.json();
+    if (data.success && data.product) {
+      const product = data.product;
+      setFormData((prev) => ({
+        ...prev,
+        ...product,
+        tag_ids: product.tag_ids || [],
+      }));
+      setPreviewImage(product.image_url || "");
+    }
+  };
+
+  fetchProduct();
+}, [id]);
   const navigate = useNavigate();
   const [categories, setCategories] = useState<Category[]>([]);
   const [tags, setTags] = useState<Tag[]>([]);
@@ -150,49 +176,52 @@ export default function FinalProductCreateForm() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!validateForm()) {
-      Swal.fire("Hata", "Lütfen zorunlu alanları doldurun", "error");
-      return;
+  if (!validateForm()) {
+    Swal.fire("Hata", "Lütfen zorunlu alanları doldurun", "error");
+    return;
+  }
+
+  setLoading(true);
+  const token = localStorage.getItem("authToken");
+
+  try {
+    const endpoint = id
+      ? `${import.meta.env.VITE_API_URL}/api/final_products/${id}`
+      : `${import.meta.env.VITE_API_URL}/api/final_products`;
+
+    const method = id ? "PUT" : "POST";
+
+    const res = await fetch(endpoint, {
+      method,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      await Swal.fire({
+        icon: "success",
+        title: "Başarılı!",
+        text: id ? "Ürün güncellendi" : "Ürün eklendi",
+        timer: 1500,
+        showConfirmButton: false,
+      });
+      navigate("/final-products");
+    } else {
+      Swal.fire("Hata", data.message || "İşlem başarısız", "error");
     }
-
-    setLoading(true);
-    const token = localStorage.getItem("authToken");
-
-    try {
-      const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/final_products`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      const data = await res.json();
-      if (data.success) {
-        await Swal.fire({
-          icon: "success",
-          title: "Başarılı!",
-          text: "Ürün başarıyla eklendi",
-          timer: 1500,
-          showConfirmButton: false,
-        });
-        navigate("/final-products");
-      } else {
-        Swal.fire("Hata", data.message || "Ürün eklenemedi", "error");
-      }
-    } catch (err) {
-      console.error("Ürün eklenemedi:", err);
-      Swal.fire("Hata", "Sunucu hatası", "error");
-    } finally {
-      setLoading(false);
-    }
-  };
+  } catch (err) {
+    console.error("İşlem hatası:", err);
+    Swal.fire("Hata", "Sunucu hatası", "error");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="max-w-6xl mx-auto p-6">

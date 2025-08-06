@@ -1,6 +1,5 @@
-// src/App.tsx
 import { NotificationProvider } from "./context/NotificationContext";
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import SignIn from "./pages/AuthPages/SignIn";
@@ -25,6 +24,11 @@ import Home from "./pages/Dashboard/Home";
 import ProductPage from "./pages/product/index";
 import FinalProductPage from "./pages/product/finalProduct";
 import FinalProductCreatePage from "./pages/product/finalProductCreate";
+import Category from "./pages/product/Category";
+import CategoryCreateForm from "@/components/product/CategoryCreateForm";
+import TagsPage from "./pages/product/Tag";
+import TagsCreateForm from "./components/product/TagsCreateForm";
+import FinalProductEditPage from "./pages/product/finalProductEdit";
 
 export default function App() {
   return (
@@ -33,36 +37,43 @@ export default function App() {
         <Router>
           <ScrollToTop />
           <Routes>
-            {/* Dashboard Layout - Protected */}
-            <Route element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>
-              <Route index path="/" element={<Home />} />
-              <Route path="/profile" element={<UserProfiles />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/blank" element={<Blank />} />
-              <Route path="/form-elements" element={<FormElements />} />
-              <Route path="/basic-tables" element={<BasicTables />} />
-              <Route path="/alerts" element={<Alerts />} />
-              <Route path="/avatars" element={<Avatars />} />
-              <Route path="/badge" element={<Badges />} />
-              <Route path="/buttons" element={<Buttons />} />
-              <Route path="/images" element={<Images />} />
-              <Route path="/videos" element={<Videos />} />
-              <Route path="/line-chart" element={<LineChart />} />
-              <Route path="/bar-chart" element={<BarChart />} />
-              <Route path="/products" element={<ProductPage />} />
-              <Route path="/final-products" element={<FinalProductPage />} />
-              <Route path="/final-products/create" element={<FinalProductCreatePage />} />
+            {/* ProtectedRoute -> AppLayout -> Protected Pages */}
+            <Route element={<ProtectedRoute />}>
+              <Route element={<AppLayout />}>
+                <Route index path="/" element={<Home />} />
+                <Route path="/profile" element={<UserProfiles />} />
+                <Route path="/calendar" element={<Calendar />} />
+                <Route path="/blank" element={<Blank />} />
+                <Route path="/form-elements" element={<FormElements />} />
+                <Route path="/basic-tables" element={<BasicTables />} />
+                <Route path="/alerts" element={<Alerts />} />
+                <Route path="/avatars" element={<Avatars />} />
+                <Route path="/badge" element={<Badges />} />
+                <Route path="/buttons" element={<Buttons />} />
+                <Route path="/images" element={<Images />} />
+                <Route path="/videos" element={<Videos />} />
+                <Route path="/line-chart" element={<LineChart />} />
+                <Route path="/bar-chart" element={<BarChart />} />
+                <Route path="/products" element={<ProductPage />} />
+                <Route path="/final-products" element={<FinalProductPage />} />
+                <Route path="/final-products/create" element={<FinalProductCreatePage />} />
+                <Route path="/final-products/edit/:id" element={<FinalProductEditPage />} />
+                <Route path="/categories" element={<Category />} />
+                <Route path="/categories/create" element={<CategoryCreateForm />} />
+                <Route path="/tags" element={<TagsPage />} />
+                <Route path="/tags/create" element={<TagsCreateForm />} />
+              </Route>
             </Route>
 
-          {/* Auth Layout - Public */}
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+            {/* Public Pages (Auth) */}
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
 
-          {/* Fallback Route */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
-    </NotificationProvider>
+            {/* Not Found */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Router>
+      </NotificationProvider>
     </AuthProvider>
   );
 }

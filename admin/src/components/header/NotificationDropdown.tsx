@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Dropdown } from "../ui/dropdown/Dropdown";
 import { DropdownItem } from "../ui/dropdown/DropdownItem";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { useNotifications } from "../../context/NotificationContext";
 
 type BotStatus = 'started' | 'running' | 'completed' | 'failed';
