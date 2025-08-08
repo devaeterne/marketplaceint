@@ -20,28 +20,31 @@ interface Tag {
 export default function FinalProductEditForm() {
   const { id } = useParams();
   useEffect(() => {
-  if (!id) return;
+    if (!id) return;
 
-  const fetchProduct = async () => {
-    const token = localStorage.getItem("authToken");
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/final_products/${id}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    const fetchProduct = async () => {
+      const token = localStorage.getItem("authToken");
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/final_products/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json", // ✅ bu varsa sorun yok
+        },
+      });
 
-    const data = await res.json();
-    if (data.success && data.product) {
-      const product = data.product;
-      setFormData((prev) => ({
-        ...prev,
-        ...product,
-        tag_ids: product.tag_ids || [],
-      }));
-      setPreviewImage(product.image_url || "");
-    }
-  };
+      const data = await res.json();
+      if (data.success && data.product) {
+        const product = data.product;
+        setFormData((prev) => ({
+          ...prev,
+          ...product,
+          tag_ids: product.tag_ids || [],
+        }));
+        setPreviewImage(product.image_url || "");
+      }
+    };
 
-  fetchProduct();
-}, [id]);
+    fetchProduct();
+  }, [id]);
   const navigate = useNavigate();
   const [categories, setCategories] = useState<Category[]>([]);
   const [tags, setTags] = useState<Tag[]>([]);
@@ -176,53 +179,94 @@ export default function FinalProductEditForm() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!validateForm()) {
-    Swal.fire("Hata", "Lütfen zorunlu alanları doldurun", "error");
-    return;
-  }
-
-  setLoading(true);
-  const token = localStorage.getItem("authToken");
-
-  try {
-    const endpoint = id
-      ? `${import.meta.env.VITE_API_URL}/api/final_products/${id}`
-      : `${import.meta.env.VITE_API_URL}/api/final_products`;
-
-    const method = id ? "PUT" : "POST";
-
-    const res = await fetch(endpoint, {
-      method,
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const data = await res.json();
-    if (data.success) {
-      await Swal.fire({
-        icon: "success",
-        title: "Başarılı!",
-        text: id ? "Ürün güncellendi" : "Ürün eklendi",
-        timer: 1500,
-        showConfirmButton: false,
-      });
-      navigate("/final-products");
-    } else {
-      Swal.fire("Hata", data.message || "İşlem başarısız", "error");
+    if (!validateForm()) {
+      Swal.fire("Hata", "Lütfen zorunlu alanları doldurun", "error");
+      return;
     }
-  } catch (err) {
-    console.error("İşlem hatası:", err);
-    Swal.fire("Hata", "Sunucu hatası", "error");
-  } finally {
-    setLoading(false);
-  }
-};
 
+    setLoading(true);
+    const token = localStorage.getItem("authToken");
+
+    // Backend'e gönderilmemesi gereken alanları çıkar
+    const {
+      id: _id,
+      created_at,
+      updated_at,
+      image_file,
+      ...cleanFormData
+    } = formData;
+
+    // Array alanları string array'e dönüştür
+    const payload = {
+      ...cleanFormData,
+      tag_ids: Array.isArray(cleanFormData.tag_ids)
+        ? cleanFormData.tag_ids.map(String)
+        : [],
+      sales_channel_ids: Array.isArray(cleanFormData.sales_channel_ids)
+        ? cleanFormData.sales_channel_ids.map(String)
+        : [],
+      hidden_sales_channel_ids: Array.isArray(cleanFormData.hidden_sales_channel_ids)
+        ? cleanFormData.hidden_sales_channel_ids.map(String)
+        : []
+    };
+
+    try {
+      console.log('🔄 Submitting data:', { id, payload });
+
+      const endpoint = id
+        ? `${import.meta.env.VITE_API_URL}/api/final_products/${id}`
+        : `${import.meta.env.VITE_API_URL}/api/final_products`;
+
+      const method = id ? "PUT" : "POST";
+
+      const res = await fetch(endpoint, {
+        method,
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      console.log('📡 Response status:', res.status);
+
+      // Response kontrolü
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error('❌ Error response:', errorText);
+
+        // HTML response kontrolü (404 sayfası vs)
+        if (errorText.includes('<!DOCTYPE')) {
+          throw new Error(`Backend endpoint bulunamadı (${res.status})`);
+        }
+
+        throw new Error(`HTTP ${res.status}: ${errorText}`);
+      }
+
+      const data = await res.json();
+
+      if (data.success) {
+        await Swal.fire({
+          icon: "success",
+          title: "Başarılı!",
+          text: id ? "Ürün güncellendi" : "Ürün eklendi",
+          timer: 1500,
+          showConfirmButton: false,
+        });
+        navigate("/final-products");
+      } else {
+        Swal.fire("Hata", data.message || "İşlem başarısız", "error");
+      }
+
+    } catch (err: any) {
+      console.error("İşlem hatası:", err);
+      Swal.fire("Hata", err.message || "Sunucu hatası", "error");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="max-w-6xl mx-auto p-6">
       {/* Header */}
@@ -252,10 +296,9 @@ export default function FinalProductEditForm() {
               onClick={() => setActiveTab(tab.id)}
               className={`
                 flex items-center gap-2 py-2 px-1 border-b-2 font-medium text-sm
-                ${
-                  activeTab === tab.id
-                    ? "border-blue-500 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                ${activeTab === tab.id
+                  ? "border-blue-500 text-blue-600"
+                  : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
                 }
               `}
             >
@@ -280,9 +323,8 @@ export default function FinalProductEditForm() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500  text-gray-800 dark:text-white  ${
-                    errors.name ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500  text-gray-800 dark:text-white  ${errors.name ? "border-red-500" : "border-gray-300"
+                    }`}
                   placeholder="Örn: Faber Castell Kurşun Kalem"
                 />
                 {errors.name && (
@@ -406,11 +448,10 @@ export default function FinalProductEditForm() {
                       key={tag.id}
                       type="button"
                       onClick={() => handleTagChange(tag.id)}
-                      className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                        formData.tag_ids.includes(tag.id)
-                          ? "bg-blue-600 text-white"
-                          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                      }`}
+                      className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${formData.tag_ids.includes(tag.id)
+                        ? "bg-blue-600 text-white"
+                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        }`}
                     >
                       {tag.name}
                     </button>
@@ -435,9 +476,8 @@ export default function FinalProductEditForm() {
                   step="0.01"
                   value={formData.price}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 dark:text-white ${
-                    errors.price ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 dark:text-white ${errors.price ? "border-red-500" : "border-gray-300"
+                    }`}
                   placeholder="0.00"
                 />
                 {errors.price && (
@@ -455,9 +495,8 @@ export default function FinalProductEditForm() {
                   step="0.01"
                   value={formData.campaign_price}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 dark:text-white ${
-                    errors.campaign_price ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 dark:text-white ${errors.campaign_price ? "border-red-500" : "border-gray-300"
+                    }`}
                   placeholder="0.00"
                 />
                 {errors.campaign_price && (

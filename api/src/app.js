@@ -10,6 +10,7 @@ import createTables from "./initDb.js";
 import botLogRoutes from "./routes/botLogRoutes.js";
 import botLogStreamRoutes from "./routes/botLogStreamRaoutes.js";
 import reportRoutes from "./routes/reportRoutes.js";
+import fProductRoutes from "./routes/fProductRoutes.js";
 
 dotenv.config();
 
@@ -36,12 +37,13 @@ app.use(express.json());
 await createTables();
 
 // Routes
-app.use("/api", botRoutes);
-app.use("/api", productRoutes);
 app.use("/api", authRoutes);
-app.use("/api", searchRoutes);
+app.use("/api", botRoutes);
 app.use("/api", botLogRoutes);
 app.use("/api", botLogStreamRoutes);
+app.use("/api", productRoutes);
+app.use("/api", fProductRoutes);
+app.use("/api", searchRoutes);
 app.use("/api", reportRoutes);
 
 // Swagger UI setup

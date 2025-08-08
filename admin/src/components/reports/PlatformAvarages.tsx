@@ -36,15 +36,19 @@ export default function PlatformAverages({ finalProductId }: PlatformAveragesPro
     try {
       setLoading(true);
       setError(null);
-      
-      const response = await fetch(`/api/report/platform-averages/${finalProductId}`);
-      
+
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/average-price/${finalProductId}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`
+        }
+      });
+
       if (!response.ok) {
         throw new Error('Platform ortalamaları yüklenirken hata oluştu');
       }
-      
+
       const result = await response.json();
-      setData(result || []);
+      setData(result.data || []);
       setLastUpdated(new Date());
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Bilinmeyen hata');
@@ -83,12 +87,14 @@ export default function PlatformAverages({ finalProductId }: PlatformAveragesPro
 
   const getTrendIcon = (trend: string | undefined) => {
     switch (trend) {
-      case 'up':
+      case "up":
         return <TrendingUp className="w-4 h-4 text-red-500" />;
-      case 'down':
+      case "down":
         return <TrendingDown className="w-4 h-4 text-green-500" />;
+      case "stable":
+        return <Minus className="w-4 h-4 text-yellow-500" />; // veya başka ikon
       default:
-        return <Minus className="w-4 h-4 text-gray-500" />;
+        return <Minus className="w-4 h-4 text-gray-400" />;
     }
   };
 
@@ -195,7 +201,7 @@ export default function PlatformAverages({ finalProductId }: PlatformAveragesPro
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Bu final ürün için henüz platform verisi bulunmuyor.
-                            </p>
+              </p>
             </div>
           ) : (
             <div className="overflow-x-auto rounded-lg border border-gray-200 dark:border-white/[0.05]">

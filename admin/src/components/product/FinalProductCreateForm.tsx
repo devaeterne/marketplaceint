@@ -160,7 +160,23 @@ export default function FinalProductCreateForm() {
     setLoading(true);
     const token = localStorage.getItem("authToken");
 
+    // Array alanları string array'e dönüştür
+    const payload = {
+      ...formData,
+      tag_ids: Array.isArray(formData.tag_ids)
+        ? formData.tag_ids.map(String)
+        : [],
+      sales_channel_ids: Array.isArray(formData.sales_channel_ids)
+        ? formData.sales_channel_ids.map(String)
+        : [],
+      hidden_sales_channel_ids: Array.isArray(formData.hidden_sales_channel_ids)
+        ? formData.hidden_sales_channel_ids.map(String)
+        : []
+    };
+
     try {
+      console.log('🔄 Creating product:', payload);
+
       const res = await fetch(
         `${import.meta.env.VITE_API_URL}/api/final_products`,
         {
@@ -169,11 +185,27 @@ export default function FinalProductCreateForm() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(payload),
         }
       );
 
+      console.log('📡 Response status:', res.status);
+
+      // Response kontrolü
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error('❌ Error response:', errorText);
+
+        // HTML response kontrolü (404 sayfası vs)
+        if (errorText.includes('<!DOCTYPE')) {
+          throw new Error(`Backend endpoint bulunamadı (${res.status})`);
+        }
+
+        throw new Error(`HTTP ${res.status}: ${errorText}`);
+      }
+
       const data = await res.json();
+
       if (data.success) {
         await Swal.fire({
           icon: "success",
@@ -186,14 +218,14 @@ export default function FinalProductCreateForm() {
       } else {
         Swal.fire("Hata", data.message || "Ürün eklenemedi", "error");
       }
-    } catch (err) {
+
+    } catch (err: any) {
       console.error("Ürün eklenemedi:", err);
-      Swal.fire("Hata", "Sunucu hatası", "error");
+      Swal.fire("Hata", err.message || "Sunucu hatası", "error");
     } finally {
       setLoading(false);
     }
   };
-
   return (
     <div className="max-w-6xl mx-auto p-6">
       {/* Header */}
@@ -223,10 +255,9 @@ export default function FinalProductCreateForm() {
               onClick={() => setActiveTab(tab.id)}
               className={`
                 flex items-center gap-2 py-2 px-1 border-b-2 font-medium text-sm
-                ${
-                  activeTab === tab.id
-                    ? "border-blue-500 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                ${activeTab === tab.id
+                  ? "border-blue-500 text-blue-600"
+                  : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
                 }
               `}
             >
@@ -251,9 +282,8 @@ export default function FinalProductCreateForm() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500  text-gray-800 dark:text-white  ${
-                    errors.name ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500  text-gray-800 dark:text-white  ${errors.name ? "border-red-500" : "border-gray-300"
+                    }`}
                   placeholder="Örn: Faber Castell Kurşun Kalem"
                 />
                 {errors.name && (
@@ -377,11 +407,10 @@ export default function FinalProductCreateForm() {
                       key={tag.id}
                       type="button"
                       onClick={() => handleTagChange(tag.id)}
-                      className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                        formData.tag_ids.includes(tag.id)
-                          ? "bg-blue-600 text-white"
-                          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                      }`}
+                      className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${formData.tag_ids.includes(tag.id)
+                        ? "bg-blue-600 text-white"
+                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        }`}
                     >
                       {tag.name}
                     </button>
@@ -406,9 +435,8 @@ export default function FinalProductCreateForm() {
                   step="0.01"
                   value={formData.price}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 dark:text-white ${
-                    errors.price ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 dark:text-white ${errors.price ? "border-red-500" : "border-gray-300"
+                    }`}
                   placeholder="0.00"
                 />
                 {errors.price && (
@@ -426,9 +454,8 @@ export default function FinalProductCreateForm() {
                   step="0.01"
                   value={formData.campaign_price}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 dark:text-white ${
-                    errors.campaign_price ? "border-red-500" : "border-gray-300"
-                  }`}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 dark:text-white ${errors.campaign_price ? "border-red-500" : "border-gray-300"
+                    }`}
                   placeholder="0.00"
                 />
                 {errors.campaign_price && (

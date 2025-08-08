@@ -1,3 +1,4 @@
+
 // src/components/reports/CampaignDetection.tsx
 import React, { useState, useEffect } from 'react';
 import { AlertCircle, TrendingDown, Zap, Loader2, RefreshCw, ExternalLink, Calendar } from 'lucide-react';
@@ -7,12 +8,12 @@ interface CampaignData {
   product_name: string;
   platform: string;
   old_price: number;
-  new_price: number;
+  new_price: number;  // Artık gerçek campaign_price
   discount_amount: number;
   discount_percentage: number;
   detection_date: string;
   url?: string;
-  campaign_type: 'sudden_drop' | 'flash_sale' | 'regular_discount';
+  campaign_type: 'flash_sale' | 'sudden_drop' | 'regular_discount' | 'minor_discount';
   confidence_level: 'high' | 'medium' | 'low';
   duration_hours?: number;
 }
@@ -44,24 +45,68 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
     try {
       setLoading(true);
       setError(null);
-      
-      const response = await fetch(`/api/report/price-drops/${finalProductId}`);
-      
+
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/price-drops/${finalProductId}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`
+        }
+      });
+
       if (!response.ok) {
         throw new Error('Kampanya tespiti verileri yüklenirken hata oluştu');
       }
-      
+
       const result = await response.json();
-      setData(result || []);
+
+      console.log('📊 Campaign API Response:', result);
+
+      // API response format kontrolü ve normalizasyon
+      let campaigns: CampaignData[] = [];
+
+      if (result.success && Array.isArray(result.data)) {
+        campaigns = result.data;
+      } else if (result.success && Array.isArray(result.campaigns)) {
+        campaigns = result.campaigns;
+      } else if (Array.isArray(result)) {
+        campaigns = result;
+      } else if (result.data && Array.isArray(result.data)) {
+        campaigns = result.data;
+      } else {
+        console.warn('⚠️ Unexpected API response format:', result);
+        campaigns = [];
+      }
+
+      setData(campaigns);
       setLastUpdated(new Date());
+
     } catch (err) {
+      console.error('❌ Campaign fetch error:', err);
       setError(err instanceof Error ? err.message : 'Bilinmeyen hata');
+      setData([]); // Hata durumunda boş array set et
     } finally {
       setLoading(false);
     }
   };
 
+  // Güvenli sayı formatlama fonksiyonu
+  const formatNumber = (value: any, decimals: number = 2): string => {
+    if (value === null || value === undefined || value === '') {
+      return '0.00';
+    }
+
+    const num = typeof value === 'string' ? parseFloat(value) : Number(value);
+
+    if (isNaN(num)) {
+      return '0.00';
+    }
+
+    return num.toFixed(decimals);
+  };
+
   const formatPrice = (price: number) => {
+    if (typeof price !== 'number' || isNaN(price)) {
+      return '₺0,00';
+    }
     return new Intl.NumberFormat('tr-TR', {
       style: 'currency',
       currency: 'TRY',
@@ -70,14 +115,21 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
   };
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('tr-TR', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
+    try {
+      const date = new Date(dateString);
+      if (isNaN(date.getTime())) {
+        return 'Geçersiz tarih';
+      }
+      return date.toLocaleDateString('tr-TR', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+    } catch {
+      return 'Geçersiz tarih';
+    }
   };
 
   const getCampaignTypeColor = (type: string) => {
@@ -108,12 +160,14 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
 
   const getCampaignTypeLabel = (type: string) => {
     switch (type) {
-      case 'sudden_drop':
-        return 'Ani Düşüş';
       case 'flash_sale':
         return 'Flaş İndirim';
+      case 'sudden_drop':
+        return 'Ani Düşüş';
       case 'regular_discount':
         return 'Normal İndirim';
+      case 'minor_discount':
+        return 'Küçük İndirim';
       default:
         return 'Bilinmeyen';
     }
@@ -148,43 +202,73 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
       'n11': 'bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400',
       'amazon': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400',
     };
-    return colors[platform.toLowerCase()] || 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300';
+    return colors[platform?.toLowerCase()] || 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300';
   };
 
-  const filteredAndSortedData = data
-    .filter(item => {
-      // Campaign type filter
-      if (campaignFilter !== 'all' && item.campaign_type !== campaignFilter) {
-        return false;
-      }
-      
-      // Confidence filter
-      if (confidenceFilter !== 'all' && item.confidence_level !== confidenceFilter) {
-        return false;
-      }
-      
-      // Minimum discount filter
-      if (minDiscount && item.discount_percentage < parseFloat(minDiscount)) {
-        return false;
-      }
-      
-      return true;
-    })
-    .sort((a, b) => {
-      const modifier = sortOrder === 'asc' ? 1 : -1;
-      switch (sortBy) {
-        case 'discount_percentage':
-          return (a.discount_percentage - b.discount_percentage) * modifier;
-        case 'discount_amount':
-          return (a.discount_amount - b.discount_amount) * modifier;
-        case 'detection_date':
-          return (new Date(a.detection_date).getTime() - new Date(b.detection_date).getTime()) * modifier;
-        case 'platform':
-          return a.platform.localeCompare(b.platform) * modifier;
-        default:
+  // Güvenli filtering ve sorting
+  const filteredAndSortedData = React.useMemo(() => {
+    // Data'nın array olduğundan emin ol
+    if (!Array.isArray(data)) {
+      console.warn('⚠️ Data is not an array:', data);
+      return [];
+    }
+
+    return data
+      .filter(item => {
+        // Item'ın valid olup olmadığını kontrol et
+        if (!item || typeof item !== 'object') {
+          return false;
+        }
+
+        // Campaign type filter
+        if (campaignFilter !== 'all' && item.campaign_type !== campaignFilter) {
+          return false;
+        }
+
+        // Confidence filter
+        if (confidenceFilter !== 'all' && item.confidence_level !== confidenceFilter) {
+          return false;
+        }
+
+        // Minimum discount filter - güvenli parsing
+        if (minDiscount) {
+          const itemDiscount = parseFloat(item.discount_percentage) || 0;
+          const minDiscountValue = parseFloat(minDiscount) || 0;
+          if (itemDiscount < minDiscountValue) {
+            return false;
+          }
+        }
+
+        return true;
+      })
+      .sort((a, b) => {
+        const modifier = sortOrder === 'asc' ? 1 : -1;
+
+        try {
+          switch (sortBy) {
+            case 'discount_percentage':
+              const aDiscount = parseFloat(a.discount_percentage) || 0;
+              const bDiscount = parseFloat(b.discount_percentage) || 0;
+              return (aDiscount - bDiscount) * modifier;
+            case 'discount_amount':
+              const aAmount = parseFloat(a.discount_amount) || 0;
+              const bAmount = parseFloat(b.discount_amount) || 0;
+              return (aAmount - bAmount) * modifier;
+            case 'detection_date':
+              const dateA = new Date(a.detection_date).getTime() || 0;
+              const dateB = new Date(b.detection_date).getTime() || 0;
+              return (dateA - dateB) * modifier;
+            case 'platform':
+              return (a.platform || '').localeCompare(b.platform || '') * modifier;
+            default:
+              return 0;
+          }
+        } catch (err) {
+          console.warn('⚠️ Sorting error:', err);
           return 0;
-      }
-    });
+        }
+      });
+  }, [data, campaignFilter, confidenceFilter, minDiscount, sortBy, sortOrder]);
 
   const handleSort = (field: typeof sortBy) => {
     if (sortBy === field) {
@@ -194,6 +278,27 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
       setSortOrder('desc');
     }
   };
+
+  // Güvenli istatistik hesaplamaları
+  const stats = React.useMemo(() => {
+    if (!Array.isArray(data) || data.length === 0) {
+      return {
+        totalCount: 0,
+        maxDiscount: 0,
+        maxSavings: 0,
+        highConfidenceCount: 0
+      };
+    }
+
+    const validData = data.filter(item => item && typeof item === 'object');
+
+    return {
+      totalCount: validData.length,
+      maxDiscount: Math.max(...validData.map(item => parseFloat(item.discount_percentage) || 0), 0),
+      maxSavings: Math.max(...validData.map(item => parseFloat(item.discount_amount) || 0), 0),
+      highConfidenceCount: validData.filter(item => item.confidence_level === 'high').length
+    };
+  }, [data]);
 
   if (!finalProductId) {
     return (
@@ -267,7 +372,7 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
       {/* Data Display */}
       {!loading && !error && (
         <>
-          {data.length === 0 ? (
+          {stats.totalCount === 0 ? (
             <div className="text-center py-12">
               <AlertCircle className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -276,6 +381,12 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
               <p className="text-gray-600 dark:text-gray-400">
                 Bu final ürün için henüz kampanya veya fiyat anomalisi tespit edilmemiş.
               </p>
+              <button
+                onClick={fetchCampaignData}
+                className="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors"
+              >
+                Yeniden Kontrol Et
+              </button>
             </div>
           ) : (
             <>
@@ -283,29 +394,54 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                 <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold text-orange-800 dark:text-orange-200">
-                    {data.length}
+                    {stats.totalCount}
                   </h3>
                   <p className="text-orange-600 dark:text-orange-400 text-sm">Toplam Tespit</p>
                 </div>
                 <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold text-red-800 dark:text-red-200">
-                    %{Math.max(...data.map(item => item.discount_percentage)).toFixed(1)}
+                    %{stats.maxDiscount.toFixed(1)}
                   </h3>
                   <p className="text-red-600 dark:text-red-400 text-sm">En Yüksek İndirim</p>
                 </div>
                 <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold text-green-800 dark:text-green-200">
-                    {formatPrice(Math.max(...data.map(item => item.discount_amount)))}
+                    {formatPrice(stats.maxSavings)}
                   </h3>
                   <p className="text-green-600 dark:text-green-400 text-sm">En Büyük Tasarruf</p>
                 </div>
                 <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200">
-                    {data.filter(item => item.confidence_level === 'high').length}
+                    {stats.highConfidenceCount}
                   </h3>
                   <p className="text-blue-600 dark:text-blue-400 text-sm">Yüksek Güvenilirlik</p>
                 </div>
               </div>
+
+              {/* Platform Breakdown */}
+              {Object.keys(filteredAndSortedData.reduce((acc, item) => {
+                acc[item.platform] = (acc[item.platform] || 0) + 1;
+                return acc;
+              }, {})).length > 1 && (
+                  <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+                      Platform Dağılımı
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {Object.entries(filteredAndSortedData.reduce((acc, item) => {
+                        acc[item.platform] = (acc[item.platform] || 0) + 1;
+                        return acc;
+                      }, {})).map(([platform, count]) => (
+                        <span
+                          key={platform}
+                          className={`px-3 py-1 text-sm font-medium rounded-full ${getPlatformColor(platform)}`}
+                        >
+                          {platform}: {count}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
               {/* Filters and Controls */}
               <div className="space-y-4 mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
@@ -317,18 +453,18 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
                   <div className="flex flex-wrap gap-2">
                     {[
                       { key: 'all', label: 'Tümü', icon: AlertCircle },
-                      { key: 'sudden_drop', label: 'Ani Düşüş', icon: TrendingDown },
                       { key: 'flash_sale', label: 'Flaş İndirim', icon: Zap },
-                      { key: 'regular_discount', label: 'Normal İndirim', icon: AlertCircle }
+                      { key: 'sudden_drop', label: 'Ani Düşüş', icon: TrendingDown },
+                      { key: 'regular_discount', label: 'Normal İndirim', icon: AlertCircle },
+                      { key: 'minor_discount', label: 'Küçük İndirim', icon: AlertCircle }
                     ].map(({ key, label, icon: Icon }) => (
                       <button
                         key={key}
                         onClick={() => setCampaignFilter(key as typeof campaignFilter)}
-                        className={`flex items-center gap-2 px-3 py-1 text-sm rounded-lg border-2 transition-colors ${
-                          campaignFilter === key
-                            ? 'bg-orange-500 text-white border-orange-500'
-                            : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-500 hover:border-orange-400'
-                        }`}
+                        className={`flex items-center gap-2 px-3 py-1 text-sm rounded-lg border-2 transition-colors ${campaignFilter === key
+                          ? 'bg-orange-500 text-white border-orange-500'
+                          : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-500 hover:border-orange-400'
+                          }`}
                       >
                         <Icon className="w-4 h-4" />
                         {label}
@@ -385,11 +521,10 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
                       <button
                         key={key}
                         onClick={() => handleSort(key as typeof sortBy)}
-                        className={`px-3 py-1 text-sm rounded-lg transition-colors ${
-                          sortBy === key
-                            ? 'bg-orange-500 text-white'
-                            : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500'
-                        }`}
+                        className={`px-3 py-1 text-sm rounded-lg transition-colors ${sortBy === key
+                          ? 'bg-orange-500 text-white'
+                          : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500'
+                          }`}
                       >
                         {label} {sortBy === key && (sortOrder === 'asc' ? '↑' : '↓')}
                       </button>
@@ -400,14 +535,14 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
 
               {/* Results Info */}
               <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                {filteredAndSortedData.length} / {data.length} kampanya gösteriliyor
+                {filteredAndSortedData.length} / {stats.totalCount} kampanya gösteriliyor
               </div>
 
               {/* Campaign Cards */}
               <div className="space-y-4">
                 {filteredAndSortedData.map((campaign, index) => (
                   <div
-                    key={`${campaign.product_id}-${campaign.platform}-${campaign.detection_date}`}
+                    key={`${campaign.product_id}-${campaign.platform}-${campaign.detection_date}-${index}`}
                     className="bg-white dark:bg-gray-700 border-2 border-orange-200 dark:border-orange-800 
                              rounded-lg p-6 hover:shadow-lg transition-all"
                   >
@@ -415,17 +550,17 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-3">
                           <h3 className="font-semibold text-gray-900 dark:text-white text-lg">
-                            {campaign.product_name}
+                            {campaign.product_name || 'Bilinmeyen Ürün'}
                           </h3>
                           <span className={`px-3 py-1 text-sm font-medium rounded-full ${getPlatformColor(campaign.platform)}`}>
-                            {campaign.platform}
+                            {campaign.platform || 'Bilinmeyen'}
                           </span>
                           <span className={`flex items-center gap-1 px-3 py-1 text-sm font-medium rounded-full border-2 ${getCampaignTypeColor(campaign.campaign_type)}`}>
                             {getCampaignTypeIcon(campaign.campaign_type)}
                             {getCampaignTypeLabel(campaign.campaign_type)}
                           </span>
                           {index === 0 && sortBy === 'discount_percentage' && (
-                            <span className="px-3 py-1 text-sm font-medium rounded-full bg-gold-100 text-gold-800 dark:bg-gold-900/20 dark:text-gold-400">
+                            <span className="px-3 py-1 text-sm font-medium rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400">
                               🏆 En Yüksek
                             </span>
                           )}
@@ -435,28 +570,28 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
                           <div>
                             <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Eski Fiyat</p>
                             <p className="text-xl font-bold text-red-600 dark:text-red-400 line-through">
-                              {formatPrice(campaign.old_price)}
+                              {formatPrice(parseFloat(campaign.old_price) || 0)}
                             </p>
                           </div>
-                          
+
                           <div>
                             <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Yeni Fiyat</p>
                             <p className="text-xl font-bold text-green-600 dark:text-green-400">
-                              {formatPrice(campaign.new_price)}
+                              {formatPrice(parseFloat(campaign.new_price) || 0)}
                             </p>
                           </div>
 
                           <div>
                             <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">İndirim Miktarı</p>
                             <p className="text-xl font-bold text-blue-600 dark:text-blue-400">
-                              {formatPrice(campaign.discount_amount)}
+                              {formatPrice(parseFloat(campaign.discount_amount) || 0)}
                             </p>
                           </div>
 
                           <div>
                             <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">İndirim Oranı</p>
                             <p className="text-3xl font-bold text-orange-600 dark:text-orange-400">
-                              %{campaign.discount_percentage.toFixed(1)}
+                              %{formatNumber(campaign.discount_percentage, 1)}
                             </p>
                           </div>
                         </div>
@@ -480,7 +615,7 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
                               </div>
                             )}
                           </div>
-                          {campaign.url && (
+                          {campaign.url && campaign.url.trim() !== '' ? (
                             <a
                               href={campaign.url}
                               target="_blank"
@@ -490,6 +625,11 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
                               <ExternalLink className="w-4 h-4" />
                               Ürünü Gör
                             </a>
+                          ) : (
+                            <div className="flex items-center gap-1 text-gray-400 text-sm">
+                              <ExternalLink className="w-4 h-4" />
+                              <span>ID: {campaign.product_id}</span>
+                            </div>
                           )}
                         </div>
 
@@ -497,18 +637,17 @@ export default function CampaignDetection({ finalProductId }: CampaignDetectionP
                         <div>
                           <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
                             <span>İndirim Seviyesi</span>
-                            <span>%{campaign.discount_percentage.toFixed(1)}</span>
+                            <span>%{formatNumber(campaign.discount_percentage, 1)}</span>
                           </div>
                           <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-3">
-                            <div 
-                              className={`h-3 rounded-full transition-all ${
-                                campaign.discount_percentage >= 50 
-                                  ? 'bg-gradient-to-r from-green-500 to-red-500' 
-                                  : campaign.discount_percentage >= 25 
+                            <div
+                              className={`h-3 rounded-full transition-all ${parseFloat(campaign.discount_percentage) >= 50
+                                ? 'bg-gradient-to-r from-green-500 to-red-500'
+                                : parseFloat(campaign.discount_percentage) >= 25
                                   ? 'bg-gradient-to-r from-yellow-500 to-orange-500'
                                   : 'bg-gradient-to-r from-blue-500 to-green-500'
-                              }`}
-                              style={{ width: `${Math.min(100, campaign.discount_percentage)}%` }}
+                                }`}
+                              style={{ width: `${Math.min(100, parseFloat(campaign.discount_percentage) || 0)}%` }}
                             ></div>
                           </div>
                         </div>

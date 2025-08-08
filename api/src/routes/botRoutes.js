@@ -27,7 +27,85 @@ const logBotActivity = async (botName, message) => {
   fs.writeFileSync(LOG_FILE, JSON.stringify(logs.slice(0, 1000), null, 2));
 };
 
-// --- GET TERMS ---
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     BotRequest:
+ *       type: object
+ *       required:
+ *         - bot_name
+ *       properties:
+ *         bot_name:
+ *           type: string
+ *           description: Bot adı
+ *           example: "my-bot"
+ *     BotResponse:
+ *       type: object
+ *       properties:
+ *         success:
+ *           type: boolean
+ *         message:
+ *           type: string
+ *         data:
+ *           type: object
+ *     HealthResponse:
+ *       type: object
+ *       properties:
+ *         api:
+ *           type: string
+ *         bot_service_url:
+ *           type: string
+ *         bot_service:
+ *           type: object
+ */
+
+/**
+ * @swagger
+ * /api/terms:
+ *   get:
+ *     summary: Arama terimlerini getir
+ *     tags: [Bot Management]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Başarılı
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 terms:
+ *                   type: array
+ *                   items:
+ *                     type: string
+ *       500:
+ *         description: Sunucu hatası
+ *   post:
+ *     summary: Arama terimlerini güncelle
+ *     tags: [Bot Management]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               terms:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *     responses:
+ *       200:
+ *         description: Terimler güncellendi
+ *       500:
+ *         description: Sunucu hatası
+ */
 router.get("/terms", authenticateToken, async (req, res) => {
   try {
     const response = await axios.get(`${BOT_SERVICE_URL}/terms`);
@@ -41,7 +119,6 @@ router.get("/terms", authenticateToken, async (req, res) => {
   }
 });
 
-// --- POST / UPDATE TERMS ---
 router.post("/terms", authenticateToken, async (req, res) => {
   try {
     const response = await axios.post(`${BOT_SERVICE_URL}/terms`, req.body);
@@ -55,12 +132,225 @@ router.post("/terms", authenticateToken, async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/bot-logs:
+ *   get:
+ *     summary: Bot loglarını getir
+ *     tags: [Bot Management]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Bot logları
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   bot:
+ *                     type: string
+ *                   message:
+ *                     type: string
+ *                   timestamp:
+ *                     type: string
+ */
 router.get("/bot-logs", authenticateToken, async (req, res) => {
   if (!fs.existsSync(LOG_FILE)) return res.json([]);
   const content = fs.readFileSync(LOG_FILE, "utf-8");
   const logs = JSON.parse(content || "[]");
   res.json(logs);
 });
+
+/**
+ * @swagger
+ * /api/start-trendyol:
+ *   post:
+ *     summary: Trendyol botunu başlat
+ *     tags: [Bot Operations]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/BotRequest'
+ *     responses:
+ *       200:
+ *         description: Bot başlatıldı
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/BotResponse'
+ *       400:
+ *         description: Geçersiz istek
+ *       500:
+ *         description: Sunucu hatası
+ */
+
+/**
+ * @swagger
+ * /api/start-trendyol-detail:
+ *   post:
+ *     summary: Trendyol detay botunu başlat
+ *     tags: [Bot Operations]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/BotRequest'
+ *     responses:
+ *       200:
+ *         description: Bot başlatıldı
+ *       400:
+ *         description: Geçersiz istek
+ *       500:
+ *         description: Sunucu hatası
+ */
+
+/**
+ * @swagger
+ * /api/start-n11:
+ *   post:
+ *     summary: N11 botunu başlat
+ *     tags: [Bot Operations]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/BotRequest'
+ *     responses:
+ *       200:
+ *         description: Bot başlatıldı
+ *       400:
+ *         description: Geçersiz istek
+ *       500:
+ *         description: Sunucu hatası
+ */
+
+/**
+ * @swagger
+ * /api/start-n11-detail:
+ *   post:
+ *     summary: N11 detay botunu başlat
+ *     tags: [Bot Operations]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/BotRequest'
+ *     responses:
+ *       200:
+ *         description: Bot başlatıldı
+ *       400:
+ *         description: Geçersiz istek
+ *       500:
+ *         description: Sunucu hatası
+ */
+
+/**
+ * @swagger
+ * /api/start-hepsiburada:
+ *   post:
+ *     summary: Hepsiburada botunu başlat
+ *     tags: [Bot Operations]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/BotRequest'
+ *     responses:
+ *       200:
+ *         description: Bot başlatıldı
+ *       400:
+ *         description: Geçersiz istek
+ *       500:
+ *         description: Sunucu hatası
+ */
+
+/**
+ * @swagger
+ * /api/start-hepsiburada-detail:
+ *   post:
+ *     summary: Hepsiburada detay botunu başlat
+ *     tags: [Bot Operations]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/BotRequest'
+ *     responses:
+ *       200:
+ *         description: Bot başlatıldı
+ *       400:
+ *         description: Geçersiz istek
+ *       500:
+ *         description: Sunucu hatası
+ */
+
+/**
+ * @swagger
+ * /api/start-avansas:
+ *   post:
+ *     summary: Avansas botunu başlat
+ *     tags: [Bot Operations]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/BotRequest'
+ *     responses:
+ *       200:
+ *         description: Bot başlatıldı
+ *       400:
+ *         description: Geçersiz istek
+ *       500:
+ *         description: Sunucu hatası
+ */
+
+/**
+ * @swagger
+ * /api/start-avansas-detail:
+ *   post:
+ *     summary: Avansas detay botunu başlat
+ *     tags: [Bot Operations]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/BotRequest'
+ *     responses:
+ *       200:
+ *         description: Bot başlatıldı
+ *       400:
+ *         description: Geçersiz istek
+ *       500:
+ *         description: Sunucu hatası
+ */
 
 const botEndpoints = [
   {
@@ -130,6 +420,20 @@ botEndpoints.forEach(({ path, backend, logMsg }) => {
   });
 });
 
+/**
+ * @swagger
+ * /api/health:
+ *   get:
+ *     summary: Sistem durumunu kontrol et
+ *     tags: [System]
+ *     responses:
+ *       200:
+ *         description: Sistem durumu
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/HealthResponse'
+ */
 router.get("/health", async (req, res) => {
   try {
     const botHealth = await axios

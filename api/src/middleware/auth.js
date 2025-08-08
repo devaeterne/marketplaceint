@@ -5,23 +5,32 @@ const JWT_SECRET =
 
 export const authenticateToken = (req, res, next) => {
   const authHeader = req.headers["authorization"];
-  const token = authHeader && authHeader.split(" ")[1];
+  const token = authHeader && authHeader.split(" ")[1]; // Bearer TOKEN
+
+  console.log("🔍 Auth header:", authHeader ? "Present" : "Missing");
+  console.log("🔍 Token extracted:", token ? "Yes" : "No");
 
   if (!token) {
     return res.status(401).json({
       success: false,
-      message: "Access token gereklidir",
+      message: "Access token required",
     });
   }
 
-  jwt.verify(token, JWT_SECRET, (err, user) => {
+  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {
+      console.error("❌ Token verification failed:", err.message);
       return res.status(403).json({
         success: false,
-        message: "Geçersiz token",
+        message: "Invalid or expired token",
+        error: err.message,
       });
     }
-    req.user = user;
+
+    console.log("🔍 Token decoded successfully:", decoded);
+    console.log("🔍 Available fields in token:", Object.keys(decoded));
+
+    req.user = decoded; // Decoded token payload'ını req'e ekle
     next();
   });
 };

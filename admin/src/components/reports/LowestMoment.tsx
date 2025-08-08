@@ -9,10 +9,11 @@ interface LowestMomentData {
   lowest_price: number;
   current_price: number;
   lowest_date: string;
-  url?: string;
+  url: string;
   price_difference: number;
   price_difference_percentage: number;
   days_ago: number;
+
 }
 
 interface LowestMomentProps {
@@ -40,17 +41,36 @@ export default function LowestMoment({ finalProductId }: LowestMomentProps) {
     try {
       setLoading(true);
       setError(null);
-      
-      const response = await fetch(`/api/report/lowest-moment/${finalProductId}`);
-      
+
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/lowest-moment/${finalProductId}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`
+        }
+      });
+
       if (!response.ok) {
         throw new Error('En ucuz an verileri yüklenirken hata oluştu');
       }
-      
+
       const result = await response.json();
-      setData(result || []);
+      console.log('📦 Lowest moment response:', result);
+
+      // Gelen veriyi sanitize et
+      const sanitizedData = (result.data || []).map((item: any) => ({
+        ...item,
+        lowest_price: Number(item.lowest_price) || 0,
+        current_price: Number(item.current_price) || 0,
+        price_difference: Number(item.price_difference) || 0,
+        price_difference_percentage: Number(item.price_difference_percentage) || 0,
+        days_ago: Number(item.days_ago) || 0
+      }));
+
+      console.log('🧹 Sanitized data sample:', sanitizedData.slice(0, 2));
+
+      setData(sanitizedData);
       setLastUpdated(new Date());
     } catch (err) {
+      console.error('❌ Fetch error:', err);
       setError(err instanceof Error ? err.message : 'Bilinmeyen hata');
     } finally {
       setLoading(false);
@@ -106,6 +126,15 @@ export default function LowestMoment({ finalProductId }: LowestMomentProps) {
         return 0;
     }
   });
+
+  console.log(
+    "PRICE % VALUE",
+    data.map(i => {
+      return i.price_difference_percentage;
+    })
+  );
+
+
 
   const handleSort = (field: typeof sortBy) => {
     if (sortBy === field) {
@@ -233,7 +262,17 @@ export default function LowestMoment({ finalProductId }: LowestMomentProps) {
                 </div>
                 <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold text-yellow-800 dark:text-yellow-200">
-                    {Math.max(...data.map(item => item.price_difference_percentage)).toFixed(1)}%
+                    {(() => {
+                      if (data.length === 0) return '0.0%';
+                      const validPercentages = data
+                        .map(item => Number(item.price_difference_percentage) || 0)
+                        .filter(pct => !isNaN(pct) && isFinite(pct));
+
+                      if (validPercentages.length === 0) return '0.0%';
+
+                      const maxPercentage = Math.max(...validPercentages);
+                      return `${maxPercentage.toFixed(1)}%`;
+                    })()}
                   </h3>
                   <p className="text-yellow-600 dark:text-yellow-400 text-sm">En Yüksek Artış</p>
                 </div>
@@ -264,11 +303,10 @@ export default function LowestMoment({ finalProductId }: LowestMomentProps) {
                       <button
                         key={key}
                         onClick={() => setTimeFilter(key as typeof timeFilter)}
-                        className={`px-3 py-1 text-sm rounded-lg transition-colors ${
-                          timeFilter === key
-                            ? 'bg-indigo-500 text-white'
-                            : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500'
-                        }`}
+                        className={`px-3 py-1 text-sm rounded-lg transition-colors ${timeFilter === key
+                          ? 'bg-indigo-500 text-white'
+                          : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500'
+                          }`}
                       >
                         {label}
                       </button>
@@ -289,11 +327,10 @@ export default function LowestMoment({ finalProductId }: LowestMomentProps) {
                       <button
                         key={key}
                         onClick={() => handleSort(key as typeof sortBy)}
-                        className={`px-3 py-1 text-sm rounded-lg transition-colors ${
-                          sortBy === key
-                            ? 'bg-indigo-500 text-white'
-                            : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500'
-                        }`}
+                        className={`px-3 py-1 text-sm rounded-lg transition-colors ${sortBy === key
+                          ? 'bg-indigo-500 text-white'
+                          : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500'
+                          }`}
                       >
                         {label} {sortBy === key && (sortOrder === 'asc' ? '↑' : '↓')}
                       </button>
@@ -341,7 +378,7 @@ export default function LowestMoment({ finalProductId }: LowestMomentProps) {
                               {item.days_ago} gün önce
                             </p>
                           </div>
-                          
+
                           <div>
                             <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Mevcut Fiyat</p>
                             <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
@@ -356,7 +393,7 @@ export default function LowestMoment({ finalProductId }: LowestMomentProps) {
                               +{formatPrice(item.price_difference)}
                             </p>
                             <p className="text-lg font-semibold text-red-500">
-                              +{item.price_difference_percentage.toFixed(1)}%
+                              +{Number(item.price_difference_percentage).toFixed(1)}%
                             </p>
                           </div>
                         </div>
@@ -383,10 +420,10 @@ export default function LowestMoment({ finalProductId }: LowestMomentProps) {
                         <div className="mt-4">
                           <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
                             <span>Fiyat Artışı</span>
-                            <span>{item.price_difference_percentage.toFixed(1)}%</span>
+                            <span>{Number(item.price_difference_percentage).toFixed(1)}%</span>
                           </div>
                           <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-                            <div 
+                            <div
                               className="bg-gradient-to-r from-green-500 to-red-500 h-2 rounded-full transition-all"
                               style={{ width: `${Math.min(100, item.price_difference_percentage)}%` }}
                             ></div>

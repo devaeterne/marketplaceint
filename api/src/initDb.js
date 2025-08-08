@@ -5,17 +5,25 @@ async function createTables() {
     // === USERS ===
     await db.query(`
       CREATE TABLE IF NOT EXISTS users (
-        id SERIAL PRIMARY KEY,
-        email VARCHAR UNIQUE NOT NULL,
-        password_hash VARCHAR NOT NULL,
-        first_name VARCHAR,
-        last_name VARCHAR,
-        role VARCHAR DEFAULT 'user',
-        is_active BOOLEAN DEFAULT true,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        last_login TIMESTAMP
-      );
+    id SERIAL PRIMARY KEY,
+    email VARCHAR UNIQUE NOT NULL,
+    password_hash VARCHAR NOT NULL,
+    first_name VARCHAR,
+    last_name VARCHAR,
+    role VARCHAR DEFAULT 'user',
+    is_active BOOLEAN DEFAULT true,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_login TIMESTAMP,
+    phone VARCHAR(20),
+    bio TEXT,
+    position VARCHAR(100),
+    location VARCHAR(200),
+    avatar TEXT,
+    facebook_url TEXT,
+    twitter_url TEXT,
+    linkedin_url TEXT,
+    instagram_url TEXT
     `);
 
     // === SEARCH TERMS ===
@@ -115,30 +123,31 @@ async function createTables() {
     // === Final Products ===
     await db.query(`
       CREATE TABLE IF NOT EXISTS final_products (
-        id SERIAL PRIMARY KEY,
-        name TEXT NOT NULL,
-        short_description TEXT,
-        description TEXT,
-        image_url TEXT,
-        image_file TEXT,
-        brand TEXT,
-        brand_id TEXT,
-        category TEXT,
-        category_id TEXT,
-        weight NUMERIC,
-        total_stock NUMERIC DEFAULT 0,
-        max_quantity_per_cart INTEGER,
-        google_taxonomy_id TEXT,
-        product_option_set_id TEXT,
-        product_volume_discount_id TEXT,
-        base_unit TEXT,
-        sales_channel_ids TEXT[],
-        hidden_sales_channel_ids TEXT[],
-        tag_ids TEXT[],
-        ikas_product_id TEXT,
-        price NUMERIC,
-        campaign_price NUMERIC,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    short_description TEXT,
+    description TEXT,
+    image_url TEXT,
+    image_file TEXT,
+    brand TEXT,
+    brand_id TEXT,
+    category TEXT,
+    category_id TEXT,
+    weight NUMERIC,
+    total_stock NUMERIC DEFAULT 0,
+    max_quantity_per_cart INTEGER,
+    google_taxonomy_id TEXT,
+    product_option_set_id TEXT,
+    product_volume_discount_id TEXT,
+    base_unit TEXT,
+    sales_channel_ids TEXT[][],
+    hidden_sales_channel_ids TEXT[][],
+    tag_ids TEXT[][],
+    ikas_product_id TEXT,
+    price NUMERIC,
+    campaign_price NUMERIC,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       );
     `);
 

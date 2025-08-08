@@ -19,6 +19,37 @@ const getLogFileName = (botName) => {
 /**
  * Server-Sent Events ile canlı log streaming
  */
+/**
+ * @swagger
+ * /api/bot-logs/stream/{botName}:
+ *   get:
+ *     summary: Belirli bir bot için canlı log akışını başlat (SSE)
+ *     tags: [Bot Logs]
+ *     parameters:
+ *       - in: path
+ *         name: botName
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Bot adı
+ *       - in: query
+ *         name: token
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: JWT token
+ *     responses:
+ *       200:
+ *         description: Log stream başlatıldı
+ *         content:
+ *           text/event-stream:
+ *             schema:
+ *               type: string
+ *       401:
+ *         description: Yetkisiz (token gerekli veya geçersiz)
+ *       500:
+ *         description: Sunucu hatası
+ */
 router.get("/bot-logs/stream/:botName", async (req, res) => {
   // Token kontrolü - query string'den al
   const token = req.query.token;
@@ -121,6 +152,36 @@ router.get("/bot-logs/stream/:botName", async (req, res) => {
 /**
  * Mevcut log dosyasını oku
  */
+/**
+ * @swagger
+ * /api/bot-logs/{botName}:
+ *   get:
+ *     summary: Belirli bir botun loglarını getir (son 1000 satır)
+ *     tags: [Bot Logs]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: botName
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Bot adı
+ *     responses:
+ *       200:
+ *         description: Loglar alındı
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 logs:
+ *                   type: array
+ *                   items:
+ *                     type: string
+ *       500:
+ *         description: Log dosyası okunamadı
+ */
 router.get("/bot-logs/:botName", authenticateToken, async (req, res) => {
   try {
     const { botName } = req.params;
@@ -149,6 +210,36 @@ router.get("/bot-logs/:botName", authenticateToken, async (req, res) => {
 
 /**
  * Log dosyasını temizle
+ */
+/**
+ * @swagger
+ * /api/bot-logs/{botName}/clear:
+ *   delete:
+ *     summary: Belirli bir botun log dosyasını temizle
+ *     tags: [Bot Logs]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: botName
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Bot adı
+ *     responses:
+ *       200:
+ *         description: Log dosyası temizlendi
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 message:
+ *                   type: string
+ *       500:
+ *         description: Log dosyası temizlenemedi
  */
 router.delete(
   "/bot-logs/:botName/clear",

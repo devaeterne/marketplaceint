@@ -39,17 +39,32 @@ export default function TagPriceReport({ finalProductId }: TagPriceReportProps) 
     try {
       setLoading(true);
       setError(null);
-      
-      const response = await fetch(`/api/report/tag-averages/${finalProductId}`);
-      
+
+      // 🎯 DÜZELTME: Doğru API URL ve headers
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/tag-averages/${finalProductId}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`
+        }
+      });
+
       if (!response.ok) {
         throw new Error('Etiket bazlı fiyat verileri yüklenirken hata oluştu');
       }
-      
+
       const result = await response.json();
-      setData(result || []);
+      console.log('📦 Tag price data:', result);
+
+      // Backend response format kontrolü
+      if (result.success) {
+        setData(result.data || []);
+      } else {
+        // Fallback eski format
+        setData(result || []);
+      }
+
       setLastUpdated(new Date());
     } catch (err) {
+      console.error('❌ Tag price fetch error:', err);
       setError(err instanceof Error ? err.message : 'Bilinmeyen hata');
     } finally {
       setLoading(false);
@@ -77,8 +92,8 @@ export default function TagPriceReport({ finalProductId }: TagPriceReportProps) 
   };
 
   const handleTagFilter = (tagName: string) => {
-    setSelectedTags(prev => 
-      prev.includes(tagName) 
+    setSelectedTags(prev =>
+      prev.includes(tagName)
         ? prev.filter(t => t !== tagName)
         : [...prev, tagName]
     );
@@ -99,11 +114,11 @@ export default function TagPriceReport({ finalProductId }: TagPriceReportProps) 
       if (selectedTags.length > 0 && !selectedTags.includes(item.tag_name)) {
         return false;
       }
-      
+
       // Price filter
       const minPrice = priceFilter.min ? parseFloat(priceFilter.min) : 0;
       const maxPrice = priceFilter.max ? parseFloat(priceFilter.max) : Infinity;
-      
+
       return item.avg_price >= minPrice && item.avg_price <= maxPrice;
     })
     .sort((a, b) => {
@@ -247,11 +262,10 @@ export default function TagPriceReport({ finalProductId }: TagPriceReportProps) 
                       <button
                         key={item.tag_name}
                         onClick={() => handleTagFilter(item.tag_name)}
-                        className={`px-3 py-1 text-sm rounded-full border-2 transition-all ${
-                          selectedTags.includes(item.tag_name)
-                            ? getTagColor(index)
-                            : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-400'
-                        }`}
+                        className={`px-3 py-1 text-sm rounded-full border-2 transition-all ${selectedTags.includes(item.tag_name)
+                          ? getTagColor(index)
+                          : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-400'
+                          }`}
                       >
                         <Hash className="w-3 h-3 inline mr-1" />
                         {item.tag_name}
@@ -311,11 +325,10 @@ export default function TagPriceReport({ finalProductId }: TagPriceReportProps) 
                       <button
                         key={key}
                         onClick={() => handleSort(key as typeof sortBy)}
-                        className={`px-3 py-1 text-sm rounded-lg transition-colors ${
-                          sortBy === key
-                            ? 'bg-purple-500 text-white'
-                            : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500'
-                        }`}
+                        className={`px-3 py-1 text-sm rounded-lg transition-colors ${sortBy === key
+                          ? 'bg-purple-500 text-white'
+                          : 'bg-white dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-500'
+                          }`}
                       >
                         {label} {sortBy === key && (sortOrder === 'asc' ? '↑' : '↓')}
                       </button>
@@ -365,7 +378,9 @@ export default function TagPriceReport({ finalProductId }: TagPriceReportProps) 
                         </div>
                         <div>
                           <p className="text-sm opacity-75">Varyans</p>
-                          <p className="text-lg font-bold">{tag.price_variance.toFixed(2)}</p>
+                          <p className="text-lg font-bold">{(tag.price_variance !== null && tag.price_variance !== undefined)
+                            ? Number(tag.price_variance).toFixed(2)
+                            : '0.00'}</p>
                         </div>
                       </div>
 
@@ -383,10 +398,10 @@ export default function TagPriceReport({ finalProductId }: TagPriceReportProps) 
                           <span>{formatPrice(tag.max_price - tag.min_price)}</span>
                         </div>
                         <div className="w-full bg-black bg-opacity-20 rounded-full h-2">
-                          <div 
+                          <div
                             className="bg-current h-2 rounded-full opacity-60"
-                            style={{ 
-                              width: `${Math.min(100, ((tag.avg_price - tag.min_price) / (tag.max_price - tag.min_price)) * 100)}%` 
+                            style={{
+                              width: `${Math.min(100, ((tag.avg_price - tag.min_price) / (tag.max_price - tag.min_price)) * 100)}%`
                             }}
                           ></div>
                         </div>

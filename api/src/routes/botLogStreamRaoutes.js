@@ -9,6 +9,37 @@ const router = express.Router();
 const LOG_DIR = path.join(process.cwd(), "bot_logs");
 const getLogFileName = (botName) => path.join(LOG_DIR, `${botName}_latest.log`);
 
+/**
+ * @swagger
+ * /api/bot-logs/stream/{botName}:
+ *   get:
+ *     summary: Belirli bir bot için canlı log akışını başlat (SSE)
+ *     tags: [Bot Logs]
+ *     parameters:
+ *       - in: path
+ *         name: botName
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Bot adı
+ *       - in: query
+ *         name: token
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: JWT token (query string olarak gönderilir)
+ *     responses:
+ *       200:
+ *         description: Log stream başlatıldı
+ *         content:
+ *           text/event-stream:
+ *             schema:
+ *               type: string
+ *       401:
+ *         description: Yetkisiz (token gerekli veya geçersiz)
+ *       500:
+ *         description: Sunucu hatası
+ */
 router.get("/bot-logs/stream/:botName", async (req, res) => {
   const token = req.query.token;
   if (!token) return res.status(401).json({ error: "Token gerekli" });
